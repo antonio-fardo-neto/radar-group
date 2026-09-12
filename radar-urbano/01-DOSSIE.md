@@ -172,7 +172,7 @@ Win-back: ex-cliente volta pela fila da zona, sem condição especial.
 Pauta para o advogado externo, oito itens do contrato:
 
 1. **Mandato de operação.** Sem perguntar: posts, fotos, horários, respostas a avaliações e perguntas, ajustes de campos. Com um Sim: categoria principal, nome, endereço, ofertas. Nunca: prometer posição ou resultado, incentivo por avaliação.
-2. **LGPD.** Dados do dono: nome e número. Textos públicos de terceiros tratados só para responder em nome da empresa, guardados como hash e temas. Nenhuma mensagem a clientes finais. Suboperadores: Google Cloud e APIs, Meta (número da casa), provedor do cérebro de linguagem, provedor de pagamento. Retenção: `actions_log` 5 anos; `llm_calls` 12 meses; dados do tenant durante o contrato + 90 dias; áudio do Dia 0 apagado 7 dias após confirmação por escrito.
+2. **LGPD.** Dados do dono: nome e número. Textos públicos de terceiros tratados só para responder em nome da empresa, guardados como hash e temas. Nenhuma mensagem a clientes finais. Suboperadores: Google Cloud e APIs, Meta (número da casa), provedor do cérebro de linguagem, provedor de pagamento. Retenção: `actions_log` 5 anos; `llm_calls` 12 meses; dados do tenant até 90 dias após o contrato.
 3. **Política de avaliações e conteúdo do Google.** Sem incentivo, sem seleção, respostas verdadeiras, sem dados do avaliador.
 4. **Marca, fotos e imagem.** Uso das fotos reais autorizado; nunca se gera foto do estabelecimento.
 5. **Preços, horários e informações comerciais.** Responsabilidade do cliente; origem registrada no Diário.
