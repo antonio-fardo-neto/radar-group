@@ -236,11 +236,11 @@ A ordem exata dos únicos 15 minutos, com o que o cliente toca em cada um. Sem o
 
 #### 1 — Antes da conversa
 
-O comercial verifica a vaga na zona: segmento e bairro (ou raio equivalente) do cliente, consultados antes de mandar qualquer link. Só com vaga livre o cliente recebe o contrato por link, lê a lista do que a máquina pode e não pode fazer, e assina digitalmente. Recebe o link de pagamento do provedor e cadastra o cartão. Cinco minutos, no celular. Estado do tenant: `created`, depois `billing_active`.
+O comercial verifica a vaga na zona: segmento e bairro (ou raio equivalente) do cliente, consultados antes de mandar qualquer link. Só com vaga livre o cliente recebe o contrato por link, lê a lista do que a máquina pode e não pode fazer, informa o número em que quer receber as entregas, marca o aceite de receber mensagens do número da casa, e assina digitalmente. Recebe o link de pagamento do provedor e cadastra o cartão. Cinco minutos, no celular. A página do contrato termina com um link que abre a conversa com o número da casa; a primeira mensagem é do dono, e é ela que abre o Dia 0. Estado do tenant: `created`, depois `billing_active`.
 
 #### 2 — Minuto 0 a 5
 
-Conversa por áudio no WhatsApp, pelo número da casa: cinco perguntas. O que você mais vende e como o cliente procura; os bairros ou o raio que importam; o jeito da casa de falar; o que a máquina pode fazer sem perguntar; em que número recebe as entregas e como quer ser chamado. O Gemini transcreve e a máquina confirma por escrito. O Sim do dono a essa confirmação é o consentimento para receber pelo número da casa. Estado: `profiled`.
+Conversa por áudio, na conversa que o dono abriu com o número da casa: cinco perguntas. O que você mais vende e como o cliente procura; os bairros ou o raio que importam; o jeito da casa de falar; o que a máquina pode fazer sem perguntar; em que número recebe as entregas e como quer ser chamado. O Gemini transcreve e a máquina confirma por escrito. O Sim do dono a essa confirmação é o consentimento para receber pelo número da casa. Estado: `profiled`.
 
 #### 3 — Minuto 5 a 8
 
@@ -248,7 +248,7 @@ Perfil da Empresa: o cliente adiciona o e-mail operacional como Gerente. Um toqu
 
 #### 4 — Minuto 8 a 10
 
-Dashboard: recebe o link único e, se quiser, cria a própria senha. Recebe o Diagnóstico de Posição na mesma conversa: card no WhatsApp, PDF no dashboard. A última mensagem diz: "A partir de agora você só recebe. Segunda, 7h, o primeiro Boletim. Dia 7, o Antes e Depois." Estado: `live`. Fim do roteiro, em cerca de dez minutos.
+Dashboard: recebe o link fixo do dashboard e, se quiser, cria a própria senha pelo link único. Recebe o Diagnóstico de Posição na mesma conversa: card no WhatsApp, PDF no dashboard. A última mensagem diz: "A partir de agora você só recebe. Segunda, 7h, o primeiro Boletim. Dia 7, o Antes e Depois." Estado: `live`. Fim do roteiro, em cerca de dez minutos.
 
 #### 5 — A folga (minuto 10 a 15)
 
@@ -289,7 +289,7 @@ O item 6 da base legal, em uma frase: enquanto o contrato durar, o Radar Urbano 
 
 | Situação | O que acontece | Quem faz |
 |---|---|---|
-| O cliente muda de endereço para outra zona | Nova verificação de vaga na zona nova. Com vaga, o tenant muda de zona e o contrato recebe um aditivo. Sem vaga, vale a regra do item 6 da base legal: operação até o fim do ciclo pago e frente da lista de espera. O endereço no perfil muda mesmo assim, porque endereço é dado do cliente. | Comercial, com `zone.check`; Guardião aprova o endereço |
+| O cliente muda de endereço para outra zona | Nova verificação de vaga na zona nova, antes de mudar qualquer coisa. Com vaga, o tenant muda de zona, o contrato recebe um aditivo e a vaga antiga libera no mesmo dia. Sem vaga, vale a regra do item 6 da base legal: lista de espera da zona nova, na ordem de chegada; vaga da zona antiga liberada no mesmo dia; mandato suspenso enquanto espera; cancelamento sem multa. O endereço no perfil muda mesmo assim, porque endereço é dado do cliente: é a última edição antes da suspensão. | Comercial, com `zone.check`; Guardião aprova o endereço |
 | O cliente muda a categoria principal | Mudança exige um sim do dono e dois olhos humanos. Antes de aprovar, o Guardião verifica a vaga no segmento novo. | Guardião, com `zone.check` |
 | O Radar Urbano redesenha uma zona (bairro dividido, raio ajustado) | Quem já está fica, nas condições do contrato. Novos entram pela regra nova. Aviso por escrito aos clientes da zona. | Head de Operação |
 | Um cliente encerra | A vaga libera no offboarding, no mesmo dia. O primeiro da lista de espera é avisado pelo comercial; o contrato dele só nasce com a vaga confirmada de novo. | Máquina (`zone.changed`) e comercial |
