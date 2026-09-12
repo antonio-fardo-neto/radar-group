@@ -1,7 +1,5 @@
 # Radar Urbano · Ponto de vista do cliente
 
-O que o dono de uma padaria, oficina ou clínica vê, contrata, recebe e nunca precisa fazer. Base para a página comercial e para o pitch.
-
 ## 1. A oferta em uma frase
 
 Por R$ 499 por mês, o Radar Urbano opera o Perfil da Empresa no Google (Maps e Busca local) com agentes de IA, mede a posição da empresa ponto a ponto, responde toda avaliação em até 2 horas e entrega tudo no WhatsApp do dono, sem que ele gaste um minuto depois do Dia 0.
@@ -10,8 +8,6 @@ Promessa oficial: captura de intenção otimizada, lucrativa e eficiente. Não s
 
 ## 2. Por que Google Maps e não redes sociais
 
-Redes sociais operam por interrupção: o usuário não estava buscando. O Google Maps opera por demanda declarada: a busca já contém o problema, a localidade e a urgência.
-
 | | Tráfego de atenção (redes sociais) | Tráfego de intenção (Google Maps) |
 |---|---|---|
 | Demanda | Latente: precisa ser criada antes de converter | Existente: a busca antecede a decisão |
@@ -19,11 +15,11 @@ Redes sociais operam por interrupção: o usuário não estava buscando. O Googl
 | Indicadores | Alcance, curtidas, salvamentos | Ligações pelo perfil, rotas, cliques no site, mensagens |
 | Custo | Cresce com a frequência de impacto | Mensalidade fixa, sem verba de mídia |
 
-O objetivo operacional é ocupar o intervalo entre a busca e a contratação: busca relevante (termo + lugar + intenção), posição no top 3 da primeira tela, ação direta a partir do perfil.
+Objetivo operacional: busca relevante, posição no top 3 da primeira tela, ação direta a partir do perfil.
 
 ## 3. O que o cliente recebe
 
-Onze entregas: duas de entrada (uma vez) e nove recorrentes. Todas chegam pelo WhatsApp do Radar Urbano (o número da casa, o mesmo desde o Dia 0) e ficam no dashboard.
+Duas entregas de entrada (uma vez) e nove recorrentes. Tudo chega pelo número da casa (o WhatsApp do Radar Urbano) e fica no dashboard.
 
 | Nº | Entrega | Quando | Por onde | O que é |
 |---|---|---|---|---|
@@ -39,7 +35,7 @@ Onze entregas: duas de entrada (uma vez) e nove recorrentes. Todas chegam pelo W
 | 10 | Voz do Cliente | Dia 1; alerta quando um tema repete | Card no WhatsApp | Três elogios e três atritos das avaliações e perguntas, com uma evidência cada |
 | 11 | Fechamento Executivo | Dia 1; trimestral a cada 3 meses | PDF no WhatsApp; arquivo permanente no dashboard | O mês em uma página: contatos, custo por contato, mapa, reputação, horas, o que foi feito e o que vem |
 
-Regras que valem para todas: nenhuma entrega passa de 60 segundos de áudio ou uma página; números do Google chegam com data de referência (atraso de 2 a 3 dias, sem tempo real); números da própria máquina atualizados de hora em hora; domingo não chega nada.
+Nenhuma entrega passa de 60 segundos de áudio ou uma página. Números do Google chegam com data de referência (atraso de 2 a 3 dias, sem tempo real); os da própria máquina, de hora em hora.
 
 ## 4. O que o cliente nunca faz
 
@@ -61,7 +57,7 @@ Antes da conversa, fora dos quinze: verificação da zona pelo comercial, contra
 | 8 a 10 | Dashboard e Diagnóstico | Recebe o link fixo, cria senha se quiser, recebe o Diagnóstico de Posição na mesma conversa |
 | 10 a 15 | Folga | Reservada para quem trava no perfil. Quinze é o teto, não a meta |
 
-O Sim ao fim das cinco perguntas confirma o número e fica registrado como consentimento para receber as entregas do número da casa.
+O Sim ao fim das cinco perguntas confirma o número e registra o consentimento para receber as entregas.
 
 ## 6. Preço e condições
 
@@ -80,7 +76,7 @@ Compromisso do Radar Urbano: perfil estruturado por completo na primeira semana 
 
 Regra: no máximo 2 empresas do mesmo segmento (categoria principal do perfil) na mesma zona (bairro do Google Maps ou raio equivalente, escrito no contrato com a cidade).
 
-- Motivo técnico: uma busca local tem três posições na primeira tela; perfis concorrentes na mesma malha disputam as mesmas posições e degradam o resultado de todos.
+- Motivo técnico: perfis concorrentes na mesma malha de busca disputam as mesmas três posições e degradam o resultado de todos.
 - O que o cliente ganha: no máximo um outro do mesmo ramo na mesma zona dentro do Radar Urbano, como cláusula de exclusividade limitada no contrato.
 - Como verifica: antes de vender, o comercial consulta segmento + zona; resposta em uma linha (livre, 0 ou 1 de 2; ou lotada, 2 de 2 com fila). A consulta repete na assinatura. O cliente pode perguntar quantos há na zona dele e ouve o número.
 - Reserva: a proposta escrita reserva a vaga por 5 dias úteis; a vaga só se ocupa na assinatura. Fila por ordem de chegada, sem exceção.
@@ -113,9 +109,8 @@ O que não existe: taxa de conversão, receita atribuída, "novos clientes gerad
 | Tempo de implantação | 30 a 90 dias (contratação) | 15 a 45 dias (onboarding) | Diagnóstico no Dia 0; perfil a limpo em 7 dias |
 | Tempo do dono | Gestão da pessoa | Reuniões e aprovações | Até 15 minutos, uma vez |
 | Vínculo | Rescisão onerosa | Fidelidade de 12 meses | Mensal, sem fidelidade |
-| Registro do trabalho | Depende | Relatório da agência | Diário de Bordo com print, conferível |
 
-Nenhuma coluna promete resultado; a comparação é de custo, foco, prazo e prova.
+Nenhuma coluna promete resultado.
 
 ## 10. Acessos que o cliente concede
 
@@ -128,11 +123,11 @@ Nenhuma coluna promete resultado; a comparação é de custo, foco, prazo e prov
 
 O que a máquina faz sem perguntar (mandato no contrato): posts, fotos, horários e feriados, descrição, serviços, atributos, respostas a avaliações e perguntas. O que exige um Sim: categoria principal, nome, endereço, ofertas. O que nunca faz: prometer posição ou resultado, incentivar ou selecionar avaliações, publicar foto gerada do estabelecimento.
 
-Dados: nome e número do dono; textos públicos de avaliações e perguntas tratados só para responder em nome da empresa e guardados como tema, sentimento e hash. Sem raspagem do Google.
+Dados guardados: nome e número do dono; avaliações e perguntas públicas só como tema, sentimento e hash.
 
 ## 11. Como sair
 
 - Cancela quando quiser, pelo WhatsApp ou pelo dashboard; vale a partir do fim do ciclo pago.
 - SAIR a qualquer momento interrompe os envios sem cancelar o serviço; o trabalho no perfil continua.
 - No encerramento: o Radar Urbano é removido como Gerente, o perfil fica com tudo que foi publicado, o histórico (Diário, extratos, fechamentos, mapas) é entregue ao dono, os dados são apagados no prazo do contrato (90 dias) e a vaga na zona é liberada para a fila.
-- O que se perde: o perfil vivo, as respostas em 2 horas, a medição e o extrato, e a vaga na zona.
+- O que se perde: o perfil vivo, as respostas em 2 horas, a medição, o extrato e a vaga na zona.
