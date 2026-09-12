@@ -4,8 +4,8 @@ Mantido como peça de visão; o produto inicial está nos arquivos 02 a 05. Uso:
 import html, re
 from pathlib import Path
 
-SRC = Path(__file__).with_name("conteudo-52.md")
-OUT = Path(__file__).resolve().parent.parent / "dist" / "radar-urbano-dossie.html"
+SRC = Path(__file__).with_name("conteudo-52.md")  # cópia de referencia/01-DOSSIE-HOLDING-VERBATIM.md em formato-fonte
+OUT = Path(__file__).resolve().parent.parent / "dist" / "radar-urbano-dossie-holding-verbatim.html"
 
 def inl(t):
     t = html.escape(t, quote=False)

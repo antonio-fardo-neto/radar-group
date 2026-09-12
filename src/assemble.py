@@ -39,7 +39,7 @@ def parts(only=()):
         print("ok", target, (ROOT / target).stat().st_size // 1024, "KB")
 
 def tudo():
-    order = ["README.md"] + sorted(p.name for p in ROOT.glob("[0-9][0-9]-*.md"))
+    order = ["README.md"] + sorted("radar-urbano/" + p.name for p in (ROOT / "radar-urbano").glob("[0-9][0-9]-*.md"))
     out = ["<!-- Radar Urbano · TUDO-EM-UM: todos os arquivos do pacote concatenados, na ordem, para colar de uma vez numa IA ou ler de ponta a ponta. Gerado por src/assemble.py; não editar à mão. -->\n"]
     for name in order:
         p = ROOT / name

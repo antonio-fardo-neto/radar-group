@@ -2,7 +2,7 @@
 """Radar Urbano · gerador único: Markdown (fonte de verdade) → apresentação web da edição branca.
 
 Uso:
-  python3 src/build.py 02-MAPA-DE-ENTREGAS.md --aba "Entregas" --out dist/radar-urbano-entregas.html
+  python3 src/build.py radar-urbano/05-MAPA-DE-ENTREGAS.md --aba "Entregas" --out dist/radar-urbano-entregas.html
   python3 src/build.py --all            # gera todos os documentos listados em DOCS
   python3 src/build.py --all --fragment # também gera o fragmento (sem <html>/<head>) para publicar como artifact
 
@@ -37,11 +37,14 @@ TPL = Path(__file__).with_name("template_branco.html")
 
 # Documentos do pacote: (arquivo md, nome na aba, arquivo de saída, linhas da capa opcionais)
 DOCS = [
-    ("02-MAPA-DE-ENTREGAS.md", "Mapa de Entregas", "radar-urbano-entregas.html"),
-    ("03-MAPA-DE-ACESSOS.md", "Mapa de Acessos", "radar-urbano-acessos.html"),
-    ("04-MAPA-MUNDI.md", "Mapa Mundi", "radar-urbano-mapa-mundi.html"),
-    ("05-BIBLIA.md", "Bíblia", "radar-urbano-biblia.html"),
-    ("11-ROADMAP-FASEADO.md", "Roadmap faseado", "radar-urbano-roadmap.html"),
+    ("radar-urbano/01-DOSSIE.md", "Dossiê", "radar-urbano-dossie.html"),
+    ("radar-urbano/02-POV-CLIENTE.md", "POV Cliente", "radar-urbano-pov-cliente.html"),
+    ("radar-urbano/03-POV-PLAYER.md", "POV Player", "radar-urbano-pov-player.html"),
+    ("radar-urbano/04-EXPANSAO.md", "Expansão", "radar-urbano-expansao.html"),
+    ("radar-urbano/05-MAPA-DE-ENTREGAS.md", "Mapa de Entregas", "radar-urbano-entregas.html"),
+    ("radar-urbano/06-MAPA-DE-ACESSOS.md", "Mapa de Acessos", "radar-urbano-acessos.html"),
+    ("radar-urbano/07-MAPA-MUNDI.md", "Mapa Mundi", "radar-urbano-mapa-mundi.html"),
+    ("radar-urbano/08-BIBLIA.md", "Bíblia", "radar-urbano-biblia.html"),
 ]
 
 # ----------------------------------------------------------------- inline
