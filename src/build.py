@@ -241,8 +241,9 @@ def render_body(blocks, sec_cls, ctx):
             m = re.match(r"^(\d{1,2})\s*[·]?\s*(.+)$", p)
             if m: out.append(f'<div class="h3c rv"><span class="h3n">{m.group(1)}</span>{inl(m.group(2))}</div>')
             else:
-                m2 = re.match(r"^([A-ZÁÉÍÓÚÂÊÔÃÕÇ][\wÁÉÍÓÚÂÊÔÃÕÇáéíóúâêôãõç-]+(?: [\wÁÉÍÓÚÂÊÔÃÕÇáéíóúâêôãõç-]+)?)\s+(.+[.!?])$", p)
-                if m2 and len(m2.group(1)) < 24: out.append(f'<div class="h3c rv">{inl(m2.group(1))}<span class="h3m">{inl(m2.group(2))}</span></div>')
+                # "### Cartógrafo Medir a posição..." → nome (uma palavra, com parêntese opcional) + missão (começa em maiúscula, termina em pontuação)
+                m2 = re.match(r"^([A-ZÁÉÍÓÚÂÊÔÃÕÇ][\wÁÉÍÓÚÂÊÔÃÕÇáéíóúâêôãõç-]*(?:\s\([^)]*\))?)\s+([A-ZÁÉÍÓÚÂÊÔÃÕÇ].+[.!?])$", p)
+                if m2 and len(m2.group(1)) < 32: out.append(f'<div class="h3c rv">{inl(m2.group(1))}<span class="h3m">{inl(m2.group(2))}</span></div>')
                 else: out.append(f'<div class="h3c rv">{inl(p)}</div>')
             i += 1; continue
         if t == "p" and is_label_line(p):
