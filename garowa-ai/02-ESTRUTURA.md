@@ -1,145 +1,166 @@
 # GAROWA.AI: A ESTRUTURA REAL
 
-*O que precisa existir para a casa sair do papel: empresa, contrato, gente, caixa, máquina, operação, conformidade e o plano de doze meses. Com números, com nomes de cargo e com o que o Radar Group já resolveu.*
+*O que precisa existir para a casa operar de verdade, qualquer que seja a forma escolhida no Horizonte: empresa, contratos, gente, caixa, máquina, operação, conformidade e o primeiro ano — com números, nomes de cargo e o que o Radar Urbano já resolveu.*
 
-*Antes de tudo · O recorte*
+*Ponto de partida · Como usar*
 
-## O QUE ESTE DOCUMENTO ASSUME
+## O QUE MUDA COM A FORMA E O QUE NÃO MUDA
 
-*O Horizonte abre trinta e seis posições. Este aqui fecha uma e monta a estrutura dela, porque estrutura não existe no plural.*
+*Nove capítulos. Sete valem para qualquer forma de empresa. Dois — gente e caixa — mudam com a forma escolhida, e por isso aparecem em três tamanhos e com a variação por família.*
 
-O documento anterior termina em cinco cenários possíveis. Este assume o único que a casa consegue começar na segunda-feira sem levantar capital novo, porque metade dele já está construída: **motor, um vertical e uma voz**. Se o fundador escolher outro cenário, muda o Capítulo II (gente) e o Capítulo III (dinheiro); os capítulos de contrato, máquina, operação e conformidade valem para qualquer um dos cinco.
+- **Vale para qualquer forma:** a empresa, os contratos, a máquina, a operação, a conformidade, o primeiro ano e o painel
+- **Muda com a forma:** quantas pessoas, em que função, e quanto caixa até a receita cobrir a folha
+- **Base dos números:** o pacote do Radar Urbano, que é a única montagem com custo medido dentro do grupo
 
-- **Motor** — a plataforma interna, cobrada por uso das empresas do grupo, com contrato e SLA.
-- **Vertical** — um produto proprietário por vez, com preço fixo e trava. O Radar Urbano é o primeiro e já existe.
-- **Voz** — escola e persona, medidas em demanda gerada e gente contratada, nunca como unidade de negócio.
+Este documento não escolhe a forma. Ele garante que, escolhida qualquer uma, a segunda-feira seguinte já tenha empresa, contrato, gente com nome, caixa contado e máquina de pé.
 
-**A regra dos números deste documento**
+**A regra dos números**
 
-- Número do Radar Urbano: fechado, vem do pacote, aparece sem ressalva.
-- Número de mercado (salário, imposto, honorário): ordem de grandeza, hipótese, confirmar com contador e advogado antes de assinar qualquer coisa.
-- Onde o papel do fundador não disse nada sobre o grupo Garowa, aparece pergunta, nunca afirmação.
+- **Número do Radar Urbano:** fechado, vem do pacote, aparece sem ressalva
+- **Número de mercado:** salário, imposto, honorário e comissão são ordem de grandeza, marcados como hipótese, para confirmar com contador e advogado antes de assinar
+- **Sobre o grupo Garowa:** o que o bilhete não disse aparece como decisão a tomar, com as alternativas lado a lado
 
 ---
 
-# Capítulo I — A casa jurídica
+# Capítulo I — A empresa
 
-*Capítulo I · A empresa*
+*Capítulo I · O CNPJ*
 
-## O CNPJ, O QUADRO E O QUE PRECISA ESTAR ESCRITO
+## O QUE PRECISA ESTAR ESCRITO ANTES DA PRIMEIRA RECEITA
 
-*Antes de qualquer linha de código, três documentos. Sem eles a casa existe, mas não é uma empresa: é um combinado entre pessoas que se gostam hoje.*
+*Três documentos fazem de um combinado entre pessoas uma empresa. Sem eles, tudo funciona enquanto todos se dão bem.*
 
-- **Tipo societário:** sociedade limitada própria, separada das outras empresas do grupo — mistura de caixa entre empresas do grupo é o problema mais caro de desfazer depois
-- **CNAE principal:** desenvolvimento e licenciamento de software (6201-5/01 e 6202-3/00); acrescentar 8599-6/04 se a escola emitir certificado; confirmar com o contador antes de abrir
-- **Capital social:** integralizado de verdade, no valor da montagem; capital simbólico atrapalha na primeira negociação séria
+- **Tipo societário:** sociedade limitada própria, com caixa separado das outras empresas do grupo — a separação custa pouco agora e muito depois
+- **CNAE principal:** desenvolvimento e licenciamento de software (6201-5/01 e 6202-3/00); acrescentar 8599-6/04 se houver escola com certificado; confirmar com o contador antes de abrir
+- **Capital social:** integralizado no valor da montagem; capital simbólico pesa na primeira negociação séria
 - **Quadro:** quem entra com dinheiro, quem entra com trabalho, e em que proporção — escrito antes de a primeira receita entrar
-- **Acordo de sócios:** vesting com cliff de 12 meses, o que acontece na saída de um sócio, quem decide o quê, e o que exige unanimidade
-- **Marca:** registro no INPI nas classes 9, 35, 41 e 42; o nome com acento e o domínio conferidos antes de imprimir qualquer coisa
+- **Acordo de sócios:** aquisição de participação ao longo do tempo com carência de 12 meses, o que acontece na saída de um sócio, quem decide o quê, o que exige unanimidade
+- **Marca:** registro no INPI nas classes 9, 35, 41 e 42; nome e domínio conferidos antes de imprimir qualquer coisa
 - **Contabilidade:** escritório contratado antes do primeiro faturamento, com experiência em software e em empresas de grupo
 
-**Os três documentos que não podem faltar**
+**Os três documentos**
 
 1. **Contrato social e acordo de sócios** — Quem é dono de quê, quem decide, o que acontece quando alguém sai.
-2. **Contrato intragrupo** — Como a Garowa.AI atende as outras empresas do grupo Garowa, por quanto e com que garantia.
+2. **Contrato com o grupo** — Como a casa atende as empresas do grupo Garowa, por quanto e com que garantia. Tem duas formas possíveis, no capítulo seguinte.
 3. **Contrato padrão de cliente** — O que a casa vende, o que promete, o que não promete e o que acontece quando dá errado.
 
-*Capítulo I · O contrato que decide tudo*
+---
 
-## O CONTRATO ENTRE A GAROWA.AI E O GRUPO
+# Capítulo II — Os contratos
 
-*É o documento mais importante da empresa e o único que ninguém tem vontade de escrever, porque é entre conhecidos.*
+*Capítulo II · A relação com o grupo*
 
-Sem ele, a casa vira departamento: atende quem grita mais alto, não factura, não mede e não vale nada numa avaliação. Com ele, o grupo vira o primeiro cliente pagante — o melhor lugar do mundo para começar.
+## DUAS FORMAS DE ATENDER O GRUPO, CADA UMA COM A SUA ESTRUTURA
 
-- **Objeto:** quais serviços e componentes, com nome e versão, e o que está fora
-- **Preço:** por uso (chamada, cliente ativo, assento) ou pacote mensal com franquia; com nota fiscal entre as empresas
-- **Prazo de atendimento:** o que é rotina, o que é urgência e quanto custa a urgência
-- **Nível de serviço:** disponibilidade, janela de manutenção e o que acontece quando falha
-- **Propriedade intelectual:** componente genérico fica com a Garowa.AI; o que é específico do negócio da outra empresa fica com ela; escrito assim, nome por nome
+*O grupo pode ser o primeiro cliente pagante da casa ou pode ser o dono da agenda dela. As duas formas funcionam. O que não funciona é não escolher, porque cada uma pede um documento diferente.*
+
+| | Grupo como cliente | Grupo como dono da agenda |
+|---|---|---|
+| Documento | Contrato de prestação, com preço e prazo de atendimento | Orçamento anual aprovado e roteiro trimestral |
+| Como a casa recebe | Nota fiscal por uso, assento ou pacote | Aporte ou rateio, com critério objetivo escrito |
+| Quem prioriza | A casa, dentro do contrato; urgência tem preço | O grupo, dentro do roteiro aprovado |
+| O que a casa mede | Receita do grupo separada da receita de fora | Custo evitado e produtos entregues ao grupo |
+| Quando faz sentido | Quando a casa vai vender para fora também | Quando a casa existe para servir o grupo, e isso é a decisão |
+| O que precisa estar escrito | Objeto, preço, prazo, nível de serviço, propriedade, dados, exclusividade, direito de recusa, saída | Orçamento, roteiro, quem aprova, propriedade, dados, o que fica fora do roteiro |
+
+**As cláusulas que aparecem nas duas formas**
+
+- **Propriedade intelectual:** componente genérico fica com a casa; o que é específico do negócio de outra empresa fica com ela; escrito nome por nome
 - **Dados:** quem é controlador e quem é operador em cada fluxo, com contrato de operador anexo
-- **Exclusividade:** a Garowa.AI pode atender concorrente de empresa do grupo? Se não pode, isso tem preço e o preço está no contrato
-- **Direito de recusa:** pedido fora do roteiro entra na fila, vira projeto com preço, ou é recusado
-- **Prazo e reajuste:** 12 meses, com índice e revisão de escopo
-- **Saída:** o que acontece com dado, acesso e código se o grupo decidir internalizar
+- **Exclusividade:** a casa pode atender concorrente de empresa do grupo? Se não pode, isso tem preço e o preço está escrito
+- **Saída:** o que acontece com dado, acesso e código se uma empresa do grupo internalizar ou sair
 
-> **O teste do contrato** — Se um estranho lesse só esse contrato, ele conseguiria dizer o que a Garowa.AI entrega e por quanto? Se não conseguir, o contrato não está pronto — e o que existe é rateio com nome de receita.
+*Capítulo II · O cliente de fora*
 
-*Capítulo I · O contrato de cliente*
+## AS CLÁUSULAS DO CONTRATO DE CLIENTE
 
-## AS CLÁUSULAS QUE NÃO PODEM FALTAR
+*Vender IA para terceiro é assumir responsabilidade por uma máquina que age em nome de alguém. O contrato é onde essa responsabilidade tem limite e prova.*
 
-*Vender IA para terceiro é assumir responsabilidade por uma máquina que age em nome de alguém. O contrato é onde essa responsabilidade tem limite.*
-
-- **Objeto e limite da promessa:** operação medida e registrada; nunca conversão, receita atribuída ou "novos clientes" — a regra já é da casa e vale para todo produto novo
+- **Objeto e limite da promessa:** operação medida e registrada; nunca conversão, receita atribuída ou "novos clientes" — a regra já é do Radar e vale para todo produto novo
 - **Mandato:** o que a casa pode fazer em nome do cliente, em quais sistemas, e o que exige aprovação dele
 - **Acesso:** nunca a senha do cliente; acesso por papel, revogável a qualquer momento
 - **Dados:** finalidade, retenção, subcontratados nomeados, canal do titular e prazo de resposta
-- **Responsabilidade:** limitação ao valor pago nos últimos 12 meses, com as exclusões usuais; confirmar redação com advogado
+- **Responsabilidade:** limitação ao valor pago nos últimos 12 meses, com as exclusões usuais; redação com advogado
 - **Registro:** a casa mantém histórico do que a máquina fez, com prova, e o cliente pode consultar
 - **Saída:** o cliente leva o quê, em quanto tempo, em que formato
-- **Consumidor:** se algum dia houver produto B2C, entra o Código de Defesa do Consumidor inteiro — arrependimento em 7 dias, atendimento, estorno. É outro contrato e outro custo de operação
+- **Consumidor:** se houver produto para pessoa física, entra o Código de Defesa do Consumidor inteiro — arrependimento em 7 dias, atendimento, estorno; é outro contrato e outro custo de operação
+
+**Se a casa fizer projeto sob medida**
+
+- **Escopo e critério de pronto:** escritos antes da proposta, com o que está fora
+- **Teto:** limite de participação do sob medida na receita total, revisado a cada trimestre, para o serviço financiar o produto sem substituí-lo
+- **Propriedade:** o que é do cliente e o que a casa reaproveita no próximo projeto, nome por nome
 
 ---
 
-# Capítulo II — Gente
+# Capítulo III — Gente
 
-*Capítulo II · Os papéis*
+*Capítulo III · Os papéis*
 
-## OS SEIS PAPÉIS QUE NÃO DÁ PARA NÃO TER
+## OS SEIS PAPÉIS QUE TODA FORMA PRECISA
 
-*Papel não é pessoa: no começo, uma pessoa acumula três. Mas todo papel sem nome escrito é um papel que ninguém faz.*
+*Papel não é pessoa: no começo uma pessoa acumula três. Mas todo papel sem nome escrito é um papel que ninguém faz.*
 
-1. **Dono do negócio** — Decide posição, preço e o "não". É quem responde pelo caixa. Não terceirizável, nunca.
-2. **Dono do produto** — Um por produto, tempo integral. Escreve o critério de pronto, prioriza, e recusa o que não cabe. Meio dono é meio produto.
-3. **Engenheiro responsável** — Constrói e mantém a máquina. É o ponto único de falha do primeiro ano; o plano de segundo engenheiro precisa de gatilho escrito.
-4. **Guardião da operação** — O humano com painel: aprova, audita por amostragem e trata exceção. É o cargo que o Radar já definiu e é o que mantém a máquina confiável.
-5. **Comercial** — Prospecta, verifica trava de território, faz proposta, assina. Sem ele, produto vira portfólio.
+1. **Dono do negócio** — Decide forma, preço e o que fica fora. Responde pelo caixa. Não se terceiriza.
+2. **Dono do produto ou do serviço** — Um por frente, tempo integral. Escreve o critério de pronto, prioriza, recusa o que não cabe.
+3. **Engenheiro responsável** — Constrói e mantém a máquina. É o ponto único de falha do primeiro ano; o segundo engenheiro tem gatilho escrito.
+4. **Guardião da operação** — O humano com painel: aprova, audita por amostragem, trata exceção. É o cargo que o Radar já definiu e o que mantém a máquina confiável.
+5. **Comercial** — Prospecta, verifica território, faz proposta, assina. Sem ele, produto vira portfólio.
 6. **Administrativo e financeiro** — Nota, cobrança, inadimplência, contrato, fornecedor, imposto. Terceirizável no começo; nunca inexistente.
 
-*Capítulo II · O organograma*
+*Capítulo III · Os tamanhos*
 
 ## TRÊS, SETE, DEZESSEIS
 
-*O mesmo negócio em três tamanhos. Cada salto é autorizado por um número, não por vontade.*
+*A mesma casa em três tamanhos. Cada salto é autorizado por um número, que está no capítulo do primeiro ano.*
 
 #### Fase 0 — Três pessoas
-- Fundador: dono do negócio, dono do produto e comercial ao mesmo tempo
+- Fundador: dono do negócio, dono da frente principal e comercial ao mesmo tempo
 - Engenheiro sênior: a máquina inteira, mais o gateway de modelos
 - Head de operação: o Guardião, o Dia 0 dos clientes e o suporte
 - Contabilidade e jurídico por fora, por hora
-- Custo mensal estimado: R$ 30–35 mil (hipótese, alinhada ao pacote do Radar)
+- Custo mensal: R$ 30–35 mil (hipótese, alinhada ao pacote do Radar)
 
 #### Fase 1 — Sete pessoas
-- Entra o segundo engenheiro quando o primeiro produto passa de 100 clientes
-- Entram dois operadores: um operador atende de 30 a 80 clientes, depois até 150
-- Entra um SDR a partir do segundo mês de venda ativa
-- O fundador larga o comercial do dia a dia e fica com produto e parcerias
-- Custo mensal estimado: R$ 55–70 mil (hipótese)
+- Segundo engenheiro quando a primeira frente passa de 100 clientes ou de três contratos grandes
+- Dois operadores: um operador atende de 30 a 80 clientes, depois até 150
+- Um SDR a partir do segundo mês de venda ativa
+- O fundador sai do comercial do dia a dia e fica com produto e parcerias
+- Custo mensal: R$ 55–70 mil (hipótese)
 
 #### Fase 2 — Dezesseis pessoas
 - Coordenação de operação separada do Guardião
-- Quatro engenheiros, sendo um dedicado à plataforma e não ao produto
+- Quatro engenheiros, um deles dedicado à plataforma e não a um produto
 - Sete operadores, três no comercial, um administrativo e financeiro interno
-- Aqui a plataforma vira produto interno com preço, porque há mais de um produto usando
-- Custo mensal estimado: R$ 130–160 mil (hipótese)
+- A plataforma vira produto interno com preço, porque mais de uma frente usa
+- Custo mensal: R$ 130–160 mil (hipótese)
+
+**Como o time muda com a forma escolhida**
+
+| Forma | O que pesa no time | Perfil que não pode faltar |
+|---|---|---|
+| A Vertical | Engenharia e operação por faixa de clientes | Dono de produto que diz não |
+| A Fábrica | Consultores e gerentes de conta | Alguém que transforma repetição em produto |
+| A Plataforma do Grupo | Engenharia e governança; pouca venda | Engenheiro de plataforma com cabeça de produto |
+| A Casa de Mídia | Conteúdo, comunidade e produção | O rosto, ou o nome, com cadência sem férias |
+| A Operadora | Operação e integração; pouca engenharia nova | Operador humano que gosta do negócio comprado |
 
 **Regras de contratação que economizam um ano**
 
 - **Nunca terceirizar:** o acesso ao cliente, o critério de pronto, o Guardião e a relação com o fornecedor de modelo
 - **Terceirizar sem medo:** contabilidade, jurídico de rotina, design, edição de conteúdo, infraestrutura gerenciada
-- **PJ ou CLT:** funções de operação com horário e subordinação tendem a CLT; especialista por projeto tende a PJ — a diferença entre as duas decisões, feita errada, é passivo trabalhista
+- **PJ ou CLT:** função de operação com horário e subordinação tende a CLT; especialista por projeto tende a PJ; a decisão errada é passivo trabalhista
 - **A pergunta antes de toda vaga:** o que essa pessoa faz na terça-feira? Se a resposta for genérica, a vaga ainda não existe
 
 ---
 
-# Capítulo III — Dinheiro
+# Capítulo IV — Dinheiro
 
-*Capítulo III · A montagem*
+*Capítulo IV · A montagem*
 
 ## O QUE CUSTA COLOCAR DE PÉ
 
-*A casa tem a sorte rara de já ter esse número medido, e não estimado: o pacote do Radar Urbano.*
+*A casa tem a sorte de já ter esse número medido, e não estimado: o pacote do Radar Urbano.*
 
 | Item | Valor (base Radar Urbano) |
 |---|---|
@@ -149,13 +170,11 @@ Sem ele, a casa vira departamento: atende quem grita mais alto, não factura, n�
 | Nuvem, APIs, ferramentas, domínio | R$ 3–5 mil |
 | **Total da montagem (6 semanas)** | **R$ 50–65 mil** |
 
-Acrescente o que é da Garowa.AI e não estava naquela conta: abertura da empresa e registro de marca (R$ 4–8 mil, hipótese), contrato intragrupo (R$ 3–6 mil, hipótese) e reserva de contingência de 15%. A montagem realista fica entre **R$ 65 e 90 mil**, para uma casa que já tem o primeiro produto desenhado.
+O que é da casa e não estava naquela conta: abertura da empresa e registro de marca (R$ 4–8 mil, hipótese), o contrato com o grupo (R$ 3–6 mil, hipótese) e reserva de contingência de 15%. A montagem realista fica entre **R$ 65 e 90 mil** para uma casa que já tem a primeira frente desenhada.
 
-*Capítulo III · Os doze meses*
+## A CONTA ATÉ O PRIMEIRO REAL SOBRAR {.dark}
 
-## A QUEIMA ATÉ O PRIMEIRO REAL SOBRAR
-
-*Sem esta tabela, não existe decisão: existe torcida.*
+*O modelo de conta, com a Vertical como exemplo porque é a forma cujos números o grupo já mediu. As outras formas mudam a velocidade da receita, e a variação está logo abaixo.*
 
 | Período | Time | Custo mensal (hipótese) | Receita esperada | Caixa acumulado |
 |---|---|---|---|---|
@@ -165,46 +184,56 @@ Acrescente o que é da Garowa.AI e não estava naquela conta: abertura da empres
 | Mês 7–9 | 4–5 | R$ 45–55 mil | R$ 20–30 mil/mês | −R$ 250–320 mil |
 | Mês 10–12 | 5–7 | R$ 55–70 mil | R$ 40–60 mil/mês | −R$ 300–380 mil |
 
-O ponto de equilíbrio do primeiro vertical fica perto de **120 clientes** a R$ 499 (hipótese do memorando). Antes disso, a casa vive de três fontes possíveis, e é decisão do fundador qual delas: capital próprio, o contrato intragrupo pagando por uso, ou projeto sob medida com teto de receita e data de saída.
+**Como a curva muda com a forma**
 
-> **O teto que protege o futuro** — Se projeto sob medida passar de metade da receita por dois trimestres seguidos, a casa virou agência. Isso não é fracasso, é outra empresa — e precisa ser uma decisão, não um acidente.
+- **A Vertical:** a tabela acima; equilíbrio perto de 120 clientes a R$ 499 (hipótese do memorando)
+- **A Fábrica:** receita em 30 a 60 dias e equilíbrio no primeiro semestre; o caixa acumulado fica na metade, e cada real novo pede uma pessoa nova
+- **A Plataforma do Grupo:** receita desde o mês 1 se o contrato com o grupo estiver assinado; o teto é o tamanho do grupo até o licenciamento
+- **A Casa de Mídia:** receita adiantada por turma; montagem mais barata (sem engenheiro em tempo integral), teto mais baixo
+- **A Operadora:** capital antes de qualquer receita; a conta é de aquisição, não de folha
 
-*Capítulo III · Imposto e preço interno*
+**As três fontes de caixa até o equilíbrio**
+
+- **Capital próprio:** o mais simples; pede a reserva de doze meses antes de começar
+- **Contrato com o grupo:** receita desde o mês 1, se o grupo for cliente pagante
+- **Projeto sob medida com teto:** financia o produto; o teto em porcentagem da receita e a data de revisão ficam escritos para o serviço não virar a empresa sem que isso seja uma decisão
+
+*Capítulo IV · Imposto e preço interno*
 
 ## O REGIME, A NOTA E O PREÇO DE TRANSFERÊNCIA
 
 *Ordem de grandeza e pauta para o contador, não conselho fiscal.*
 
-- **Simples Nacional:** software costuma cair no Anexo V, e vai para o Anexo III quando a folha atinge 28% da receita (fator R) — isso muda a alíquota efetiva de forma relevante e deve ser simulado antes de definir pró-labore
-- **Lucro Presumido:** faz sentido acima de certo faturamento; a carga sobe para a faixa de 13% a 16% sobre a receita de serviço, somando PIS, COFINS, IRPJ, CSLL e ISS
-- **ISS:** de 2% a 5% conforme o município; vale verificar o município da sede antes de escolher endereço
-- **Nota entre empresas do grupo:** serviço prestado a empresa do mesmo grupo é receita tributada normalmente; rateio de custo tem regra própria e precisa de contrato e critério objetivo, sob pena de glosa
-- **Preço interno:** definido por uso (chamada de modelo, cliente ativo, assento) com margem declarada sobre o custo; sem margem, não é preço, é rateio disfarçado
+- **Simples Nacional:** software costuma cair no Anexo V e vai para o Anexo III quando a folha atinge 28% da receita (fator R); a diferença de alíquota efetiva é relevante e se simula antes de definir pró-labore
+- **Lucro Presumido:** faz sentido a partir de certo faturamento; a carga vai para a faixa de 13% a 16% sobre serviço, somando PIS, COFINS, IRPJ, CSLL e ISS
+- **ISS:** de 2% a 5% conforme o município; vale conferir o município da sede antes de escolher endereço
+- **Nota entre empresas do grupo:** serviço prestado a empresa do mesmo grupo é receita tributada normalmente; rateio de custo tem regra própria e precisa de contrato e critério objetivo
+- **Preço interno:** por uso (chamada de modelo, cliente ativo, assento) com margem declarada sobre o custo; sem margem, é rateio com outro nome
 
 **O que precisa existir no financeiro desde o primeiro mês**
 
-- Plano de contas que separe: receita externa, receita do grupo, custo de tecnologia por produto, folha, e o resto
-- Custo de tecnologia rateado por cliente — a métrica de primeira classe do Radar, com alerta em R$ 25 por cliente
+- Plano de contas que separe receita de fora, receita do grupo, custo de tecnologia por frente, folha e o resto
+- Custo de tecnologia por cliente, a métrica de primeira classe do Radar, com alerta em R$ 25
 - Conciliação de assinatura e inadimplência, com régua de cobrança escrita
-- Reserva de caixa equivalente a três meses de folha, intocável
+- Reserva equivalente a três meses de folha, intocável
 
 ---
 
-# Capítulo IV — A máquina
+# Capítulo V — A máquina
 
-*Capítulo IV · As peças*
+*Capítulo V · As peças*
 
 ## AS DEZ PEÇAS DA PLATAFORMA
 
-*Não é arquitetura ideal: é a lista do que precisa existir para dois produtos rodarem sem dobrar o time.*
+*Não é a arquitetura ideal: é a lista do que precisa existir para duas frentes rodarem sem dobrar o time. Ao lado de cada peça, o que o Radar já tem.*
 
-- **01 · Gateway de modelos** — Uma porta só para todo modelo, com registro de custo por chamada e troca de fornecedor sem tocar no produto.
-  - Já existe no Radar: sim, com Gemini obrigatório onde toca o Google
+- **01 · Gateway de modelos** — Uma porta só para todo modelo, com custo por chamada registrado e troca de fornecedor sem tocar no produto.
+  - Já existe no Radar: sim, com Gemini onde toca o Google
 - **02 · Multiempresa** — Cliente, plano, território e limite por território, verificados antes de o cliente nascer.
-  - Já existe no Radar: sim, incluindo a trava de 2 por segmento por zona
+  - Já existe no Radar: sim, com a trava de 2 por segmento por zona
 - **03 · Cobrança e assinatura** — Meio de pagamento, ciclo, falha de cobrança, suspensão e retomada.
-  - Já existe no Radar: parcialmente; é a peça que mais some em projeto de IA
-- **04 · Identidade e acesso** — Login do cliente, papéis, e segredo de terceiro guardado com cofre.
+  - Já existe no Radar: em parte; é a peça que mais falta em projeto de IA
+- **04 · Identidade e acesso** — Login do cliente, papéis, segredo de terceiro guardado em cofre.
   - Já existe no Radar: sim, com a regra de nunca guardar senha de cliente
 - **05 · Fila e agendamento** — Tudo que o sistema faz sozinho é um trabalho agendado, com repetição segura.
   - Já existe no Radar: sim, em cadências de 30 minutos, hora, dia, semana e dia 1
@@ -214,53 +243,53 @@ O ponto de equilíbrio do primeiro vertical fica perto de **120 clientes** a R$ 
   - Já existe no Radar: sim
 - **08 · Painel do Guardião** — Fila de aprovação, amostragem, histórico com prova, botão de parar tudo.
   - Já existe no Radar: sim; é o que torna agente confiável para vender
-- **09 · Ambientes e publicação** — Desenvolvimento, homologação e produção; infraestrutura descrita em código; volta atrás em um comando.
+- **09 · Ambientes e publicação** — Desenvolvimento, homologação e produção; infraestrutura em código; volta atrás em um comando.
   - Já existe no Radar: sim, com Terraform e publicação automática
 - **10 · Segurança e continuidade** — Cofre de segredos, cópia de segurança testada, registro de acesso, plano de incidente.
-  - Já existe no Radar: parcialmente; a cópia de segurança precisa de teste de restauração, não só de rotina
+  - Já existe no Radar: em parte; a cópia de segurança precisa de teste de restauração, não só de rotina
 
-> **A leitura que importa** — Oito das dez peças já existem em algum grau dentro do Radar Urbano. A Garowa.AI não precisa construir plataforma: precisa extrair, versionar, dar nome, colocar preço e passar a atender um segundo produto sem quebrar o primeiro.
+> **A leitura que importa** — Oito das dez peças já existem em algum grau dentro do Radar Urbano. A casa não precisa construir uma plataforma: precisa extrair, versionar, dar nome, colocar preço e passar a atender uma segunda frente sem quebrar a primeira.
 
-*Capítulo IV · O custo*
+*Capítulo V · O custo*
 
-## COMO SE MEDE E COMO SE CORTA O CUSTO POR CLIENTE
+## COMO SE MEDE E COMO SE REDUZ O CUSTO POR CLIENTE
 
 *A conta que separa uma casa de IA rentável de uma casa de IA ocupada.*
 
-- **Referência atual do Radar:** R$ 12–25 por cliente por mês, com alerta disparando em R$ 25
+- **Referência atual do Radar:** R$ 12–25 por cliente por mês, com alerta em R$ 25
 - **Onde o custo mora:** chamadas de modelo, APIs de terceiros, geração de voz, processamento e armazenamento
-- **Como se corta, na ordem:** reduzir a frequência do que é medido, usar modelo menor para tarefa simples, guardar resposta repetida, agrupar chamadas, e só então renegociar preço
-- **O que nunca se corta:** a amostragem do Guardião e o registro com prova — cortar auditoria é cortar o produto
-- **Regra de governança:** todo produto novo nasce com teto de custo por cliente definido antes da primeira linha de código
+- **Como se reduz, nesta ordem:** frequência do que é medido, modelo menor para tarefa simples, resposta repetida guardada, chamadas agrupadas, e só então renegociar preço
+- **O que não se reduz:** a amostragem do Guardião e o registro com prova; cortar auditoria é cortar o produto
+- **Regra para toda frente nova:** nasce com teto de custo por cliente definido antes da primeira linha de código
 
 ---
 
-# Capítulo V — Operação
+# Capítulo VI — Operação
 
-*Capítulo V · As cadências*
+*Capítulo VI · As cadências*
 
 ## O QUE ACONTECE TODO DIA, TODA SEMANA E TODO MÊS
 
 *Operação é calendário, não intenção.*
 
-- **Diário — 15 minutos:** fila do Guardião zerada, erros da noite, custo do dia por cliente, clientes em risco
-- **Semanal — 60 minutos:** entregas da semana, amostragem de qualidade, funil comercial, contas a receber, uma decisão de produto
-- **Mensal — 2 horas:** fechamento financeiro, custo por cliente por produto, churn, margem de contribuição, revisão das portas
-- **Trimestral — meio dia:** revisão do "não", revisão do contrato intragrupo, e a pergunta sobre o segundo produto
-- **Toda segunda às 7h e todo dia 1:** o que o cliente recebe; é a promessa que a operação inteira serve
+- **Diário, 15 minutos:** fila do Guardião zerada, erros da noite, custo do dia por cliente, clientes em risco
+- **Semanal, 60 minutos:** entregas da semana, amostragem de qualidade, funil comercial, contas a receber, uma decisão de produto
+- **Mensal, 2 horas:** fechamento financeiro, custo por cliente por frente, churn, margem de contribuição, revisão das portas
+- **Trimestral, meio dia:** revisão do que fica fora, revisão do contrato com o grupo, e a pergunta sobre a segunda frente
+- **Toda segunda às 7h e todo dia 1:** o que o cliente do Radar recebe; é a promessa que a operação inteira serve
 
-*Capítulo V · O ciclo do cliente*
+*Capítulo VI · O ciclo*
 
-## COMO ENTRA, COMO É ATENDIDO E COMO SAI
+## COMO O CLIENTE ENTRA, É ATENDIDO E SAI
 
-*O ciclo inteiro precisa caber numa página, senão ele não é repetível.*
+*O ciclo inteiro cabe numa página; se não couber, não é repetível.*
 
-1. **Verificação antes da venda** — Território e segmento conferidos; se a vaga não existe, a venda não acontece. É a trava que protege o resultado de quem já está dentro.
-2. **Proposta e contrato** — Proposta escrita que reserva a vaga por poucos dias; assinatura por link; a vaga só se ocupa quando assina.
-3. **Dia 0** — Até 15 minutos do dono, acessos concedidos por papel, nunca por senha, e a primeira entrega saindo no mesmo dia.
+1. **Verificação antes da venda** — Território e segmento conferidos; sem vaga, sem venda. É a trava que protege o resultado de quem já está dentro.
+2. **Proposta e contrato** — Proposta escrita que reserva a vaga por poucos dias; assinatura por link; a vaga se ocupa na assinatura.
+3. **Dia 0** — Até 15 minutos do dono, acessos por papel e nunca por senha, primeira entrega no mesmo dia.
 4. **Rotina** — Entregas nas cadências combinadas, com registro do que a máquina fez e prova do que mudou.
-5. **Risco** — Alerta quando o cliente para de interagir, quando a entrega falha duas vezes ou quando o custo estoura o teto.
-6. **Saída** — Cancelamento com data, devolução de acesso, exportação do que é do cliente, e a vaga volta para a fila.
+5. **Risco** — Alerta quando o cliente para de interagir, quando a entrega falha duas vezes ou quando o custo passa do teto.
+6. **Saída** — Cancelamento com data, devolução de acesso, exportação do que é do cliente, vaga de volta para a fila.
 
 **O que nunca é automático**
 
@@ -271,133 +300,128 @@ O ponto de equilíbrio do primeiro vertical fica perto de **120 clientes** a R$ 
 
 ---
 
-# Capítulo VI — Risco e conformidade
+# Capítulo VII — Conformidade e risco
 
-*Capítulo VI · Dados*
+*Capítulo VII · Dados*
 
-## LGPD NA PRÁTICA, NÃO NO PAPEL
+## LGPD NA PRÁTICA
 
-*Pauta de advogado com as decisões já tomadas, para a reunião durar uma hora em vez de um mês.*
+*Pauta de advogado com as decisões já tomadas, para a reunião durar uma hora.*
 
-- **Papéis:** em cada fluxo, definir quem é controlador e quem é operador, e ter contrato de operador assinado onde a casa for operadora
-- **Base legal:** por finalidade, escrita; dado público de pessoa jurídica é um caso, dado de cliente final do cliente é outro completamente diferente
+- **Papéis:** em cada fluxo, quem é controlador e quem é operador, com contrato de operador assinado onde a casa for operadora
+- **Base legal:** por finalidade, escrita; dado público de pessoa jurídica é um caso, dado de cliente final do cliente é outro
 - **Minimização:** guardar tema e indicador, não o texto inteiro de terceiro, quando o texto não for necessário
-- **Subcontratados:** lista nominal de todo fornecedor que processa dado, inclusive fornecedor de modelo, com atualização quando mudar
+- **Subcontratados:** lista nominal de todo fornecedor que processa dado, inclusive fornecedor de modelo, atualizada quando mudar
 - **Titular:** canal de atendimento e prazo de resposta definidos, com responsável nomeado
 - **Retenção:** por quanto tempo cada tipo de dado fica, e o que é apagado na saída do cliente
 - **Incidente:** plano escrito de quem avisa quem, em quanto tempo, com modelo de comunicação pronto
-- **Transferência internacional:** a maior parte dos modelos processa fora do país; isso precisa estar no contrato e no aviso de privacidade
+- **Transferência internacional:** a maior parte dos modelos processa fora do país; isso fica no contrato e no aviso de privacidade
 
-*Capítulo VI · Agentes*
+*Capítulo VII · Agentes*
 
 ## O QUE SE ASSINA E O QUE SE RECUSA
 
-*Responsabilidade por máquina que age em nome de terceiro é o risco central do negócio, e ele é gerenciável.*
+*Responsabilidade por máquina que age em nome de terceiro é o risco central do negócio, e ele se administra com quatro listas.*
 
 - **O que se assina:** que a operação será feita, medida e registrada, com prazo e prova
-- **O que nunca se assina:** resultado comercial, posição garantida, receita, número de clientes novos
+- **O que não se assina:** resultado comercial, posição garantida, receita, número de clientes novos
 - **O que se registra:** toda ação da máquina, com data, autor, versão e evidência
-- **O que se recusa:** acesso amplo demais, escopo sem limite, promessa verbal do comercial, e cliente que exige a senha em vez do papel de acesso
-- **Seguro:** avaliar responsabilidade civil profissional e cibernético a partir do momento em que houver dezenas de clientes; hoje é linha de risco anotada, não apólice contratada
-- **Fornecedor de modelo:** ler os termos de uso quanto a uso comercial, treinamento com dado do cliente e disponibilidade; ter um segundo fornecedor testado antes de precisar dele
+- **O que se recusa:** acesso amplo demais, escopo sem limite, promessa verbal do comercial, cliente que pede a senha em vez do papel de acesso
+- **Seguro:** responsabilidade civil profissional e cibernético a partir de dezenas de clientes; hoje é linha de risco anotada, não apólice
+- **Fornecedor de modelo:** termos de uso lidos quanto a uso comercial, treinamento com dado do cliente e disponibilidade; um segundo fornecedor testado antes de precisar dele
 
-*Capítulo VI · Concentração*
+*Capítulo VII · Concentração*
 
-## AS QUATRO DEPENDÊNCIAS QUE PODEM PARAR A CASA
+## AS QUATRO DEPENDÊNCIAS E O QUE REDUZ CADA UMA
 
 | Dependência | O que acontece se falhar | O que reduz o risco |
 |---|---|---|
-| Fornecedor de modelo | Preço sobe, termo muda, ou a função vira nativa do fornecedor | Gateway com dois fornecedores testados; nunca construir onde o roteiro do fornecedor passa |
+| Fornecedor de modelo | Preço sobe, termo muda, ou a função vira nativa do fornecedor | Gateway com dois fornecedores testados; construir onde o modelo não alcança |
 | Plataforma de terceiro (Google, Meta) | Acesso suspenso, cota cortada, perfil de cliente bloqueado | Conector isolado, uso dentro dos termos, roteiro de crise escrito |
-| Engenheiro único | Tudo para | Infraestrutura em código, publicação automática, documentação, gatilho de contratação do segundo |
-| Cliente grande demais | A casa vira fornecedora dele | Teto de participação na receita por cliente, escrito e revisado no trimestre |
+| Engenheiro único | Tudo para | Infraestrutura em código, publicação automática, documentação, gatilho do segundo |
+| Cliente grande demais | A casa vira fornecedora dele | Teto de participação por cliente, escrito e revisado no trimestre |
 
 ---
 
-# Capítulo VII — O plano
+# Capítulo VIII — O primeiro ano
 
-*Capítulo VII · Os primeiros doze meses*
+*Capítulo VIII · As janelas*
 
-## QUATRO JANELAS, COM CRITÉRIO DE PRONTO
+## QUATRO JANELAS, CADA UMA COM ALGO PARA MOSTRAR
 
-*Cada janela termina com uma coisa que dá para mostrar, não com um relatório de andamento.*
+*As duas primeiras valem para qualquer forma. As duas últimas dizem o que mostrar em cada uma.*
 
 #### Dia 0 a 30 — A casa existe
 - Empresa aberta, contas bancária e contábil funcionando, marca depositada
-- Contrato intragrupo assinado, com preço por uso e SLA
+- A forma de atender o grupo escolhida, e o documento dela assinado
 - Contrato padrão de cliente revisado por advogado
-- A frase de cinco campos escrita: cliente, problema, preço, quem entrega, o que a casa não faz
-- A lista de "não" publicada internamente
+- A frase de cinco campos escrita: cliente, problema, preço, quem entrega, o que fica fora
+- Os seis papéis com nome
 
 #### Dia 30 a 90 — A máquina de pé
-- As dez peças da plataforma inventariadas: o que herda do Radar, o que falta, com dono e prazo
+- As dez peças inventariadas: o que herda do Radar, o que falta, com dono e prazo
 - Custo por cliente medido de verdade, com alerta funcionando
 - Painel do Guardião em uso diário
-- Piloto com três clientes por trinta dias, com critério de aceitação escrito antes
+- A primeira entrega real: piloto de três clientes, ou três contratos com teto, ou a primeira turma
 
-#### Dia 90 a 180 — A venda repetível
-- Verificação de território antes da proposta, automatizada
-- Proposta, contrato e Dia 0 em roteiro único, executáveis por quem não é o fundador
-- Primeiro SDR em operação, com meta contada em contratos assinados
-- Escola e persona no ar, medidas só por contatos qualificados sem mídia paga
+#### Dia 90 a 180 — A receita repetível
+- Vertical: verificação de território, proposta, contrato e Dia 0 em roteiro único, executável por quem não é o fundador
+- Fábrica ou Plataforma: o segundo cliente atendido pelo mesmo roteiro do primeiro, com escopo escrito
+- Casa de Mídia: lista própria, segunda turma e contatos qualificados contados sem mídia paga
+- Em todas: primeiro SDR ou primeiro gerente de conta, com meta em contratos assinados
 
-#### Dia 180 a 365 — O segundo apoio
-- Plataforma cobrando por uso de pelo menos duas frentes do grupo
-- Churn medido em uma base real, não estimada
+#### Dia 180 a 365 — A segunda frente
+- Plataforma cobrando por uso de pelo menos duas frentes, do grupo ou de fora
+- Churn ou renovação medidos numa base real
 - Margem de contribuição positiva no patamar corrente de operador
-- Decisão sobre o segundo vertical, com o mesmo teste de cinco campos
+- Decisão sobre a segunda frente, com o mesmo teste de cinco campos
 
-*Capítulo VII · As portas*
+*Capítulo VIII · As portas*
 
-## O QUE AUTORIZA A PRÓXIMA COISA
+## O QUE AUTORIZA A PRÓXIMA DESPESA
 
-*Porta abre com número, não com entusiasmo. O calendário é consequência.*
+*Cada porta abre com um número, e o calendário é consequência.*
 
-- **Porta 1 · A plataforma vira produto interno:** o primeiro vertical com clientes pagantes e churn medido por 90 dias, custo por cliente sustentado abaixo de R$ 25
-- **Porta 2 · Começa o segundo vertical:** plataforma cobrada por uso com contrato rodando, e primeiro produto com margem de contribuição positiva no patamar de operador
-- **Porta 3 · A voz vira canal:** contatos qualificados contados, sem mídia paga, com custo de aquisição do produto caindo por causa do conteúdo
-- **Porta 4 · Reabre distribuição:** dois produtos de pé e audiência que responde — só aí distribuir a IA dos outros deixa de ser viver da margem alheia
-- **Porta 5 · Entra capital:** churn e custo de aquisição medidos por dois trimestres; capital antes disso compra tempo, não escala
+- **Segundo engenheiro:** a primeira frente com mais de 100 clientes ou três contratos grandes, e o primeiro engenheiro sem folga há dois meses
+- **Plataforma como produto interno:** a primeira frente com clientes pagantes e churn medido por 90 dias, custo por cliente sustentado abaixo do teto
+- **Segunda frente:** plataforma cobrada por uso e a primeira frente com margem de contribuição positiva no patamar de operador
+- **Mídia paga:** contatos qualificados sem mídia paga já contados, para a mídia ter uma linha de base para bater
+- **Capital de fora:** churn e custo de aquisição medidos por dois trimestres; antes disso, capital compra tempo, não escala
 
-## O "NÃO" DE AGORA {.dark}
+**A lista do que fica fora — como se escreve**
 
-*Uma estratégia é uma lista de recusas, cada uma com a condição que a reabre. Sem condição, é birra; com condição, é gestão.*
-
-- **Marketplace de IAs e SaaS:** não, até existir demanda própria contada (Porta 4)
-- **Produto B2C:** não, até a voz provar canal sem mídia paga (Porta 3)
-- **Projeto sob medida sem teto:** não; só com limite de participação na receita e data de saída
-- **Balcão de suporte para o grupo:** não; só plataforma com preço, contrato e direito de dizer não
-- **Segundo produto proprietário:** não, até o primeiro passar da Porta 2
-- **Cross-sell entre empresas do grupo:** não, até existir cadastro único e base legal escrita
-- **Prometer conversão, receita ou clientes novos:** não, em nenhum produto, nunca
+- **A forma:** cada item tem a condição que o reabre; sem condição é teimosia, com condição é gestão
+- **Exemplo:** "Produto para pessoa física: fica fora até a persona provar canal sem mídia paga"
+- **Exemplo:** "Projeto sob medida: fica fora acima de X% da receita, revisado no trimestre"
+- **Quem escreve:** o dono do negócio, uma vez por trimestre, com os seis papéis na sala
 
 ---
 
-# Capítulo VIII — O painel
+# Capítulo IX — O painel
 
-*Capítulo VIII · Os números*
+*Capítulo IX · Os números*
 
 ## O QUE O FUNDADOR OLHA TODA SEGUNDA
 
-*Seis números e nenhum deles é quantidade de hubs.*
+*Seis números. Nenhum deles é quantidade de frentes.*
 
-- **Receita de fora do grupo ÷ receita total:** se não sobe, a casa é departamento
-- **Custo por cliente, por produto:** o teto é R$ 25 no Radar; todo produto novo nasce com o seu
-- **Margem de contribuição por produto:** no patamar corrente de operador, não no ideal
-- **Meses até o segundo produto:** mede se a plataforma existe de verdade
+- **Receita de fora do grupo ÷ receita total:** diz se a casa é empresa ou departamento, e as duas respostas são válidas se forem escolhidas
+- **Custo por cliente, por frente:** o teto é R$ 25 no Radar; toda frente nova nasce com o seu
+- **Margem de contribuição por frente:** no patamar corrente de operador, não no ideal
+- **Meses até a segunda frente:** mede se a plataforma existe de verdade
 - **Parte da entrega feita por agente sem toque humano:** mede se a tese da casa é verdade dentro da própria casa
-- **Contatos qualificados sem mídia paga:** o retorno da voz, que não é receita
+- **Contatos qualificados sem mídia paga:** o retorno da persona e da escola, que não é receita
 
-*Capítulo VIII · Os alarmes*
+*Capítulo IX · Os alarmes*
 
 ## O QUE DÁ ERRADO, E O GATILHO DE CADA COISA
 
 | Sintoma | O que significa | Gatilho |
 |---|---|---|
-| Projeto sob medida passa de metade da receita | A casa virou agência | Fechar carteira de projetos por um trimestre |
-| Custo por cliente passa do teto por dois meses | O produto não escala como está | Roteiro de corte antes de vender mais |
-| Fila do Guardião não zera | A automação não está pronta para o volume | Parar a venda, não contratar operador |
-| Grupo pede fora do contrato toda semana | O contrato interno não está sendo respeitado | Revisão do contrato com o fundador, por escrito |
+| Sob medida passa do teto por dois trimestres | A forma mudou sem decisão | Reunião de forma: escolher de novo, por escrito |
+| Custo por cliente passa do teto por dois meses | A frente não escala como está | Roteiro de redução antes de vender mais |
+| Fila do Guardião não zera | A automação não está pronta para o volume | Pausar a venda, não contratar operador |
+| Grupo pede fora do documento toda semana | O documento com o grupo não está sendo usado | Revisão com o dono do negócio, por escrito |
 | Churn acima da hipótese por dois meses | A promessa vendida não é a entregue | Revisar discurso comercial antes de revisar produto |
 | Um cliente passa de 20% da receita | Dependência perigosa | Teto por cliente e prospecção dirigida |
 
@@ -405,19 +429,19 @@ O ponto de equilíbrio do primeiro vertical fica perto de **120 clientes** a R$ 
 
 *Se tudo o que está escrito aqui fosse demais para começar, sobra isto — e isto já é uma empresa.*
 
-Três pessoas com papéis escritos. Um contrato com o grupo que paga por uso e tem SLA. Um produto proprietário com cliente, preço e trava, que já existe e se chama Radar Urbano. Uma plataforma extraída desse produto, com nome e versão. Uma lista de "não" com condições de reabertura. Um painel de seis números olhado toda segunda-feira.
+Três pessoas com papéis escritos. Um documento com o grupo, na forma escolhida. Uma frente com cliente, preço e critério de pronto — e o grupo já tem uma, que se chama Radar Urbano. Uma máquina extraída dela, com nome e versão. Uma lista do que fica fora, com as condições de volta. Um painel de seis números olhado toda segunda-feira.
 
-O resto deste documento é o que vem quando esses seis itens estiverem de pé — e nenhum deles depende de capital novo, de contratação em massa ou de escolher hoje entre os cinco cenários do Horizonte.
+O resto deste documento é o que vem quando esses seis itens estiverem de pé — e nenhum deles depende de capital novo, de contratação em massa ou de escolher hoje entre as cinco formas do Horizonte.
 
-As decisões abaixo precisam de assinatura antes da primeira linha de código nova. Nenhuma delas é técnica.
+As decisões abaixo precisam de assinatura antes da primeira linha de código nova. Nenhuma é técnica, e todas têm mais de uma resposta válida.
 
-1. O grupo Garowa paga a Garowa.AI em reais, com nota e contrato? Quanto, por uso do quê?
-2. O Radar Group é cliente da Garowa.AI, empresa irmã ou o mesmo caixa?
-3. Quem é o dono do produto, em tempo integral, e o que ele deixa de fazer para ser isso?
-4. Quanto caixa existe para atravessar doze meses com receita apenas parcial?
-5. Qual é o teto de receita para projeto sob medida, em porcentagem, e qual a data de saída?
-6. A Garowa.AI pode atender concorrente de empresa do grupo?
+1. O grupo Garowa é cliente pagante da casa ou dono da agenda dela?
+2. O Radar Group é cliente, empresa irmã ou o mesmo caixa?
+3. Quem é o dono da primeira frente, em tempo integral, e o que deixa de fazer para ser isso?
+4. Quanto caixa existe para atravessar doze meses com receita parcial, e de qual das três fontes?
+5. Qual é o teto de sob medida na receita, em porcentagem, e quando se revisa?
+6. A casa pode atender concorrente de empresa do grupo?
 7. Quem assina a responsabilidade quando um agente erra em nome de um cliente?
-8. Qual é o teto de custo por cliente do próximo produto, definido antes de ele existir?
+8. Qual é o teto de custo por cliente da próxima frente, definido antes de ela existir?
 
-> **A frase que fecha** — Estrutura não é burocracia: é o que faz a segunda-feira parecer com a anterior. Um contrato, seis papéis, dez peças, quatro cadências e seis números. Tudo o mais que a casa quiser ser cabe depois — e cabe melhor, porque terá onde se apoiar.
+> **A frase que fecha** — Estrutura não é burocracia: é o que faz a segunda-feira parecer com a anterior. Um documento, seis papéis, dez peças, quatro cadências e seis números. Tudo o mais que a casa quiser ser cabe depois — e cabe melhor, porque terá onde se apoiar.

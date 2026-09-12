@@ -1,13 +1,13 @@
 # Garowa.AI
 
-Dois documentos sobre o posicionamento da **Garowa.AI**, a casa de IA do grupo Garowa, escritos a partir do bilhete de doze itens do fundador. Usam o mesmo sistema visual e o mesmo gerador do pacote do Radar Urbano.
+Dois documentos sobre a **Garowa.AI**, a casa de IA do grupo Garowa, escritos a partir do bilhete de doze itens do fundador: um abre o horizonte, o outro monta a estrutura. Usam o mesmo sistema visual e o mesmo gerador do pacote do Radar Urbano.
 
-| Arquivo | O que é |
-|---|---|
-| `01-HORIZONTE.md` | Expansão: trinta e seis posições possíveis em sete famílias, os quatro eixos de decisão, a crítica ao bilhete, onde o Radar Group entra e cinco empresas inteiras possíveis |
-| `02-ESTRUTURA.md` | Aterrissagem: empresa e contratos, seis papéis, organograma em três tamanhos, caixa dos doze primeiros meses, dez peças da plataforma, operação, LGPD e risco, plano por portas e painel do fundador |
+| Arquivo | Propósito | O que tem |
+|---|---|---|
+| `01-HORIZONTE.md` | Abrir o leque | Os doze itens do bilhete mapeados em famílias, seis réguas para ler qualquer posição, trinta e seis posições em três anéis de distância (ao alcance agora, em um ou dois anos, a fronteira), as quatro portas que o Radar Urbano abre, as combinações que só o grupo consegue fazer e cinco formas inteiras de empresa |
+| `02-ESTRUTURA.md` | Aterrissar | O que precisa existir para qualquer forma operar: empresa, as duas formas de atender o grupo, contratos, seis papéis, organograma em três tamanhos e por forma, montagem e conta dos doze meses, dez peças da máquina, cadências, LGPD e risco, as quatro janelas do primeiro ano, as portas e o painel |
 
-O primeiro abre o leque; o segundo fecha um recorte (motor, um vertical e uma voz) e monta a estrutura dele. Os capítulos de contrato, máquina, operação e conformidade do segundo valem para qualquer cenário do primeiro.
+O primeiro não escolhe: abre. O segundo não escolhe: garante que, escolhida qualquer forma, a segunda-feira seguinte tenha empresa, contrato, gente com nome, caixa contado e máquina de pé. Nenhum dos dois julga o bilhete; os dois partem dele.
 
 ## Regras de conteúdo
 
