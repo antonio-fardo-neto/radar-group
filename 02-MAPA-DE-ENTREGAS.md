@@ -1,4 +1,4 @@
-<!-- Radar Urbano · O Mapa de Entregas: 11 entregas tangíveis (2 objetos de entrada, 9 recorrentes), calendário do Dia 0 ao ritmo permanente, uma semana na vida do cliente, a máquina (5 agentes e o Guardião), a conta na mesa (só contagens e custo por contato), a trava territorial, por que é irrefutável. Fonte: _work/parts/entregas.md → src/build.py -->
+<!-- Radar Urbano · O Mapa de Entregas: 11 entregas tangíveis (2 objetos de entrada, 9 recorrentes), calendário do Dia 0 ao ritmo permanente, uma semana na vida do cliente, a máquina (5 agentes e o Guardião), a conta na mesa (só contagens e custo por contato), a trava territorial, por que é irrefutável. Fonte de verdade: este Markdown, lido por src/build.py -->
 
 # RADAR URBANO: O MAPA DE ENTREGAS
 
@@ -11,8 +11,8 @@
 Seis regras que valem para todas as onze entregas. Se uma entrega viola uma delas, a entrega está errada, não a regra.
 
 1. **Zero reuniões** — Não existe call de alinhamento, call de resultado, call de nada. O único tempo que o cliente gasta na vida com o Radar Urbano são até 15 minutos do primeiro dia, por WhatsApp: cinco perguntas respondidas por áudio e um toque no Perfil da Empresa. O roteiro real fecha em cerca de dez minutos; os cinco restantes são folga para quem trava no perfil. Quinze é o teto, não a meta.
-2. **Zero login obrigatório** — O dashboard existe para quem gosta de olhar. Quem não abrir nunca continua recebendo tudo pelo WhatsApp: áudio de 60 segundos, card de uma tela, PDF de uma página. Tudo chega do número do Radar Urbano, o mesmo desde o Dia 0. Uma palavra (SAIR) interrompe os envios; o trabalho no perfil continua.
-3. **Zero aprovação** — Tudo que a máquina publica, responde e ajusta foi pré-autorizado no Dia 0, dentro de limites claros: posts, fotos, horários, descrição, serviços, atributos, respostas a avaliações e a perguntas. O que exige um sim (categoria principal, nome, endereço) chega como uma pergunta com dois botões. Quem quiser aprovar tudo antes, aprova com um toque. Quem não quiser, não é incomodado.
+2. **Zero login obrigatório** — O dashboard existe para quem gosta de olhar. Quem não abrir nunca continua recebendo tudo pelo WhatsApp: áudio de 60 segundos, card de uma tela, PDF de uma página. Tudo chega do número da casa: o número do Radar Urbano, o mesmo desde o Dia 0. Uma palavra (SAIR) interrompe os envios; o trabalho no perfil continua.
+3. **Zero aprovação** — Tudo que a máquina publica, responde e ajusta foi pré-autorizado no Dia 0, dentro de limites claros: posts, fotos, horários, descrição, serviços, atributos, respostas a avaliações e a perguntas. O que exige um sim (categoria principal, nome, endereço e qualquer oferta ou promoção) chega como uma pergunta com dois botões. Quem quiser aprovar tudo antes, aprova com um toque. Quem não quiser, não é incomodado.
 4. **Zero relatório longo** — Nenhuma entrega passa de 60 segundos de áudio ou uma página. Se precisa de explicação, a entrega está errada. Os números do Google chegam com a data de referência; os da própria máquina, atualizados de hora em hora.
 5. **Zero surpresa** — Cada ação da máquina fica registrada no Diário de Bordo, com data, hora e print, antes de qualquer resumo. O dono nunca descobre depois; ele sempre pode ver antes. Um humano com painel, o Guardião, revisa por amostragem e aprova o que exige dois olhos.
 6. **Zero cobrança de esforço** — A máquina nunca pede foto, texto, tabela ou senha. Ela usa o que já existe no perfil, gera, publica e mede. Quando precisa de algo, faz uma pergunta de sim ou não. Entra como Gerente, convidada pelo dono, e sai quando ele quiser.
@@ -67,7 +67,7 @@ No minuto em que o dono adiciona o Radar Urbano como Gerente do Perfil da Empres
 
 *O perfil que a máquina encontrou e o perfil que ela deixou, lado a lado, sete dias depois.*
 
-Na primeira semana, o Editor passa o perfil inteiro a limpo: serviços listados, atributos marcados, descrição escrita para os termos que trazem cliente, horários certos e os feriados do ano na agenda, fotos existentes avaliadas uma a uma, capa escolhida, perguntas públicas respondidas, avaliações paradas respondidas. Cada mudança entra no Diário de Bordo com o campo, o valor antes, o valor depois e a origem. No dia 7, a máquina monta o card: o perfil do Dia 0 à esquerda, o do dia 7 à direita, campo a campo, e embaixo a segunda medição reduzida, nos mesmos termos e nos mesmos nove pontos do Diagnóstico, com as duas datas. Uma semana raramente mexe posição; o card diz isso com todas as letras. O que mudou foi o perfil, e é isso que o Google vai ler nos meses seguintes.
+Na primeira semana, o Editor passa o perfil inteiro a limpo: serviços listados, atributos marcados, descrição escrita para os termos que trazem cliente, horários certos e os feriados do ano na agenda, fotos existentes avaliadas uma a uma, capa escolhida; o Anfitrião responde as perguntas públicas e as avaliações paradas. Cada mudança entra no Diário de Bordo com o campo, o valor antes, o valor depois e a origem. No dia 7, a máquina monta o card: o perfil do Dia 0 à esquerda, o do dia 7 à direita, campo a campo, e embaixo a segunda medição reduzida, nos mesmos termos e nos mesmos nove pontos do Diagnóstico, com as duas datas. Uma semana raramente mexe posição; o card diz isso com todas as letras. O que mudou foi o perfil, e é isso que o Google vai ler nos meses seguintes.
 
 - **Quando:** Dia 7 do cliente, automático, seja que dia da semana for. Uma vez.
 - **Por onde chega:** Card lado a lado no WhatsApp do dono; arquivo no dashboard, ao lado do Diagnóstico, para a comparação ficar permanente.
@@ -107,10 +107,10 @@ Dois relógios, ditos na própria tela. Os números do Google chegam com dois ou
 
 Toda segunda-feira às 7h, um áudio de até 60 segundos no WhatsApp, com a voz da casa, e um card de uma tela com os números da semana. O áudio fala como gente e cobre a semana que o Google já fechou: sete dias até a data de referência, em geral a quinta ou a sexta anterior. Ele diz isso em uma frase, e segue: ligações pelo perfil, rotas, cliques no site, mensagens, avaliações novas e quantas foram respondidas, a posição nos termos-chave (da medição reduzida de sábado, 3h), as ações do Diário (o post, as fotos, o feriado ajustado) e o que a máquina vai fazer nos próximos sete dias. Nada de gráfico para interpretar. O card traz os mesmos números, com a seta contra a semana anterior e a data de referência no rodapé.
 
-Por dentro, a segunda começa às 4h, com o post semanal do Editor. Às 6h o Redator-chefe recebe os números do Tesoureiro e a medição do Cartógrafo, confere cada número contra o banco antes de escrever, escreve o roteiro no tom que o dono descreveu no Dia 0, e a voz da casa grava. Às 7h o serviço de entrega envia áudio e card. Se o WhatsApp não confirmar a entrega em duas horas, reenvia.
+Por dentro, a segunda começa às 4h, com o post semanal do Editor. Às 6h o Redator-chefe recebe os números do Tesoureiro e a medição do Cartógrafo, confere cada número contra o banco antes de escrever, escreve o roteiro no tom que o dono descreveu no Dia 0, e a voz da casa grava. Às 7h o serviço de entrega envia áudio e card. Se o WhatsApp não confirmar a entrega em duas horas, reenvia a mesma mensagem, sem duplicar: nenhuma entrega chega duas vezes, mesmo quando a máquina precisa refazer um passo.
 
 - **Quando:** Segunda, 7h. Toda semana, inclusive em feriado.
-- **Por onde chega:** Áudio de até 60 segundos (a voz da casa, sempre a mesma) + card de uma tela, no WhatsApp do dono, pelo número do Radar Urbano. Fica também no dashboard, com as semanas anteriores.
+- **Por onde chega:** Áudio de até 60 segundos (a voz da casa, sempre a mesma) + card de uma tela, no WhatsApp do dono, pelo número da casa. Fica também no dashboard, com as semanas anteriores.
 - **Quem faz:** Redator-chefe, com os números do Tesoureiro e a medição do Cartógrafo. O Redator-chefe não inventa número: cita o que conferiu.
 - **O que o dono faz:** Nada. Recebe, olha se quiser, segue o dia.
 
@@ -135,7 +135,7 @@ O rodapé declara o método, sempre o mesmo: busca por texto na Places API, pont
 
 - **Quando:** Mensal, dia 1, com a medição completa das 2h (todos os termos, toda a grade). Edição reduzida (termos-chave, nove pontos) no Dia 0, dentro do Diagnóstico, e no dia 7, dentro do Antes e Depois. Aos sábados, 3h, a medição reduzida alimenta o Boletim e o dashboard, sem virar mapa novo.
 - **Por onde chega:** Imagem no WhatsApp do dono, um mapa por termo-chave; versão interativa no dashboard, com todos os termos, cada ponto clicável e a série dos meses.
-- **Quem faz:** Cartógrafo. Mede pela Places API, dentro dos termos do Google: nada de raspagem, nada guardado além de trinta dias exceto a posição do próprio cliente por termo e ponto. É ele quem diz ao Editor o que otimizar.
+- **Quem faz:** Cartógrafo. Mede pela Places API, dentro dos termos do Google: nada de raspagem, nada da Places API guardado além de trinta dias, exceto o `place_id`; o que fica é medição nossa: data, termo, ponto e posição do próprio cliente. É ele quem diz ao Editor o que otimizar.
 - **O que o dono faz:** Nada. Recebe, olha se quiser, segue o dia.
 
 > **O valor que aparece** — Pela primeira vez o dono enxerga a rua digital como enxerga a rua física: em que esquina ele aparece, em qual ainda não. E vê o próprio território ficar verde mês a mês.
@@ -156,19 +156,19 @@ O que entra no perfil, e como:
 - **Post semanal**: segunda, 4h. Texto no tom da casa; foto real, escolhida entre as fotos existentes do perfil ou as que o dono mandou por vontade própria. A máquina nunca gera uma foto do estabelecimento e nunca pede uma.
 - **Fotos**: as existentes, avaliadas uma a uma (nitidez, luz, atualidade) para escolher capa e destaques; as novas, quando o dono manda, publicadas no mesmo dia.
 - **Descrição, serviços e atributos**: escritos para os termos que trazem cliente; revistos quando o Cartógrafo manda uma tarefa (um termo vermelho, um serviço que ninguém listou) e na auditoria de todo dia 1.
-- **Horários e feriados**: checagem todo dia às 5h. Feriados nacionais e municipais ficam em uma tabela própria, por cidade; 72 horas antes de cada um, o horário especial entra no perfil e um post avisa. Quem abre no feriado aparece aberto; quem fecha aparece fechado.
+- **Horários e feriados**: checagem todo dia às 5h. Feriados nacionais e municipais ficam em uma tabela própria, por cidade; 72 horas antes de cada um, o horário especial entra no perfil e um post avisa. Quem abre no feriado aparece aberto; quem fecha aparece fechado. O horário do feriado segue a regra que o dono deu no Dia 0 (fecha, abre meio período, abre normal); na dúvida, vira uma pergunta de sim ou não, também 72 horas antes.
 - **Categorias**: nunca sozinhas. Toda mudança de categoria passa por dois olhos humanos antes de entrar; a principal, só com um sim do dono.
 - **Perguntas do perfil**: o Anfitrião responde as perguntas públicas e registra a resposta aqui também.
 
 - **Quando:** Contínuo. Resumo no Boletim de Segunda; registro completo, com todos os prints, no dashboard.
-- **Por onde chega:** Seção do dashboard, em ordem de tempo, com filtro por tipo de ação e o print de cada uma; uma linha no WhatsApp quando há ação relevante (feriado ajustado, descrição reescrita, capa trocada). Post de rotina não gera mensagem.
+- **Por onde chega:** Seção do dashboard, em ordem de tempo, com filtro por tipo de ação e o print de cada uma; uma linha no WhatsApp quando há ação relevante (feriado ajustado, descrição reescrita, capa trocada), sempre em horário comercial. Post de rotina não gera mensagem.
 - **Quem faz:** Editor. O Cartógrafo diz o que otimizar; o Editor escreve, publica e registra. O Guardião aprova categorias e audita por amostragem.
 - **O que o dono faz:** Nada. Recebe, olha se quiser, segue o dia.
 
 > **O valor que aparece** — O dono nunca mais precisa lembrar de postar, trocar foto, mudar horário de feriado. E vê, preto no branco, que a constância que ele nunca conseguiu ter está acontecendo.
 
 > *Na vida real · Seu Jorge, Padaria Pão da Praça*
-> Terça, 15h. No Diário de Bordo, as últimas linhas: "segunda, 5h02, horário de Corpus Christi (quinta) ajustado para 6h às 13h, post do feriado publicado, 72 horas antes; terça, 14h10, foto da vitrine de bolos que o Seu Jorge mandou no domingo publicada; terça, 14h15, descrição atualizada com 'pão de fermentação natural', tarefa do Cartógrafo: termo vermelho no lado do mercado." Três prints. Seu Jorge nem viu; está no caixa. Na quinta, uma cliente diz que veio pela foto do bolo.
+> Terça, 15h. No Diário de Bordo, as últimas linhas: "segunda, 5h02, horário de Corpus Christi (quinta) ajustado para 6h às 13h, post do feriado publicado, 72 horas antes; terça, 14h10, foto da vitrine de bolos que o Seu Jorge mandou de manhã publicada; terça, 14h15, descrição atualizada com 'pão de fermentação natural', tarefa do Cartógrafo: termo vermelho no lado do mercado." Três prints. Seu Jorge nem viu; está no caixa. Na quinta, uma cliente diz que veio pela foto do bolo.
 
 *Entrega 07 · Vendas & Performance*
 
@@ -176,11 +176,11 @@ O que entra no perfil, e como:
 
 *Toda avaliação respondida em menos de duas horas. O QR no balcão. Nenhum convite por mensagem.*
 
-A cada 30 minutos a máquina olha as avaliações e as perguntas novas do perfil. Toda avaliação que chega, boa ou ruim, recebe resposta humanizada e específica em até duas horas, no tom da casa: cita o que a pessoa disse, não usa dado do avaliador, não promete o que não pode. Notas de uma ou duas estrelas passam por dois olhos humanos antes de sair, ainda dentro das duas horas, mesmo para o cliente que já opera no patamar de menos supervisão. Toda pergunta pública do perfil ("vocês têm estacionamento?", "atende convênio?") é respondida em menos de quatro horas, com a resposta registrada no Diário. Avaliação com cara de falsa (perfil recém-criado, texto igual ao de outra, série de notas baixas no mesmo dia) vira sinal para o Guardião denunciar pelo canal oficial do Google; a máquina não briga em público.
+A cada 30 minutos a máquina olha as avaliações e as perguntas novas do perfil. Toda avaliação que chega, boa ou ruim, recebe resposta humanizada e específica em até duas horas, no tom da casa: cita o que a pessoa disse, não usa dado do avaliador e não guarda o texto (só tema, sentimento e o hash), não promete o que não pode. Notas de uma ou duas estrelas passam por dois olhos humanos antes de sair, ainda dentro das duas horas, mesmo para o cliente que já opera no patamar de menos supervisão. Toda pergunta pública do perfil ("vocês têm estacionamento?", "atende convênio?") é respondida em menos de quatro horas, com a resposta registrada no Diário. Avaliação com cara de falsa (perfil recém-criado, texto igual ao de outra, série de notas baixas no mesmo dia) vira sinal para o Guardião denunciar pelo canal oficial do Google; a máquina não briga em público.
 
 Para trazer mais avaliações reais, o balcão: a máquina gera o link curto oficial do perfil ("Receber mais avaliações") e o QR correspondente, em um PDF pronto para imprimir e colar no balcão, na comanda ou na porta. O cliente que quiser aponta o celular; ninguém recebe mensagem pedindo nota, ninguém é escolhido para receber convite e ninguém ganha nada por avaliar. Só avaliações reais, sem incentivo, sem seleção. No dia 1 de cada mês chega o Boletim de Reputação: nota, novas avaliações no mês, quantas respondidas e em quanto tempo, temas elogiados, temas de atenção, perguntas respondidas.
 
-- **Quando:** Respostas contínuas, em até 2 horas (mediana abaixo de 2 h; 100% em 24 h); perguntas em menos de 4 horas; Boletim de Reputação mensal, dia 1. Material do QR gerado na primeira semana e reenviado quando o dono pedir.
+- **Quando:** Respostas contínuas, em até 2 horas (mediana abaixo de 2 h; 100% em 24 h); perguntas em menos de 4 horas; Boletim de Reputação mensal, dia 1. Material do QR gerado na segunda semana e reenviado quando o dono pedir.
 - **Por onde chega:** As respostas, no próprio Google, embaixo de cada avaliação e de cada pergunta; o Boletim de Reputação, em card no WhatsApp; o material do QR, em PDF no WhatsApp (o cliente imprime, ou a máquina manda o arquivo para quem imprime).
 - **Quem faz:** Anfitrião. Classifica com o Gemini, escreve no tom da casa, verifica a política de conteúdo do Google antes de publicar. O Guardião aprova as respostas a notas baixas e denuncia as avaliações suspeitas.
 - **O que o dono faz:** Nada. Recebe, olha se quiser, segue o dia. Colar o QR no balcão é a única coisa física do produto, e é opcional.
@@ -253,7 +253,7 @@ Um contador honesto do trabalho executado, tirado linha a linha do Diário de Bo
 
 *O que o bairro está dizendo sobre a sua operação, em três pontos e uma evidência cada.*
 
-A máquina lê todas as avaliações e todas as perguntas públicas do perfil no mês, classifica tema e sentimento, e devolve o que importa para a gestão: os três elogios mais recorrentes (para proteger), os três pontos de atrito mais recorrentes (para corrigir), cada um com a frase real de um cliente, sem o nome de quem escreveu, e a frequência. Quando o atrito é resolvível no próprio perfil (horário confuso, informação faltando, serviço não listado), ela corrige e avisa no mesmo card. Quando é da operação (fila, produto acabando, tempo de espera), ela mostra e deixa a decisão com o dono. Só avaliações e perguntas: esta máquina não lê conversa de ninguém. O texto fica no Google; a máquina guarda o tema e o sentimento, não a pessoa.
+A máquina lê todas as avaliações e todas as perguntas públicas do perfil no mês, classifica tema e sentimento, e devolve o que importa para a gestão: os três elogios mais recorrentes (para proteger), os três pontos de atrito mais recorrentes (para corrigir), cada um com a frase real de um cliente, sem o nome de quem escreveu, e a frequência. Quando o atrito é resolvível no próprio perfil (horário confuso, informação faltando, serviço não listado), ela corrige e avisa no mesmo card. Quando é da operação (fila, produto acabando, tempo de espera), ela mostra e deixa a decisão com o dono. Só avaliações e perguntas: esta máquina não lê conversa de ninguém. O texto fica no Google; a máquina guarda o tema, o sentimento e uma impressão digital do texto (um hash, que serve para reconhecer a avaliação sem reconstruí-la), nunca o texto nem o nome de quem escreveu.
 
 Entre um card e outro, o alerta: se o mesmo atrito aparece três vezes em sete dias, uma linha no WhatsApp avisa antes do dia 1.
 
@@ -276,14 +276,14 @@ Entre um card e outro, o alerta: se o mesmo atrito aparece três vezes em sete d
 No dia 1, uma página em PDF com a assinatura da casa: os quatro contatos e o total, contra o mês anterior; as impressões como contexto; o custo por contato; a nota e as avaliações (novas, respondidas, tempo mediano); o Mapa de Domínio em miniatura, com os pontos verdes de cada termo contra o mês anterior; as horas devolvidas; o que a máquina fez (do Diário: posts, fotos, ajustes, respostas) e o que vai fazer (as tarefas que o Cartógrafo já passou ao Editor). A data de referência dos números do Google, no rodapé. A cada três meses, a edição trimestral coloca os três meses lado a lado e desenha a curva desde o Dia 0: contatos, custo por contato, pontos verdes, nota. É o documento que o dono guarda e mostra.
 
 - **Quando:** Mensal, dia 1, o último da manhã de entregas; trimestral, no dia 1 de cada terceiro mês, junto com o mensal.
-- **Por onde chega:** PDF no WhatsApp do dono; arquivo permanente no dashboard, um por mês, desde o primeiro.
+- **Por onde chega:** PDF no WhatsApp do dono; arquivo permanente no dashboard, um por mês, desde o primeiro. Cópia automática para o sócio ou o contador, se o dono indicar um número ou e-mail: o terceiro recebe só o PDF, confirma com uma palavra antes da primeira cópia e sai com uma palavra quando quiser.
 - **Quem faz:** Redator-chefe, com os números do Tesoureiro e os mapas do Cartógrafo. Antes de escrever, confere cada número que vai citar contra o banco.
 - **O que o dono faz:** Nada. Recebe, olha se quiser, segue o dia.
 
 > **O valor que aparece** — É a prova material de que o negócio está sendo gerido. O dono passa a apresentar a própria empresa com o documento que a máquina escreveu.
 
 > *Na vida real · Marcão, Oficina Marcão Auto Center*
-> Dia 1, 7h. Marcão abre o Fechamento de agosto no celular: 168 contatos, 11% acima de julho; nota 4,8 com 214 avaliações; 1º em "oficina mecânica" em 7 dos 9 pontos; R$ 2,97 por contato; 11h25 devolvidas. Encaminha para o contador com a mensagem: "segue o mês". Só isso.
+> Dia 1, 8h10. Marcão abre o Fechamento de agosto no celular: 168 contatos, 11% acima de julho; nota 4,8 com 214 avaliações; 1º em "oficina mecânica" em 7 dos 9 pontos; R$ 2,97 por contato; 11h25 devolvidas. Encaminha para o contador com a mensagem: "segue o mês". Só isso.
 
 *Capítulo III · O calendário*
 
@@ -297,13 +297,14 @@ Do Dia 0 ao ritmo permanente. Cada semana entrega um objeto que o dono pode ver.
 - Minuto 0 a 5: conversa por WhatsApp, por áudio, sem formulário. Cinco perguntas: o que você mais vende e como o cliente procura; os bairros ou o raio que importam; o jeito da casa de falar; o que a máquina pode fazer sem perguntar; em que número recebe as entregas e como quer ser chamado. A máquina transcreve e confirma por escrito.
 - Minuto 5 a 8: Gerente no Perfil da Empresa, um toque. Se o perfil não estiver verificado, chega o passo a passo; o resto não espera.
 - Minuto 8 a 10: link do dashboard, senha opcional, e o Diagnóstico de Posição na mesma conversa. O roteiro real fecha em cerca de dez minutos; os cinco restantes são folga para quem trava no perfil.
-- O dono consente em receber tudo no número dele, pelo número do Radar Urbano. SAIR interrompe os envios quando ele quiser.
+- O dono consente em receber tudo no número dele, pelo número da casa, o número do Radar Urbano. SAIR interrompe os envios quando ele quiser.
 
 #### Semana 1 — A fundação
 
 - Perfil auditado e corrigido: serviços, atributos, descrição, horários com os feriados do ano na agenda, fotos existentes avaliadas, capa escolhida. Categorias só com dois olhos humanos. O Diário registra cada ajuste com print.
 - Dashboard no ar desde o Dia 0. Na madrugada seguinte entram os primeiros números do Google, com data de referência; depois, todo dia às 3h.
 - Motor de Reputação ligado no primeiro dia: toda avaliação nova respondida em até duas horas, toda pergunta em menos de quatro; as que estavam paradas sem resposta, respondidas nos primeiros dias.
+- Primeiro sábado, 3h: medição reduzida dos termos-chave, mesmo antes do dia 7. Com a do Dia 0, a posição começa a ter série.
 - Se cair uma segunda no meio da semana, o Boletim já vem, e diz quantos dias cobre.
 - Dia 7: Antes e Depois do Perfil, lado a lado, com a segunda medição.
 
@@ -312,11 +313,11 @@ Do Dia 0 ao ritmo permanente. Cada semana entrega um objeto que o dono pode ver.
 - Primeiro Boletim de Segunda com uma semana inteira fechada pelo Google: os quatro contatos, as avaliações, a posição, as ações, o que vem.
 - Post semanal em ritmo: segunda, 4h, texto no tom da casa, foto real escolhida entre as existentes.
 - Material do QR em PDF: o link curto oficial "Receber mais avaliações" e o código, prontos para o balcão ou a comanda.
-- Primeira medição reduzida de sábado, 3h: a posição passa a ter série.
+- Segunda medição de sábado, 3h: com as do Dia 0 e do dia 7, a série já mostra tendência e ganha um ponto por semana, que alimenta o Boletim e o dashboard.
 
 #### Semana 3 — O ajuste fino
 
-- Três medições de sábado na série: os termos vermelhos viram tarefas para o Editor (descrição, serviços, atributos, o post da semana sobre o tema).
+- Terceira medição de sábado: com o Dia 0, o dia 7 e os sábados, a série já tem quatro ou cinco pontos, e os termos vermelhos viram tarefas para o Editor (descrição, serviços, atributos, o post da semana sobre o tema).
 - Primeiro feriado tratado 72 horas antes, com horário especial e post, se houver feriado no período.
 - O lote noturno do Anfitrião já classifica tema e sentimento para a Voz do Cliente do dia 1.
 - Primeiro alerta de tema, se um atrito repetir três vezes em sete dias.
@@ -354,9 +355,9 @@ Do Dia 0 ao ritmo permanente. Cada semana entrega um objeto que o dono pode ver.
 Sete dias na vida do Seu Jorge, da Padaria Pão da Praça. Repare no que ele faz: quase nada. Repare no que chega: o suficiente, e nunca mais que isso.
 
 - **Segunda, 7h02** — Boletim de Segunda no fone, com a primeira fornada saindo: 31 ligações pelo perfil, 22 rotas, 8 cliques no site, três avaliações novas, todas respondidas; primeiro em "padaria perto de mim" em 7 dos 9 pontos. O post de segunda já está no ar desde as 4h.
-- **Terça, 5h05** — Sexta é feriado. Setenta e duas horas antes, o horário especial (6h às 13h) entra no perfil e um post avisa, com a foto da vitrine. Uma linha no WhatsApp: "Sexta é feriado; horário e post publicados." Ele lê no caixa e não responde nada, porque não precisa.
+- **Terça, 5h05** — Sexta é feriado. Setenta e duas horas antes, o horário especial (6h às 13h) entra no perfil e um post avisa, com a foto da vitrine. Às 8h, uma linha no WhatsApp: "Sexta é feriado; horário e post publicados." Ele lê no caixa e não responde nada, porque não precisa.
 - **Quarta, 16h10** — Pergunta pública no perfil: "Vocês têm estacionamento?" Às 16h50, respondida: na rua de trás, sem cobrança. Linha no Diário, com print. Ele não viu.
-- **Quinta, 20h50** — Uma avaliação de duas estrelas entrou às 19h30: "pão francês acabou às 10h". A resposta, aprovada por dois olhos humanos, já está publicada: pede desculpa, agradece o aviso, convida a voltar. O tema "pão francês acabando" fica anotado para a Voz do Cliente. Seu Jorge está jantando.
+- **Quinta, 21h20** — Uma avaliação de duas estrelas entrou às 20h05: "pão francês acabou às 10h". A resposta, aprovada por dois olhos humanos, já está publicada: pede desculpa, agradece o aviso, convida a voltar. O tema "pão francês acabando" fica anotado para a Voz do Cliente. Seu Jorge já foi dormir; a fornada é às 5h.
 - **Sexta, 6h30** — Feriado. O perfil diz "aberto hoje, 6h às 13h" desde terça. Fila na porta. Nada chega no WhatsApp; nada precisa chegar.
 - **Sábado, 3h00** — A máquina mede "padaria perto de mim" e "pão de fermentação natural" nos nove pontos. Às 8h15, entre uma fornada e outra, ele abre o ícone no celular: seta verde nas rotas, "dados do Google até quarta". Oito segundos, e volta pra fornada.
 - **Domingo** — Nada chega. A máquina trabalha (uma avaliação de domingo é respondida em duas horas do mesmo jeito); o dono descansa. Segunda, 7h02, recomeça.
@@ -422,10 +423,10 @@ Três clientes, três Extratos de Demanda de um mês típico, só com o que o Go
 
 O Radar Urbano atende no máximo duas empresas do mesmo segmento na mesma zona. É uma regra técnica antes de ser comercial, e está no contrato.
 
-1. **A regra** — Duas empresas do mesmo segmento por zona, e não mais. Zona é o bairro, ou o raio de medição quando o bairro não descreve a área (uma avenida longa, uma estrada, uma cidade pequena inteira). É a mesma grade do Mapa de Domínio: se dois clientes disputam os mesmos pontos para os mesmos termos, estão na mesma zona.
-2. **Por quê** — Uma busca local tem três posições na primeira tela. Dois perfis do mesmo ramo na mesma malha de busca disputam as mesmas três posições, para os mesmos termos, nos mesmos pontos. Com três ou quatro clientes iguais na mesma zona, a máquina estaria trabalhando contra si mesma, e o resultado de todos cairia. Com dois, cabe. Também é uma questão de honestidade: não se pode prometer o verde para quatro ao mesmo tempo.
-3. **Como se verifica antes de vender** — Antes do contrato, o comercial consulta a zona: segmento mais zona, quantos clientes ativos. Se já são dois, a empresa entra na lista de espera daquela zona e o cadastro nem nasce. A consulta se repete na assinatura, para o caso de duas vendas correrem ao mesmo tempo. A resposta é uma linha: "zona livre" ou "zona lotada, fila de espera".
-4. **Se a zona muda** — Se o cliente muda de endereço ou pede um raio maior, a consulta roda de novo antes de mudar qualquer coisa. Quem já está numa zona fica; quem chega espera. A vaga na zona antiga é liberada no mesmo dia. Nada disso muda a mensalidade.
+1. **A regra** — Duas empresas do mesmo segmento por zona, e não mais. Zona é o bairro, ou um raio equivalente quando o bairro não descreve a área (uma avenida longa, uma estrada, uma cidade pequena inteira). A zona fica escrita no contrato, com a cidade e o segmento, e é ela que o comercial consulta antes de vender.
+2. **Por quê** — Uma busca local tem três posições na primeira tela. Dois perfis do mesmo ramo na mesma malha de busca disputam as mesmas três posições, para os mesmos termos, nos mesmos pontos. Com três ou quatro clientes iguais na mesma zona, a máquina estaria trabalhando contra si mesma, e o resultado de todos cairia. Com dois, cabe. Também é uma questão de honestidade: não dá para trabalhar as mesmas três posições para quatro ao mesmo tempo sem que um puxe o outro para baixo.
+3. **Como se verifica antes de vender** — Antes do contrato, o comercial consulta a zona: segmento mais zona, quantos clientes ativos. Se já são dois, a empresa entra na lista de espera daquela zona e o cadastro nem nasce. A consulta se repete na assinatura, para o caso de duas vendas correrem ao mesmo tempo. A resposta é uma linha: livre, com zero ou um de dois; ou lotada, com dois de dois e fila de espera.
+4. **Se a zona muda** — Mudança de endereço, de categoria principal (o segmento é a categoria principal do perfil) ou pedido de raio maior roda a consulta de novo antes de mudar qualquer coisa. Com vaga, o contrato ganha um aditivo com a zona nova e a vaga antiga é liberada no mesmo dia. Sem vaga, o cliente mantém a operação até o fim do ciclo pago e entra na frente da lista de espera da zona nova; o endereço no perfil muda mesmo assim, porque endereço é dado dele. Se o Radar Urbano redesenhar uma zona, quem já está fica. Nada disso muda a mensalidade.
 5. **O que o cliente ganha** — A garantia de que a máquina joga por ele, e não contra ele com a outra mão. No máximo um outro do mesmo ramo, na mesma zona, dentro do Radar Urbano. É uma exclusividade limitada, escrita no contrato e verificável: o cliente pode perguntar quantos há na zona dele e ouve o número.
 6. **O que custa ao Radar Urbano** — Vender menos por zona. É de propósito. Quando um cliente sai, a vaga é liberada no encerramento e a lista de espera é chamada em ordem. A próxima empresa da fila é a que espera há mais tempo, não a que paga mais.
 
@@ -433,7 +434,7 @@ O Radar Urbano atende no máximo duas empresas do mesmo segmento na mesma zona. 
 
 ## O IRREFUTÁVEL DO IRREFUTÁVEL
 
-1. **O valor chega antes da fatura** — O Diagnóstico de Posição chega nos únicos 15 minutos do Dia 0, com o mapa e a lista do que falta. O Antes e Depois chega no dia 7, campo a campo. A primeira conta na mesa chega no dia 30: mapa completo, extrato, horas, voz, fechamento. O cliente vê valor três vezes antes de decidir se renova.
+1. **O valor chega antes da fatura** — O Diagnóstico de Posição chega nos únicos 15 minutos do Dia 0, com o mapa e a lista do que falta. O Antes e Depois chega no dia 7, campo a campo. A primeira conta na mesa chega no dia 1 do mês seguinte: mapa completo, extrato, horas, voz, fechamento. O cliente vê valor três vezes antes de decidir se renova.
 2. **Toda entrega é tangível** — Áudio, card, mapa, extrato, PDF. Nada é "estamos trabalhando". Tudo é "aqui está". Onze objetos que o dono pode mostrar para alguém, cada um com a data do dado impressa.
 3. **O tempo do dono é zero por desenho** — Não é uma promessa de atendimento; é uma regra de arquitetura. A máquina nunca pede insumo, nunca marca reunião, nunca manda relatório longo, nunca pede senha. Quando precisa, faz uma pergunta de sim ou não. Os únicos minutos são os do Dia 0, e são no máximo quinze.
 4. **A promessa é a que se pode cumprir** — Captura de intenção otimizada, lucrativa e eficiente: isso se garante e se demonstra todo mês, com ligações pelo perfil, rotas, cliques no site, mensagens e custo por contato, todos contados pelo Google e conferíveis. Não prometemos conversão nem venda, porque isso depende do balcão, não do mapa. O dono põe o valor dele em cima de números que pode conferir. É por isso que a conta fecha sem discussão.
@@ -444,3 +445,5 @@ O Radar Urbano atende no máximo duas empresas do mesmo segmento na mesma zona. 
 ## A ENTREGA É O PRODUTO {.fecho}
 
 *Ninguém compra posicionamento, reputação ou automação. Compra-se a segunda-feira às 7h, a avaliação de duas estrelas respondida às 20h50, o mapa do dia 1, a conta na mesa. Onze objetos, toda semana, todo mês, sem pedir nada de quem paga. Captura de intenção otimizada, lucrativa e eficiente. Isso é o Radar Urbano na vida real.*
+
+Radar Urbano
