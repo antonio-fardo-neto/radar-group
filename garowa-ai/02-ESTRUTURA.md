@@ -1,4 +1,4 @@
-# GAROWAÍ: A ESTRUTURA REAL
+# GAROWA.AI: A ESTRUTURA REAL
 
 *O que precisa existir para a casa sair do papel: empresa, contrato, gente, caixa, máquina, operação, conformidade e o plano de doze meses. Com números, com nomes de cargo e com o que o Radar Group já resolveu.*
 
@@ -41,12 +41,12 @@ O documento anterior termina em cinco cenários possíveis. Este assume o único
 **Os três documentos que não podem faltar**
 
 1. **Contrato social e acordo de sócios** — Quem é dono de quê, quem decide, o que acontece quando alguém sai.
-2. **Contrato intragrupo** — Como a GarowAÍ atende as outras empresas do grupo Garowa, por quanto e com que garantia.
+2. **Contrato intragrupo** — Como a Garowa.AI atende as outras empresas do grupo Garowa, por quanto e com que garantia.
 3. **Contrato padrão de cliente** — O que a casa vende, o que promete, o que não promete e o que acontece quando dá errado.
 
 *Capítulo I · O contrato que decide tudo*
 
-## O CONTRATO ENTRE A GAROWAÍ E O GRUPO
+## O CONTRATO ENTRE A GAROWA.AI E O GRUPO
 
 *É o documento mais importante da empresa e o único que ninguém tem vontade de escrever, porque é entre conhecidos.*
 
@@ -56,14 +56,14 @@ Sem ele, a casa vira departamento: atende quem grita mais alto, não factura, n�
 - **Preço:** por uso (chamada, cliente ativo, assento) ou pacote mensal com franquia; com nota fiscal entre as empresas
 - **Prazo de atendimento:** o que é rotina, o que é urgência e quanto custa a urgência
 - **Nível de serviço:** disponibilidade, janela de manutenção e o que acontece quando falha
-- **Propriedade intelectual:** componente genérico fica com a GarowAÍ; o que é específico do negócio da outra empresa fica com ela; escrito assim, nome por nome
+- **Propriedade intelectual:** componente genérico fica com a Garowa.AI; o que é específico do negócio da outra empresa fica com ela; escrito assim, nome por nome
 - **Dados:** quem é controlador e quem é operador em cada fluxo, com contrato de operador anexo
-- **Exclusividade:** a GarowAÍ pode atender concorrente de empresa do grupo? Se não pode, isso tem preço e o preço está no contrato
+- **Exclusividade:** a Garowa.AI pode atender concorrente de empresa do grupo? Se não pode, isso tem preço e o preço está no contrato
 - **Direito de recusa:** pedido fora do roteiro entra na fila, vira projeto com preço, ou é recusado
 - **Prazo e reajuste:** 12 meses, com índice e revisão de escopo
 - **Saída:** o que acontece com dado, acesso e código se o grupo decidir internalizar
 
-> **O teste do contrato** — Se um estranho lesse só esse contrato, ele conseguiria dizer o que a GarowAÍ entrega e por quanto? Se não conseguir, o contrato não está pronto — e o que existe é rateio com nome de receita.
+> **O teste do contrato** — Se um estranho lesse só esse contrato, ele conseguiria dizer o que a Garowa.AI entrega e por quanto? Se não conseguir, o contrato não está pronto — e o que existe é rateio com nome de receita.
 
 *Capítulo I · O contrato de cliente*
 
@@ -149,7 +149,7 @@ Sem ele, a casa vira departamento: atende quem grita mais alto, não factura, n�
 | Nuvem, APIs, ferramentas, domínio | R$ 3–5 mil |
 | **Total da montagem (6 semanas)** | **R$ 50–65 mil** |
 
-Acrescente o que é da GarowAÍ e não estava naquela conta: abertura da empresa e registro de marca (R$ 4–8 mil, hipótese), contrato intragrupo (R$ 3–6 mil, hipótese) e reserva de contingência de 15%. A montagem realista fica entre **R$ 65 e 90 mil**, para uma casa que já tem o primeiro produto desenhado.
+Acrescente o que é da Garowa.AI e não estava naquela conta: abertura da empresa e registro de marca (R$ 4–8 mil, hipótese), contrato intragrupo (R$ 3–6 mil, hipótese) e reserva de contingência de 15%. A montagem realista fica entre **R$ 65 e 90 mil**, para uma casa que já tem o primeiro produto desenhado.
 
 *Capítulo III · Os doze meses*
 
@@ -219,7 +219,7 @@ O ponto de equilíbrio do primeiro vertical fica perto de **120 clientes** a R$ 
 - **10 · Segurança e continuidade** — Cofre de segredos, cópia de segurança testada, registro de acesso, plano de incidente.
   - Já existe no Radar: parcialmente; a cópia de segurança precisa de teste de restauração, não só de rotina
 
-> **A leitura que importa** — Oito das dez peças já existem em algum grau dentro do Radar Urbano. A GarowAÍ não precisa construir plataforma: precisa extrair, versionar, dar nome, colocar preço e passar a atender um segundo produto sem quebrar o primeiro.
+> **A leitura que importa** — Oito das dez peças já existem em algum grau dentro do Radar Urbano. A Garowa.AI não precisa construir plataforma: precisa extrair, versionar, dar nome, colocar preço e passar a atender um segundo produto sem quebrar o primeiro.
 
 *Capítulo IV · O custo*
 
@@ -411,12 +411,12 @@ O resto deste documento é o que vem quando esses seis itens estiverem de pé �
 
 As decisões abaixo precisam de assinatura antes da primeira linha de código nova. Nenhuma delas é técnica.
 
-1. O grupo Garowa paga a GarowAÍ em reais, com nota e contrato? Quanto, por uso do quê?
-2. O Radar Group é cliente da GarowAÍ, empresa irmã ou o mesmo caixa?
+1. O grupo Garowa paga a Garowa.AI em reais, com nota e contrato? Quanto, por uso do quê?
+2. O Radar Group é cliente da Garowa.AI, empresa irmã ou o mesmo caixa?
 3. Quem é o dono do produto, em tempo integral, e o que ele deixa de fazer para ser isso?
 4. Quanto caixa existe para atravessar doze meses com receita apenas parcial?
 5. Qual é o teto de receita para projeto sob medida, em porcentagem, e qual a data de saída?
-6. A GarowAÍ pode atender concorrente de empresa do grupo?
+6. A Garowa.AI pode atender concorrente de empresa do grupo?
 7. Quem assina a responsabilidade quando um agente erra em nome de um cliente?
 8. Qual é o teto de custo por cliente do próximo produto, definido antes de ele existir?
 

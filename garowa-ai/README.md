@@ -1,6 +1,6 @@
-# GarowAÍ
+# Garowa.AI
 
-Dois documentos sobre o posicionamento da **GarowAÍ**, a casa de IA do grupo Garowa, escritos a partir do bilhete de doze itens do fundador. Usam o mesmo sistema visual e o mesmo gerador do pacote do Radar Urbano.
+Dois documentos sobre o posicionamento da **Garowa.AI**, a casa de IA do grupo Garowa, escritos a partir do bilhete de doze itens do fundador. Usam o mesmo sistema visual e o mesmo gerador do pacote do Radar Urbano.
 
 | Arquivo | O que é |
 |---|---|
@@ -20,10 +20,10 @@ O primeiro abre o leque; o segundo fecha um recorte (motor, um vertical e uma vo
 
 ```bash
 python3 src/build.py garowa-ai/01-HORIZONTE.md --aba "Horizonte" \
-  --titulo "O Horizonte da GarowAÍ" --marca "GarowAÍ · Radar Group" \
+  --titulo "O Horizonte da Garowa.AI" --marca "Garowa.AI · Radar Group" \
   --out dist/garowa-ai-horizonte.html
 python3 src/build.py garowa-ai/02-ESTRUTURA.md --aba "Estrutura" \
-  --titulo "A Estrutura Real da GarowAÍ" --marca "GarowAÍ · Radar Group" \
+  --titulo "A Estrutura Real da Garowa.AI" --marca "Garowa.AI · Radar Group" \
   --out dist/garowa-ai-estrutura.html
 ```
 

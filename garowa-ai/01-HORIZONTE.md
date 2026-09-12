@@ -1,4 +1,4 @@
-# GAROWAÍ: O HORIZONTE
+# GAROWA.AI: O HORIZONTE
 
 *Trinta e seis posições possíveis para uma casa de IA dentro de um grupo: o que cada uma vende, quem paga, o que fica de ativo e como cada uma morre. Documento de expansão — feito para abrir o leque antes de fechar.*
 
@@ -314,12 +314,12 @@ O conflito não é filosófico, é de agenda. Toda segunda-feira existem duas li
 **O que precisa estar escrito para as duas coexistirem**
 
 - **Preço interno:** por uso ou por assento, com nota entre as empresas
-- **Contrato e SLA:** o que a GarowAÍ garante, em quanto tempo, e o que ela não faz
+- **Contrato e SLA:** o que a Garowa.AI garante, em quanto tempo, e o que ela não faz
 - **Direito de dizer não:** pedido que fura o roteiro entra na fila ou paga urgência
-- **Propriedade:** de quem é o código e o dado quando a GarowAÍ constrói para outra empresa do grupo
-- **Exclusividade:** a GarowAÍ pode vender para um concorrente de uma empresa do grupo?
+- **Propriedade:** de quem é o código e o dado quando a Garowa.AI constrói para outra empresa do grupo
+- **Exclusividade:** a Garowa.AI pode vender para um concorrente de uma empresa do grupo?
 
-> **A pergunta em uma frase** — O grupo é o primeiro cliente pagante da GarowAÍ ou o dono da agenda dela? As duas respostas são legítimas; só não dá para ter as duas.
+> **A pergunta em uma frase** — O grupo é o primeiro cliente pagante da Garowa.AI ou o dono da agenda dela? As duas respostas são legítimas; só não dá para ter as duas.
 
 *Capítulo VIII · O ativo*
 
@@ -360,7 +360,7 @@ Publicar, responder, cobrar ou prometer em nome de um cliente cria três exposi�
 
 ## O RADAR É A ÚNICA POSIÇÃO JÁ OCUPADA
 
-*Enquanto o papel pergunta o que a GarowAÍ poderia ser, o Radar Urbano já é: posição 01, vertical de nicho, com cliente, preço e trava.*
+*Enquanto o papel pergunta o que a Garowa.AI poderia ser, o Radar Urbano já é: posição 01, vertical de nicho, com cliente, preço e trava.*
 
 **O que está fechado**
 
@@ -408,7 +408,7 @@ Publicar, responder, cobrar ou prometer em nome de um cliente cria três exposi�
 - Direito de recusar novidade que não passou no critério de pronto.
 - Nenhum experimento em cliente pagante sem aprovação do Guardião.
 
-> **O risco na direção contrária** — Uma casa de IA tende a usar o produto do grupo como laboratório, porque é o acesso mais fácil que ela tem. O preço disso não aparece na GarowAÍ: aparece no churn do Radar, três meses depois, e ninguém liga uma coisa à outra.
+> **O risco na direção contrária** — Uma casa de IA tende a usar o produto do grupo como laboratório, porque é o acesso mais fácil que ela tem. O preço disso não aparece na Garowa.AI: aparece no churn do Radar, três meses depois, e ninguém liga uma coisa à outra.
 
 *Capítulo IX · A memória*
 
@@ -422,7 +422,7 @@ O Radar Urbano nasceu como holding de seis produtos, suíte de R$ 1.500 a R$ 2.2
 
 ---
 
-# Capítulo X — As cinco GarowaÍs
+# Capítulo X — As cinco Garowa.AI
 
 *Capítulo X · Os cenários*
 
@@ -471,16 +471,16 @@ O Radar Urbano nasceu como holding de seis produtos, suíte de R$ 1.500 a R$ 2.2
 
 *Ele não escolhe. Escolher é do fundador, e a escolha tem consequência de organograma, caixa e contratação já no próximo trimestre.*
 
-O que está aqui é o mapa inteiro: trinta e seis posições, quatro eixos, cinco empresas possíveis e a crítica honesta de cada caminho. O papel original não estava errado — estava cedo. Ele listou tudo o que a GarowAÍ pode ser e não escolheu nada, e essa é exatamente a diferença entre um inventário de possibilidades e um posicionamento.
+O que está aqui é o mapa inteiro: trinta e seis posições, quatro eixos, cinco empresas possíveis e a crítica honesta de cada caminho. O papel original não estava errado — estava cedo. Ele listou tudo o que a Garowa.AI pode ser e não escolheu nada, e essa é exatamente a diferença entre um inventário de possibilidades e um posicionamento.
 
 As perguntas abaixo não são retóricas. Nenhuma delas tem resposta certa; todas têm consequência imediata.
 
-1. O grupo Garowa é o primeiro cliente pagante da GarowAÍ ou o dono da agenda dela?
+1. O grupo Garowa é o primeiro cliente pagante da Garowa.AI ou o dono da agenda dela?
 2. O Radar Group é cliente, irmão ou o mesmo caixa?
 3. Qual dos cinco cenários a casa está disposta a ser por três anos seguidos?
 4. Quanto caixa existe para atravessar doze meses sem receita nova?
 5. Quem é o dono, em tempo integral, de cada posição escolhida?
-6. A GarowAÍ pode vender para o concorrente de uma empresa do grupo?
+6. A Garowa.AI pode vender para o concorrente de uma empresa do grupo?
 7. O grupo contrata os alunos da escola?
 8. A persona tem rosto de pessoa ou é sintética, e quem assina o que ela publica?
 9. Qual é o primeiro "não" que a casa vai dizer para um cheque que couber na conta?
