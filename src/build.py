@@ -5,6 +5,7 @@ Uso:
   python3 src/build.py radar-urbano/05-MAPA-DE-ENTREGAS.md --aba "Entregas" --out dist/radar-urbano-entregas.html
   python3 src/build.py --all            # gera todos os documentos listados em DOCS
   python3 src/build.py --all --fragment # também gera o fragmento (sem <html>/<head>) para publicar como artifact
+  python3 src/build.py doc.md --aba "Aba" --titulo "Nome do artifact" --out dist/doc.html --fragment
 
 Convenções do Markdown (as mesmas que o exportador do pacote original produzia):
   # TÍTULO DO DOCUMENTO                → capa (h1 em linhas) · linha seguinte *subtítulo* → capa
@@ -192,7 +193,8 @@ def render_list(kind, items, ctx):
                 ms = re.match(r"^(.*?):\s*(.+)$", s)
                 if ms:
                     hi = " hi" if re.search(r"custo por contato|contatos no m", ms.group(1), re.I) else ""
-                    o.append(f'<div class="c-row{hi}"><span>{inl(ms.group(1))}</span><b>{inl(ms.group(2))}</b></div>')
+                    lg = "" if (len(ms.group(2)) <= 14 and re.search(r"\d", ms.group(2))) else " long"
+                    o.append(f'<div class="c-row{hi}{lg}"><span>{inl(ms.group(1))}</span><b>{inl(ms.group(2))}</b></div>')
                 else:
                     o.append(f'<div class="c-row"><span>{inl(s)}</span></div>')
             o.append("</div>")
@@ -278,7 +280,7 @@ def render_block(t, p, ctx):
 BIGN_RES = [re.compile(r"^Entrega\s+(\d+)"), re.compile(r"^Verbete\s+([IVX]+\.\d+)"), re.compile(r"^Sistema\s+([A-H])\b"),
             re.compile(r"^Seção\s+(\d+)"), re.compile(r"^Fase\s+(\d+)"), re.compile(r"^Módulo\s+(\d+)")]
 
-def build(md_path, aba, out_path, fragment=False):
+def build(md_path, aba, out_path, fragment=False, titulo=None, marca=None):
     src = Path(md_path).read_text(encoding="utf-8")
     lines = src.splitlines()
     blocks = blocks_of(lines)
@@ -411,8 +413,11 @@ def build(md_path, aba, out_path, fragment=False):
     tpl = TPL.read_text(encoding="utf-8")
     page = (tpl.replace("{{SUB}}", inl(sub)).replace("{{INDICE}}", "\n".join(idx_html)).replace("{{CORPO}}", "\n".join(body))
                .replace("</style>", EXTRA_CSS + "</style>")
-               .replace("<title>Radar Urbano</title>", f"<title>Radar Urbano · {H(aba)}</title>"))
+               .replace("<title>Radar Urbano</title>", f"<title>{H(titulo)}</title>" if titulo else f"<title>Radar Urbano · {H(aba)}</title>"))
     page = re.sub(r"<h1>.*?</h1>", lambda m: h1, page, count=1, flags=re.S)
+    if marca:
+        page = page.replace("<span>Radar Urbano</span>", f"<span>{H(marca)}</span>")
+        page = page.replace('<div class="k">Radar Urbano</div>', f'<div class="k">{H(marca)}</div>')
     if not fragment:
         i = page.index("</style>") + 8
         page = ('<!doctype html>\n<html lang="pt-BR">\n<head>\n<meta charset="utf-8">\n<meta name="viewport" content="width=device-width,initial-scale=1">\n'
@@ -459,6 +464,10 @@ tbody tr:last-child td{border-bottom:0}
 .c-row{display:flex;justify-content:space-between;gap:16px;padding:9px 0;border-top:1px solid var(--line);font-size:13.5px;color:var(--ink-2)}
 .c-row b{font-family:var(--serif);font-weight:400;font-size:18px;color:var(--ink);font-variant-numeric:tabular-nums;white-space:nowrap}
 .c-row.hi{color:var(--ink)}.c-row.hi b{color:var(--em);font-size:22px}
+.c-row.long{flex-direction:column;align-items:flex-start;gap:3px}
+.c-row.long>span{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-3)}
+.c-row.long b{font-family:var(--sans);font-weight:400;font-size:14px;line-height:1.5;white-space:normal;color:var(--ink-2)}
+.sec.dark .c-row.long b{color:rgba(255,255,255,.72)}
 .sec.dark .card{background:var(--dark-2);border-color:rgba(255,255,255,.08)}.sec.dark .card h3{color:#F5F5F7}.sec.dark .card p{color:rgba(255,255,255,.7)}
 .vin{margin-top:36px;padding:30px 0 0;border-top:1px solid var(--line)}
 .vin p{font-family:var(--serif);font-size:clamp(19px,1.5vw,23px);line-height:1.5;color:var(--ink);max-width:62ch;text-wrap:pretty}
@@ -490,6 +499,8 @@ def main():
     ap.add_argument("--all", action="store_true")
     ap.add_argument("--fragment", action="store_true", help="gera também a versão fragmento (para artifacts)")
     ap.add_argument("--dist", default=str(ROOT / "dist"))
+    ap.add_argument("--titulo", help="título da aba/artifact; sem ele, 'Radar Urbano · <aba>'")
+    ap.add_argument("--marca", help="assinatura no topo e na capa; sem ela, 'Radar Urbano'")
     a = ap.parse_args()
     if a.all:
         for md, aba, out in DOCS:
@@ -500,7 +511,7 @@ def main():
         return
     if not a.md: ap.error("informe o .md ou --all")
     out = a.out or (Path(a.dist) / (Path(a.md).stem.lower() + ".html"))
-    build(a.md, a.aba, out, fragment=a.fragment)
+    build(a.md, a.aba, out, fragment=a.fragment, titulo=a.titulo, marca=a.marca)
 
 if __name__ == "__main__":
     main()

@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>O Horizonte da GarowAÍ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Manrope:wght@300;400;500;600&display=swap">
+<style>
+/* Radar Urbano — edição branca. Apple no ar e no ritmo; maison de luxo na tipografia; tecnologia só no acabamento. */
+:root{
+  --bg:#FFFFFF;--bg-2:#F5F5F7;--bg-3:#EDEDF0;--dark:#0B0B0C;--dark-2:#151517;
+  --ink:#1D1D1F;--ink-2:#6E6E73;--ink-3:#A1A1A6;--line:rgba(0,0,0,.09);--line-2:rgba(0,0,0,.16);
+  --em:#0B7A55;--em-soft:rgba(11,122,85,.08);--em-light:#37C48E;
+  --sans:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text","Manrope","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --serif:"Bodoni Moda","Didot","Bodoni 72",Georgia,serif;
+  --ease:cubic-bezier(.22,1,.36,1);
+}
+*{box-sizing:border-box}
+html{background:var(--bg);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+::selection{background:var(--em);color:#fff}
+a{color:inherit;text-decoration:none}
+button:focus-visible,a:focus-visible{outline:2px solid var(--em);outline-offset:3px}
+p{margin:0}
+strong{font-weight:600}
+h2,h3{margin:0;font-weight:500}
+
+/* chrome */
+#prog{position:fixed;top:0;left:0;height:2px;width:0;background:var(--em);z-index:70}
+.bar{position:fixed;top:0;left:0;right:0;height:60px;z-index:60;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(20px,4vw,48px);background:rgba(255,255,255,.72);backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%);border-bottom:1px solid transparent;transition:border-color .4s}
+.bar.on{border-bottom-color:var(--line)}
+.wm{display:flex;align-items:center;gap:12px;font-size:11.5px;font-weight:500;letter-spacing:.34em;text-transform:uppercase;color:var(--ink)}
+.wm svg{width:18px;height:18px}
+.wm svg circle{fill:none;stroke:var(--ink);stroke-width:.9}
+.ix-btn{display:flex;align-items:center;gap:12px;background:none;border:1px solid var(--line-2);color:var(--ink);font-family:var(--sans);font-size:11px;letter-spacing:.28em;text-transform:uppercase;padding:10px 16px;border-radius:999px;cursor:pointer;transition:background .3s,border-color .3s}
+.ix-btn:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+.ix-btn i{display:block;width:16px;height:9px;position:relative}
+.ix-btn i::before,.ix-btn i::after{content:"";position:absolute;left:0;right:0;height:1px;background:currentColor;transition:transform .4s var(--ease),top .4s var(--ease)}
+.ix-btn i::before{top:0}.ix-btn i::after{top:8px}
+body.ix .ix-btn i::before{top:4px;transform:rotate(45deg)}body.ix .ix-btn i::after{top:4px;transform:rotate(-45deg)}
+
+/* índice em tela cheia */
+.ix{position:fixed;inset:0;z-index:58;background:rgba(255,255,255,.86);backdrop-filter:blur(30px) saturate(160%);-webkit-backdrop-filter:blur(30px) saturate(160%);opacity:0;pointer-events:none;transition:opacity .5s var(--ease);overflow-y:auto;padding:110px clamp(20px,6vw,96px) 80px}
+body.ix .ix{opacity:1;pointer-events:auto}
+.ix-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:36px 48px;max-width:1400px;margin:0 auto}
+.ix-c{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--ink-3);margin-bottom:14px;display:flex;gap:12px;align-items:baseline}
+.ix-r{font-family:var(--serif);font-size:20px;color:var(--ink);letter-spacing:0}
+.ix-g a{display:grid;grid-template-columns:30px 1fr;gap:12px;padding:8px 0;color:var(--ink-2);font-size:13.5px;line-height:1.35;border-top:1px solid var(--line);transition:color .2s;opacity:0;transform:translateY(8px)}
+body.ix .ix-g a{opacity:1;transform:none;transition:opacity .6s var(--ease),transform .6s var(--ease),color .2s}
+.ix-g a i{font-style:normal;font-family:var(--serif);font-size:14px;color:var(--ink-3)}
+.ix-g a:hover,.ix-g a.on{color:var(--ink)}
+.ix-g a.on i{color:var(--em)}
+.ix-g a span{text-transform:none;letter-spacing:0}
+
+/* capa */
+.cover{padding:clamp(150px,20vh,240px) clamp(20px,6vw,96px) clamp(90px,12vh,150px);position:relative;max-width:1400px;margin:0 auto}
+.cover .k{font-size:11px;letter-spacing:.44em;text-transform:uppercase;color:var(--ink-2);margin-bottom:38px}
+.cover h1{font-family:var(--sans);font-weight:500;font-size:clamp(28px,4.4vw,64px);line-height:1.12;letter-spacing:.03em;text-transform:uppercase;margin:0;max-width:22ch;text-wrap:balance}
+.cover h1 .l{display:block;overflow:hidden}.cover h1 .l span{display:block}
+.cover .sub{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(20px,2vw,29px);line-height:1.45;color:var(--ink-2);max-width:56ch;margin:44px 0 0;text-wrap:pretty}
+.cover .rule{height:1px;width:0;background:var(--ink);margin-top:56px;transition:width 1.8s var(--ease)}
+.cover .hint{margin-top:60px;font-size:10.5px;letter-spacing:.34em;text-transform:uppercase;color:var(--ink-3);display:flex;align-items:center;gap:16px}
+.cover .hint b{display:block;width:1px;height:36px;background:var(--ink-3);animation:cai 2.6s var(--ease) infinite}
+@keyframes cai{0%{transform:scaleY(0);transform-origin:top}45%{transform:scaleY(1);transform-origin:top}55%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+.cover .arcs{position:absolute;right:clamp(-120px,-4vw,0px);top:50%;transform:translateY(-50%);width:min(44vw,560px);aspect-ratio:1;pointer-events:none}
+.cover .arcs circle{fill:none;stroke:var(--ink);stroke-width:.7;vector-effect:non-scaling-stroke}
+.a1{opacity:.22}.a2{opacity:.14}.a3{opacity:.09}.a4{opacity:.05}
+@media (max-width:900px){.cover .arcs{display:none}}
+
+/* capítulos */
+.cap{padding:clamp(90px,12vh,150px) clamp(20px,6vw,96px) clamp(30px,4vh,50px);border-top:1px solid var(--line)}
+.cap .wrap{max-width:1400px;margin:0 auto;display:flex;align-items:baseline;gap:28px;flex-wrap:wrap}
+.cap-r{font-family:var(--serif);font-size:clamp(44px,6vw,84px);line-height:1;color:var(--ink);letter-spacing:.02em}
+.cap-n{font-size:12px;letter-spacing:.4em;text-transform:uppercase;color:var(--ink)}
+.cap-s{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-3);margin-left:auto}
+
+/* seções */
+.sec{padding:clamp(80px,11vh,140px) clamp(20px,6vw,96px)}
+.sec.alt{background:var(--bg-2)}
+.sec .wrap{max-width:1400px;margin:0 auto;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,5vw,96px);align-items:start}
+.hd{position:sticky;top:96px}
+.eyebrow{font-size:11px;letter-spacing:.36em;text-transform:uppercase;color:var(--ink-3);margin-bottom:22px}
+.eyebrow span{margin:0 10px;color:var(--line-2)}
+h2{font-size:clamp(21px,2.2vw,32px);line-height:1.25;letter-spacing:.03em;text-transform:uppercase;font-weight:500;color:var(--ink);text-wrap:balance}
+.intro{font-size:clamp(18px,1.35vw,21px);line-height:1.6;color:var(--ink);max-width:62ch;margin-bottom:8px;text-wrap:pretty}
+.intro+.intro{margin-top:18px}
+.bd>.intro+.rows,.bd>.intro+.kpis,.bd>.intro+.prods,.bd>.intro+.tl,.bd>.intro+.mani{margin-top:40px}
+
+/* linhas numeradas */
+.rows{list-style:none;margin:0;padding:0}
+.rows li{display:grid;grid-template-columns:56px 1fr;gap:20px;padding:30px 0;border-top:1px solid var(--line)}
+.rows li:last-child{border-bottom:1px solid var(--line)}
+.num{font-family:var(--serif);font-size:22px;line-height:1;color:var(--ink-3);padding-top:4px;transition:color .3s}
+.rows li:hover .num{color:var(--em)}
+.rows h3{font-size:17px;font-weight:600;letter-spacing:.01em;margin-bottom:8px;color:var(--ink)}
+.rows p{color:var(--ink-2);font-size:16.5px;line-height:1.6;max-width:62ch}
+
+/* kpis */
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.kpi{background:var(--bg);border:1px solid var(--line);border-radius:22px;padding:30px 28px 28px;transition:transform .6s var(--ease),box-shadow .6s var(--ease)}
+.sec.alt .kpi{border-color:transparent}
+.kpi:hover{transform:translateY(-4px);box-shadow:0 30px 60px -36px rgba(0,0,0,.25)}
+.k-lab{font-size:10.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--ink-3);margin-bottom:16px}
+.k-big{font-family:var(--serif);font-weight:400;font-size:clamp(36px,3.6vw,52px);line-height:1;color:var(--ink);letter-spacing:.01em;font-variant-numeric:tabular-nums;margin-bottom:18px}
+.kpi p{font-size:15px;color:var(--ink-2);line-height:1.55}
+
+/* produtos */
+.prods{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+.prod{background:var(--bg);border-radius:22px;padding:28px 26px 24px;border:1px solid transparent;display:flex;flex-direction:column;gap:10px;transition:transform .6s var(--ease),box-shadow .6s var(--ease)}
+.sec:not(.alt) .prod{border-color:var(--line)}
+.prod:hover{transform:translateY(-4px);box-shadow:0 30px 60px -36px rgba(0,0,0,.25)}
+.p-n{font-family:var(--serif);font-size:20px;color:var(--ink-3)}
+.prod h3{font-size:17px;font-weight:600}
+.prod p{font-size:15px;color:var(--ink-2);line-height:1.55;flex:1}
+.p-foot{font-size:12.5px;letter-spacing:.02em;color:var(--em);padding-top:14px;border-top:1px solid var(--line);margin-top:6px}
+.band{margin-top:14px;background:var(--ink);color:#fff;border-radius:22px;padding:30px 32px;display:flex;flex-wrap:wrap;gap:8px 40px;align-items:baseline}
+.b-lab{font-size:10.5px;letter-spacing:.3em;text-transform:uppercase;color:rgba(255,255,255,.55)}
+.band p{font-size:clamp(18px,1.6vw,24px);font-family:var(--serif);color:#fff}
+.band p strong{font-weight:400;color:var(--em-light)}
+
+/* estágios (escuro) */
+.sec.dark{background:var(--dark);color:#F5F5F7}
+.sec.dark .eyebrow{color:rgba(255,255,255,.4)}.sec.dark .eyebrow span{color:rgba(255,255,255,.15)}
+.sec.dark h2{color:#F5F5F7}
+.sec.dark .k-lab{color:rgba(255,255,255,.42)}
+.sec.dark .intro{color:rgba(255,255,255,.78)}
+.est p{font-size:clamp(17px,1.25vw,19px);color:rgba(255,255,255,.78);line-height:1.6;max-width:60ch}
+.fin{margin-top:16px;border-top:1px solid rgba(255,255,255,.14)}
+.f-row{display:flex;justify-content:space-between;gap:24px;align-items:baseline;padding:17px 0;border-bottom:1px solid rgba(255,255,255,.1);font-size:16px;color:rgba(255,255,255,.72)}
+.f-row b{font-family:var(--serif);font-weight:400;font-size:20px;color:#F5F5F7;font-variant-numeric:tabular-nums;white-space:nowrap;letter-spacing:.01em}
+.f-row.neg b{color:rgba(255,255,255,.55)}
+.f-row.soma{color:#F5F5F7}.f-row.soma b{color:var(--em-light)}
+.res{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-top:28px}
+.r-card{background:var(--dark-2);border:1px solid rgba(255,255,255,.08);border-radius:22px;padding:30px 30px 26px}
+.r-big{font-family:var(--serif);font-weight:400;font-size:clamp(34px,3.4vw,50px);line-height:1.05;color:var(--em-light);font-variant-numeric:tabular-nums;letter-spacing:.005em}
+.r-card.val .r-big{color:#F5F5F7}
+.r-note{margin-top:12px;font-style:italic;color:rgba(255,255,255,.55);font-size:15px}
+
+/* linha do tempo */
+.tl{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:26px;position:relative;padding-top:26px}
+.tl::before{content:"";position:absolute;left:0;right:0;top:5px;height:1px;background:var(--line-2)}
+.tl-i{position:relative}
+.tl-dot{position:absolute;top:-26px;left:0;width:11px;height:11px;border-radius:50%;background:var(--bg);border:1px solid var(--ink);transform:translateY(0)}
+.tl-i:hover .tl-dot{background:var(--em);border-color:var(--em)}
+.tl-lab{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--ink);margin-bottom:12px}
+.tl p{font-size:15.5px;color:var(--ink-2);line-height:1.6}
+
+/* manifesto */
+.sec.dark .mani .m-i{display:grid;grid-template-columns:56px 1fr;gap:20px;padding:34px 0;border-top:1px solid rgba(255,255,255,.12)}
+.sec.dark .mani .m-i:last-child{border-bottom:1px solid rgba(255,255,255,.12)}
+.sec.dark .mani .num{color:rgba(255,255,255,.35)}
+.sec.dark .mani h3{font-family:var(--serif);font-weight:400;font-size:clamp(24px,2.2vw,34px);line-height:1.15;color:#F5F5F7;margin-bottom:12px;letter-spacing:.005em}
+.sec.dark .mani p{color:rgba(255,255,255,.7);font-size:16.5px;line-height:1.6;max-width:60ch}
+
+/* fecho */
+.fecho{padding:clamp(120px,16vh,200px) clamp(20px,6vw,96px) clamp(140px,18vh,220px);text-align:center}
+.fecho .wrap{max-width:820px;margin:0 auto;display:block}
+.fecho .eyebrow{margin-bottom:26px}
+.fecho h2{margin-bottom:40px}
+.fecho .lead{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(22px,2.4vw,34px);line-height:1.4;color:var(--ink);text-wrap:pretty}
+.fim{display:flex;justify-content:center;padding:0 0 80px}
+
+/* movimento: Apple, contido */
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
+.js .rv.in{opacity:1;transform:none}
+.js .stag>*{opacity:0;transform:translateY(18px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.js .stag.in>*{opacity:1;transform:none}
+.js .cover h1 .l span{transform:translateY(105%);transition:transform 1.4s var(--ease)}
+.js .cover.in h1 .l span{transform:none}
+.js .cover .k,.js .cover .sub,.js .cover .hint{opacity:0;transform:translateY(12px);transition:opacity 1.1s var(--ease),transform 1.1s var(--ease)}
+.js .cover.in .k,.js .cover.in .sub,.js .cover.in .hint{opacity:1;transform:none}
+.js .cover.in .rule{width:min(360px,50%)}
+.js .cover .arcs circle{stroke-dasharray:1;stroke-dashoffset:1;pathLength:1;transition:stroke-dashoffset 2.4s var(--ease)}
+.js .cover.in .arcs circle{stroke-dashoffset:0}
+@media (prefers-reduced-motion:reduce){.js .rv,.js .stag>*,.js .cover h1 .l span,.js .cover .k,.js .cover .sub,.js .cover .hint,.js .cover .arcs circle{opacity:1!important;transform:none!important;transition:none!important;stroke-dashoffset:0!important}.js .cover .rule{width:min(360px,50%)!important}.cover .hint b{animation:none}}
+
+@media (max-width:900px){
+  .sec .wrap{grid-template-columns:1fr;gap:28px}
+  .hd{position:static}
+  .rows li{grid-template-columns:40px 1fr;gap:14px;padding:24px 0}
+  .f-row{flex-direction:column;gap:4px}
+  .wm span{display:none}
+}
+
+/* blocos comuns aos documentos gerados a partir do Markdown */
+.big-n{font-family:var(--serif);font-size:clamp(56px,6.5vw,104px);line-height:.9;color:var(--ink-3);margin:-6px 0 14px;letter-spacing:.01em}
+.sec.alt .big-n{color:#C9C9CE}
+.tag{font-family:var(--serif);font-style:italic;font-size:clamp(19px,1.6vw,24px);line-height:1.4;color:var(--ink-2);margin-top:18px;max-width:28ch}
+.spec{border-top:1px solid var(--line);margin:6px 0 26px}
+.sp-row{display:grid;grid-template-columns:180px 1fr;gap:24px;padding:16px 0;border-bottom:1px solid var(--line)}
+.sp-k{font-size:10.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--ink-3);padding-top:4px}
+.sp-v{font-size:15.5px;line-height:1.6;color:var(--ink)}
+.h3c{font-family:var(--sans);font-size:19px;font-weight:600;margin:44px 0 14px;letter-spacing:.005em;display:flex;gap:14px;align-items:baseline;flex-wrap:wrap}
+.h3c .h3m{font-family:var(--serif);font-style:italic;font-weight:400;font-size:18px;color:var(--ink-2)}
+.h3c .h3n{font-family:var(--serif);font-weight:400;font-size:26px;color:var(--ink-3)}
+.vb{margin:0 0 26px}.vb-k{font-size:10.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--em);margin:26px 0 10px}
+.vb .intro{font-size:16.5px}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.86em;background:var(--bg-2);padding:1px 6px;border-radius:5px;color:var(--ink)}
+.sec.alt code{background:#E8E8ED}
+pre{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12.5px;line-height:1.55;background:var(--ink);color:#E8ECEA;border-radius:16px;padding:22px 24px;overflow-x:auto;margin:10px 0 18px;white-space:pre-wrap}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:16px;background:var(--bg);margin:10px 0 18px}
+table{border-collapse:collapse;width:100%;font-size:14px;min-width:560px}
+th,td{padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top;text-align:left;line-height:1.5}
+th{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-3);font-weight:500;background:var(--bg-2)}
+tbody tr:last-child td{border-bottom:0}
+.steps{margin:6px 0 18px;padding-left:24px}.steps li{font-size:16px;line-height:1.65;color:var(--ink);margin:10px 0}.steps li::marker{color:var(--em);font-family:var(--serif);font-size:18px}
+.list{margin:6px 0 18px;padding-left:20px}.list li{font-size:16px;line-height:1.65;color:var(--ink);margin:6px 0}.list ul{padding-left:18px;margin:4px 0}
+.dl{margin:6px 0 18px;display:grid;grid-template-columns:1fr;gap:0}
+.dl div{border-top:1px solid var(--line);padding:12px 0}.dl dt{font-weight:600;font-size:15px}.dl dd{margin:3px 0 0;color:var(--ink-2);font-size:15px;line-height:1.55}
+.sec.dark .dl{grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:0 28px}
+.sec.dark .dl div{border-color:rgba(255,255,255,.12)}.sec.dark .dl dt{color:#F5F5F7}.sec.dark .dl dd{color:rgba(255,255,255,.65)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:6px 0 18px}
+.card{background:var(--bg);border-radius:22px;padding:26px 26px 22px;border:1px solid var(--line);display:flex;flex-direction:column;gap:8px;transition:transform .6s var(--ease),box-shadow .6s var(--ease)}
+.sec.alt .card{border-color:transparent}
+.card:hover{transform:translateY(-4px);box-shadow:0 30px 60px -36px rgba(0,0,0,.25)}
+.card .p-n{font-family:var(--serif);font-size:20px;color:var(--ink-3)}
+.card h3{font-size:16.5px;font-weight:600;line-height:1.35}
+.card p{font-size:14.5px;color:var(--ink-2);line-height:1.55}
+.c-row{display:flex;justify-content:space-between;gap:16px;padding:9px 0;border-top:1px solid var(--line);font-size:13.5px;color:var(--ink-2)}
+.c-row b{font-family:var(--serif);font-weight:400;font-size:18px;color:var(--ink);font-variant-numeric:tabular-nums;white-space:nowrap}
+.c-row.hi{color:var(--ink)}.c-row.hi b{color:var(--em);font-size:22px}
+.c-row.long{flex-direction:column;align-items:flex-start;gap:3px}
+.c-row.long>span{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-3)}
+.c-row.long b{font-family:var(--sans);font-weight:400;font-size:14px;line-height:1.5;white-space:normal;color:var(--ink-2)}
+.sec.dark .c-row.long b{color:rgba(255,255,255,.72)}
+.sec.dark .card{background:var(--dark-2);border-color:rgba(255,255,255,.08)}.sec.dark .card h3{color:#F5F5F7}.sec.dark .card p{color:rgba(255,255,255,.7)}
+.vin{margin-top:36px;padding:30px 0 0;border-top:1px solid var(--line)}
+.vin p{font-family:var(--serif);font-size:clamp(19px,1.5vw,23px);line-height:1.5;color:var(--ink);max-width:62ch;text-wrap:pretty}
+.band{margin:14px 0 22px}
+.band p{font-family:var(--sans);font-size:16.5px;line-height:1.55}
+.quote{margin:10px 0 18px;padding:4px 0 4px 22px;border-left:2px solid var(--em);font-family:var(--serif);font-size:19px;line-height:1.5;color:var(--ink)}
+.cal{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;margin:6px 0 18px}
+.cal-i{background:var(--bg);border-radius:22px;padding:26px 26px 22px;border:1px solid var(--line)}
+.sec.alt .cal-i{border-color:transparent}
+.cal-t{font-family:var(--serif);font-size:30px;line-height:1;color:var(--ink);margin-bottom:8px}
+.cal-s{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--ink-3);margin-bottom:14px}
+.cal p{font-size:14.5px;color:var(--ink-2);line-height:1.55}
+.cal ul{margin:0;padding:0;list-style:none}.cal li{font-size:14.5px;color:var(--ink-2);line-height:1.55;padding:9px 0;border-top:1px solid var(--line)}
+.sec.dark .rows li{border-color:rgba(255,255,255,.12)}.sec.dark .rows h3{color:#F5F5F7}.sec.dark .rows p{color:rgba(255,255,255,.7)}.sec.dark .num{color:rgba(255,255,255,.35)}
+.sec.dark .k-lab,.sec.dark .vb-k{color:rgba(255,255,255,.5)}.sec.dark .tbl{background:var(--dark-2);border-color:rgba(255,255,255,.1)}.sec.dark th{background:rgba(255,255,255,.05);color:rgba(255,255,255,.5)}.sec.dark td{color:rgba(255,255,255,.8);border-color:rgba(255,255,255,.08)}.sec.dark .intro{color:rgba(255,255,255,.78)}
+.sec.dark .sp-row{border-color:rgba(255,255,255,.12)}.sec.dark .sp-v{color:rgba(255,255,255,.85)}.sec.dark .list li,.sec.dark .steps li{color:rgba(255,255,255,.85)}
+.sec.dark .cal-i{background:var(--dark-2);border-color:rgba(255,255,255,.08)}.sec.dark .cal-t{color:#F5F5F7}.sec.dark .cal p,.sec.dark .cal li{color:rgba(255,255,255,.7);border-color:rgba(255,255,255,.1)}
+.sec.dark .band{background:var(--dark-2);border:1px solid rgba(255,255,255,.1)}.sec.dark .quote{color:#F5F5F7}
+.sec.wide .wrap{grid-template-columns:1fr}.sec.wide .hd{position:static;margin-bottom:10px}
+.ix-g a i{font-size:12px}
+@media (max-width:700px){.sp-row{grid-template-columns:1fr;gap:6px}}
+</style>
+</head>
+<body>
+
+
+<div id="prog" aria-hidden="true"></div>
+<header class="bar" id="bar">
+  <a class="wm" href="#topo"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10.5"/><circle cx="12" cy="12" r="6.5" opacity=".5"/><circle cx="12" cy="12" r="2" opacity=".3"/></svg><span>GarowAÍ · Radar Group</span></a>
+  <button class="ix-btn" id="ixBtn" aria-controls="ix" aria-expanded="false"><i></i>Índice</button>
+</header>
+<nav class="ix" id="ix" aria-label="Índice do dossiê"><div class="ix-grid">
+<div class="ix-g"><div class="ix-c"><span class="ix-r">§</span>Capítulos</div>
+<a href="#cI" data-s="cI"><i>I</i><span>Produto</span></a>
+<a href="#cII" data-s="cII"><i>II</i><span>Trabalho</span></a>
+<a href="#cIII" data-s="cIII"><i>III</i><span>Resultado</span></a>
+<a href="#cIV" data-s="cIV"><i>IV</i><span>Acesso</span></a>
+<a href="#cV" data-s="cV"><i>V</i><span>Atenção</span></a>
+<a href="#cVI" data-s="cVI"><i>VI</i><span>Infraestrutura</span></a>
+<a href="#cVII" data-s="cVII"><i>VII</i><span>Capital</span></a>
+<a href="#cVIII" data-s="cVIII"><i>VIII</i><span>A crítica</span></a>
+<a href="#cIX" data-s="cIX"><i>IX</i><span>O Radar Group</span></a>
+<a href="#cX" data-s="cX"><i>X</i><span>As cinco GarowaÍs</span></a>
+</div>
+<div class="ix-g"><div class="ix-c">Antes de tudo</div>
+<a href="#o-papel-linha-por-linha" data-s="o-papel-linha-por-linha"><i>01</i><span>O PAPEL, LINHA POR LINHA</span></a>
+<a href="#os-quatro-eixos-que-organizam-tudo" data-s="os-quatro-eixos-que-organizam-tudo"><i>02</i><span>OS QUATRO EIXOS QUE ORGANIZAM TUDO</span></a>
+</div>
+<div class="ix-g"><div class="ix-c">Produto</div>
+<a href="#o-que-se-constroi-uma-vez-e-se-vende-muitas" data-s="o-que-se-constroi-uma-vez-e-se-vende-muitas"><i>01</i><span>O QUE SE CONSTRÓI UMA VEZ E SE VENDE MUITAS</span></a>
+</div>
+<div class="ix-g"><div class="ix-c">Trabalho</div>
+<a href="#o-que-se-vende-por-hora-por-projeto-ou-por-cabec" data-s="o-que-se-vende-por-hora-por-projeto-ou-por-cabec"><i>01</i><span>O QUE SE VENDE POR HORA, POR PROJETO OU POR CABEÇA</span></a>
+</div>
+<div class="ix-g"><div class="ix-c">Resultado</div>
+<a href="#cobrar-pelo-efeito-nao-pela-ferramenta" data-s="cobrar-pelo-efeito-nao-pela-ferramenta"><i>01</i><span>COBRAR PELO EFEITO, NÃO PELA FERRAMENTA</span></a>
+</div>
+<div class="ix-g"><div class="ix-c">Acesso</div>
+<a href="#viver-do-caminho-entre-quem-tem-e-quem-precisa" data-s="viver-do-caminho-entre-quem-tem-e-quem-precisa"><i>01</i><span>VIVER DO CAMINHO ENTRE QUEM TEM E QUEM PRECISA</span></a>
+</div>
+<div class="ix-g"><div class="ix-c">Atenção</div>
+<a href="#o-negocio-de-ser-procurado" data-s="o-negocio-de-ser-procurado"><i>01</i><span>O NEGÓCIO DE SER PROCURADO</span></a>
+</div>
+<div class="ix-g"><div class="ix-c">Infraestrutura</div>
+<a href="#o-que-faz-o-proximo-produto-custar-uma-fracao-do" data-s="o-que-faz-o-proximo-produto-custar-uma-fracao-do"><i>01</i><span>O QUE FAZ O PRÓXIMO PRODUTO CUSTAR UMA FRAÇÃO DO PRIMEIRO</span></a>
+</div>
+<div class="ix-g"><div class="ix-c">Capital</div>
+<a href="#quando-a-casa-para-de-vender-ferramenta-e-passa-" data-s="quando-a-casa-para-de-vender-ferramenta-e-passa-"><i>01</i><span>QUANDO A CASA PARA DE VENDER FERRAMENTA E PASSA A FICAR COM O RESULTADO</span></a>
+</div>
+<div class="ix-g"><div class="ix-c">A crítica</div>
+<a href="#hub-nao-e-modelo-de-negocio" data-s="hub-nao-e-modelo-de-negocio"><i>01</i><span>HUB NÃO É MODELO DE NEGÓCIO</span></a>
+<a href="#doze-linhas-quatro-empresas" data-s="doze-linhas-quatro-empresas"><i>02</i><span>DOZE LINHAS, QUATRO EMPRESAS</span></a>
+<a href="#servir-o-grupo-ou-servir-o-mercado" data-s="servir-o-grupo-ou-servir-o-mercado"><i>03</i><span>SERVIR O GRUPO OU SERVIR O MERCADO</span></a>
+<a href="#o-que-vai-sobrar-depois-de-tres-anos" data-s="o-que-vai-sobrar-depois-de-tres-anos"><i>04</i><span>O QUE VAI SOBRAR DEPOIS DE TRÊS ANOS</span></a>
+<a href="#o-fornecedor-pode-virar-o-concorrente" data-s="o-fornecedor-pode-virar-o-concorrente"><i>05</i><span>O FORNECEDOR PODE VIRAR O CONCORRENTE</span></a>
+<a href="#quem-responde-quando-o-agente-erra" data-s="quem-responde-quando-o-agente-erra"><i>06</i><span>QUEM RESPONDE QUANDO O AGENTE ERRA</span></a>
+</div>
+<div class="ix-g"><div class="ix-c">O Radar Group</div>
+<a href="#o-radar-e-a-unica-posicao-ja-ocupada" data-s="o-radar-e-a-unica-posicao-ja-ocupada"><i>01</i><span>O RADAR É A ÚNICA POSIÇÃO JÁ OCUPADA</span></a>
+<a href="#o-que-o-radar-da-e-o-que-ele-cobra-de-volta" data-s="o-que-o-radar-da-e-o-que-ele-cobra-de-volta"><i>02</i><span>O QUE O RADAR DÁ E O QUE ELE COBRA DE VOLTA</span></a>
+<a href="#o-erro-que-esta-casa-ja-cometeu-uma-vez" data-s="o-erro-que-esta-casa-ja-cometeu-uma-vez"><i>03</i><span>O ERRO QUE ESTA CASA JÁ COMETEU UMA VEZ</span></a>
+</div>
+<div class="ix-g"><div class="ix-c">As cinco GarowaÍs</div>
+<a href="#cinco-empresas-inteiras-coerentes-ate-o-fim" data-s="cinco-empresas-inteiras-coerentes-ate-o-fim"><i>01</i><span>CINCO EMPRESAS INTEIRAS, COERENTES ATÉ O FIM</span></a>
+<a href="#o-que-este-documento-nao-faz" data-s="o-que-este-documento-nao-faz"><i>02</i><span>O QUE ESTE DOCUMENTO NÃO FAZ</span></a>
+</div>
+</div></nav>
+
+<main id="topo">
+<section class="cover" id="capa">
+  <svg class="arcs" viewBox="0 0 600 600" aria-hidden="true"><circle class="a4" cx="300" cy="300" r="296"/><circle class="a3" cx="300" cy="300" r="222"/><circle class="a2" cx="300" cy="300" r="148"/><circle class="a1" cx="300" cy="300" r="74"/></svg>
+  <div class="k">GarowAÍ · Radar Group</div>
+  <h1><span class="l"><span>GAROWAÍ:</span></span><span class="l"><span>O HORIZONTE</span></span></h1>
+  <p class="sub">Trinta e seis posições possíveis para uma casa de IA dentro de um grupo: o que cada uma vende, quem paga, o que fica de ativo e como cada uma morre. Documento de expansão — feito para abrir o leque antes de fechar.</p>
+  <div class="rule"></div>
+  <div class="hint"><b></b>Role para começar</div>
+</section>
+
+<section id="o-papel-linha-por-linha" class="sec "><div class="wrap"><div class="hd"><div class="eyebrow rv">Antes de tudo <span>·</span> A transcrição</div><h2 class="rv">O PAPEL, LINHA POR LINHA</h2><p class="tag rv">Doze itens. A palavra "hub" aparece oito vezes. O item 12 não estava no papel e é o mais interessante dos doze.</p></div><div class="bd"><div class="cards stag"><div class="card"><span class="p-n">01</span><h3>Produtos proprietários B2B</h3><p>Hub de produtos proprietários B2B.</p></div><div class="card"><span class="p-n">02</span><h3>Produtos proprietários B2C</h3><p>Hub de produtos proprietários B2C.</p></div><div class="card"><span class="p-n">03</span><h3>Presença e monetização</h3><p>Hub de presença e monetização de plataformas digitais.</p></div><div class="card"><span class="p-n">04</span><h3>Escola de IA x Tech</h3><p>Hub Escola de AI x TECH.</p></div><div class="card"><span class="p-n">05</span><h3>Provedoria para o grupo</h3><p>Hub provedoria de suporte e soluções em AI e tech para o grupo Garowa.</p></div><div class="card"><span class="p-n">06</span><h3>Escala e cross-selling</h3><p>Hub de produtos: ser escala e modelo cross-selling com outras empresas do grupo Garowa.</p></div><div class="card"><span class="p-n">07</span><h3>Distribuidor de IAs e SaaS</h3><p>Hub distribuidor de IAs e SaaS curados (marketplace?).</p></div><div class="card"><span class="p-n">08</span><h3>Vetor de engajamento</h3><p>Hub/vetor de engajamento digital (garowa.ai — influencer).</p></div><div class="card"><span class="p-n">09</span><h3>Squads de agentes</h3><p>Vendedora ou criadora de squad de agentes não humanos.</p></div><div class="card"><span class="p-n">10</span><h3>O primeiro eixo</h3><p>Personalizado x valor agregado.</p></div><div class="card"><span class="p-n">11</span><h3>O segundo eixo</h3><p>Generalista de nicho x escala.</p></div><div class="card"><span class="p-n">12</span><h3>O que não estava no papel</h3><p>Distribuição com curadoria de agentes mais stacks tech tailor made.</p></div></div><p class="intro rv">Os itens 1 a 9 são posições. Os itens 10 e 11 não são posições: são os dois eixos que decidem todas as outras. O item 12 é uma posição nova e é a mais densa do conjunto — ela junta distribuição, curadoria e trabalho sob medida numa oferta só, e por isso mesmo é a que mais precisa de recorte.</p><div class="band rv"><div class="b-lab">O que este documento faz</div><p>Não escolhe. Abre. Ele lista trinta e seis posições que uma casa de IA dentro de um grupo pode ocupar hoje, inclusive as que ninguém escreveu no papel, com a conta de cada uma. A escolha tem um documento próprio, e ele se chama A Estrutura Real.</p></div></div></div></section>
+<section id="os-quatro-eixos-que-organizam-tudo" class="sec alt"><div class="wrap"><div class="hd"><div class="eyebrow rv">Antes de tudo <span>·</span> O sistema</div><h2 class="rv">OS QUATRO EIXOS QUE ORGANIZAM TUDO</h2><p class="tag rv">Antes de listar posições, vale ter as réguas. Toda posição deste documento é um ponto no cruzamento de quatro perguntas.</p></div><div class="bd"><ol class="rows stag"><li><span class="num">01</span><div><h3>O que se vende</h3><p>Trabalho (horas), produto (licença), acesso (intermediação), resultado (o efeito no negócio do outro) ou participação (parte do negócio do outro). Essa é a régua que mais muda o valor da empresa: trabalho vale múltiplo de 1 a 3 vezes o lucro; produto com recorrência vale de 3 a 10; participação vale o que o negócio de baixo valer.</p></div></li><li><span class="num">02</span><div><h3>Quem paga</h3><p>Cliente externo, empresa do grupo, aluno, anunciante, fornecedor de software, ou ninguém (é aposta própria).</p></div></li><li><span class="num">03</span><div><h3>O que fica proprietário</h3><p>Dado com direito de uso, distribuição, operação, contrato, marca, ou nada. Código sozinho deixou de contar: hoje ele é velocidade, não fosso.</p></div></li><li><span class="num">04</span><div><h3>Como se defende</h3><p>Acesso privilegiado, trava contratual, escala de custo, conhecimento local, responsabilidade assinada, ou rede que cresce com cada participante.</p></div></li></ol><div class="vb rv"><div class="vb-k">Os dois eixos que o papel já escreveu</div><div class="spec stag"><div class="sp-row"><div class="sp-k">Personalizado x valor agregado (item 10)</div><div class="sp-v">quanto da entrega é feita sob medida para um cliente e quanto é a mesma coisa vendida de novo. É a régua da margem.</div></div><div class="sp-row"><div class="sp-k">Generalista de nicho x escala (item 11)</div><div class="sp-v">profundidade num setor ou alcance em muitos. É a régua do fosso.</div></div></div><p class="intro rv">Cruzados, dão quatro empresas diferentes: a agência, a boutique, o vertical e a plataforma. O Radar Urbano já está no vertical, com nome, preço e trava — e isso significa que a casa não escolhe no escuro, ela escolhe com uma amostra rodando.</p></div></div></div></section>
+<div class="cap" id="cI"><div class="wrap"><div class="cap-r rv">I</div><div class="cap-n rv">Produto</div><div class="cap-s rv"></div></div></div>
+<section id="o-que-se-constroi-uma-vez-e-se-vende-muitas" class="sec "><div class="wrap"><div class="hd"><div class="eyebrow rv">Família A <span>·</span> Produto</div><h2 class="rv">O QUE SE CONSTRÓI UMA VEZ E SE VENDE MUITAS</h2><p class="tag rv">A família mais cara para começar e a única que fica valendo sozinha.</p></div><div class="bd"><div class="cards stag"><div class="card"><span class="p-n">01</span><h3>Vertical de nicho</h3><p>Um produto para um setor específico, com preço fixo e entrega escrita. O Radar Urbano, por exemplo.</p><div class="c-row long"><span>Quem paga</span><b>o dono do negócio, assinatura mensal</b></div><div class="c-row long"><span>Fica proprietário</span><b>produto, série de dados, contrato, trava territorial</b></div><div class="c-row long"><span>Morre de</span><b>errar o nicho, ou o nicho ser pequeno demais</b></div></div><div class="card"><span class="p-n">02</span><h3>Micro-SaaS de agente</h3><p>Um agente que faz uma coisa só, cobrada por uso ou por assinatura baixa, vendido sem vendedor.</p><div class="c-row long"><span>Quem paga</span><b>profissional autônomo e pequena empresa</b></div><div class="c-row long"><span>Fica proprietário</span><b>quase nada; vale como laboratório e como porta de entrada</b></div><div class="c-row long"><span>Morre de</span><b>virar funcionalidade nativa do fornecedor do modelo</b></div></div><div class="card"><span class="p-n">03</span><h3>Produto de dado</h3><p>O dado é o produto: série histórica, painel de setor, índice de referência que ninguém mais tem.</p><div class="c-row long"><span>Quem paga</span><b>quem precisa comparar — associação, franqueadora, investidor, imprensa</b></div><div class="c-row long"><span>Fica proprietário</span><b>a série, que não se compra depois</b></div><div class="c-row long"><span>Morre de</span><b>base legal frágil ou amostra pequena demais para significar algo</b></div></div><div class="card"><span class="p-n">04</span><h3>Suíte vertical</h3><p>Vários produtos para o mesmo setor, vendidos juntos, com um cadastro só.</p><div class="c-row long"><span>Quem paga</span><b>o mesmo cliente do vertical, com ticket multiplicado</b></div><div class="c-row long"><span>Fica proprietário</span><b>o cadastro e o custo de troca</b></div><div class="c-row long"><span>Morre de</span><b>começar pela suíte antes de o primeiro produto ter cliente</b></div></div><div class="card"><span class="p-n">05</span><h3>Produto B2C</h3><p>Aplicativo ou assinatura barata direto ao consumidor final.</p><div class="c-row long"><span>Quem paga</span><b>pessoa física, ticket baixo, volume alto</b></div><div class="c-row long"><span>Fica proprietário</span><b>base de usuários, se houver retenção</b></div><div class="c-row long"><span>Morre de</span><b>custo de mídia; sem canal próprio, não começa</b></div></div><div class="card"><span class="p-n">06</span><h3>Ferramenta horizontal</h3><p>Uma ferramenta de IA para qualquer empresa, de qualquer setor.</p><div class="c-row long"><span>Quem paga</span><b>qualquer um, e por isso ninguém em particular</b></div><div class="c-row long"><span>Fica proprietário</span><b>marca, se sobreviver</b></div><div class="c-row long"><span>Morre de</span><b>a próxima atualização do fornecedor de modelo entregar aquilo de graça</b></div></div></div><div class="band rv"><div class="b-lab">A régua da família</div><p>Produto é dívida de doze a vinte e quatro meses antes de virar ativo. A casa já tem o número medido: montar o Radar Urbano custa R$ 50–65 mil em seis semanas, com queima de R$ 180–250 mil até o mês 5. Cada produto novo reinicia essa conta, e nenhum começa a pagar antes do anterior terminar.</p></div></div></div></section>
+<div class="cap" id="cII"><div class="wrap"><div class="cap-r rv">II</div><div class="cap-n rv">Trabalho</div><div class="cap-s rv"></div></div></div>
+<section id="o-que-se-vende-por-hora-por-projeto-ou-por-cabec" class="sec "><div class="wrap"><div class="hd"><div class="eyebrow rv">Família B <span>·</span> Trabalho e squads</div><h2 class="rv">O QUE SE VENDE POR HORA, POR PROJETO OU POR CABEÇA</h2><p class="tag rv">Entra dinheiro em trinta dias. É a família que financia todas as outras e a que engole todas as outras.</p></div><div class="bd"><div class="cards stag"><div class="card"><span class="p-n">07</span><h3>Agência de agentes</h3><p>Projetos sob medida: mapear processo, montar squad de agentes, entregar e sair.</p><div class="c-row long"><span>Quem paga</span><b>média e grande empresa, por projeto</b></div><div class="c-row long"><span>Fica proprietário</span><b>método e reputação; o código costuma ficar com o cliente</b></div><div class="c-row long"><span>Morre de</span><b>dependência de três clientes grandes; o maior deles vira o chefe</b></div></div><div class="card"><span class="p-n">08</span><h3>Boutique de um setor só</h3><p>Os mesmos projetos, sempre no mesmo setor, com 70% do trabalho repetido.</p><div class="c-row long"><span>Quem paga</span><b>empresas de um setor, por projeto</b></div><div class="c-row long"><span>Fica proprietário</span><b>repertório e blocos reaproveitáveis — um produto disfarçado</b></div><div class="c-row long"><span>Morre de</span><b>nunca perceber que já tinha produto na mão</b></div></div><div class="card"><span class="p-n">09</span><h3>Departamento de IA por assinatura</h3><p>A casa é o time de IA de quem não tem time, por uma mensalidade, com horas e escopo definidos.</p><div class="c-row long"><span>Quem paga</span><b>empresa média, mensalidade alta</b></div><div class="c-row long"><span>Fica proprietário</span><b>relação e conhecimento do cliente</b></div><div class="c-row long"><span>Morre de</span><b>escopo aberto; vira plantão sem preço</b></div></div><div class="card"><span class="p-n">10</span><h3>Agente como funcionário</h3><p>Não se vende software, vende-se posto de trabalho: um agente que ocupa uma função, com preço de salário e substituição garantida.</p><div class="c-row long"><span>Quem paga</span><b>o gestor da área, do orçamento de pessoal, que é muito maior que o de software</b></div><div class="c-row long"><span>Fica proprietário</span><b>a operação e o acesso aos sistemas do cliente</b></div><div class="c-row long"><span>Morre de</span><b>promessa de substituição que não se cumpre; e da conversa sindical e trabalhista, que é real</b></div></div><div class="card"><span class="p-n">11</span><h3>Squad sob medida com pilha própria</h3><p>O item 12 do papel: escolher, montar, integrar e operar a pilha de ferramentas, com curadoria e responsabilidade.</p><div class="c-row long"><span>Quem paga</span><b>empresa que quer resultado e não quer escolher ferramenta</b></div><div class="c-row long"><span>Fica proprietário</span><b>a operação, o acesso e a relação; o fosso é ser quem opera</b></div><div class="c-row long"><span>Morre de</span><b>virar revenda; se a casa cobra pelo link e não pelo trabalho, a margem some</b></div></div><div class="card"><span class="p-n">12</span><h3>Resgate e auditoria</h3><p>Consertar implantações de IA que deram errado e auditar agentes de terceiros.</p><div class="c-row long"><span>Quem paga</span><b>quem já gastou e não teve resultado — o cliente mais motivado que existe</b></div><div class="c-row long"><span>Fica proprietário</span><b>repertório de falhas, que vira produto de diagnóstico</b></div><div class="c-row long"><span>Morre de</span><b>mercado pequeno enquanto poucos implantaram; cresce com o tempo</b></div></div></div><div class="band rv"><div class="b-lab">A régua da família</div><p>Trabalho paga rápido e custa o futuro: cada real de receita exige uma pessoa. A regra que salva é ter teto e data: projeto sob medida com limite de participação na receita e com prazo para sair. Sem teto e sem data, a agência vira a empresa inteira, porque ela é a que paga mais rápido.</p></div></div></div></section>
+<div class="cap" id="cIII"><div class="wrap"><div class="cap-r rv">III</div><div class="cap-n rv">Resultado</div><div class="cap-s rv"></div></div></div>
+<section id="cobrar-pelo-efeito-nao-pela-ferramenta" class="sec "><div class="wrap"><div class="hd"><div class="eyebrow rv">Família C <span>·</span> Resultado e participação</div><h2 class="rv">COBRAR PELO EFEITO, NÃO PELA FERRAMENTA</h2><p class="tag rv">A família mais difícil de vender e a mais difícil de copiar. Exige medir o que o cliente não mede sozinho.</p></div><div class="bd"><div class="cards stag"><div class="card"><span class="p-n">13</span><h3>Preço por unidade de resultado</h3><p>Por contato, por atendimento resolvido, por hora devolvida, por documento processado.</p><div class="c-row long"><span>Quem paga</span><b>o cliente, proporcional ao que recebeu</b></div><div class="c-row long"><span>Fica proprietário</span><b>a medição, que vira o padrão do setor</b></div><div class="c-row long"><span>Morre de</span><b>medir o que não se consegue provar; o Radar resolveu isso contando só o que o Google conta</b></div></div><div class="card"><span class="p-n">14</span><h3>Participação na economia gerada</h3><p>A casa fica com uma fatia do custo que tirou da mesa do cliente.</p><div class="c-row long"><span>Quem paga</span><b>o cliente, do que economizou</b></div><div class="c-row long"><span>Fica proprietário</span><b>contrato longo e acesso profundo</b></div><div class="c-row long"><span>Morre de</span><b>discussão sobre a linha de base; sem linha de base auditável, não há acordo</b></div></div><div class="card"><span class="p-n">15</span><h3>Participação na receita</h3><p>Fatia do faturamento incremental, com ou sem piso mensal.</p><div class="c-row long"><span>Quem paga</span><b>o cliente, do que vendeu</b></div><div class="c-row long"><span>Fica proprietário</span><b>dado de venda do cliente, o mais valioso que existe</b></div><div class="c-row long"><span>Morre de</span><b>atribuição; provar que a venda veio da casa é quase sempre impossível</b></div></div><div class="card"><span class="p-n">16</span><h3>Participação societária por tecnologia</h3><p>Entrar no capital de um negócio pequeno em troca de montar e operar a máquina de IA dele.</p><div class="c-row long"><span>Quem paga</span><b>ninguém, em dinheiro; paga-se em participação</b></div><div class="c-row long"><span>Fica proprietário</span><b>parte do negócio, que vale o que o negócio valer</b></div><div class="c-row long"><span>Morre de</span><b>iliquidez e falta de foco; é fundo, não é empresa de serviço</b></div></div><div class="card"><span class="p-n">17</span><h3>Joint venture com o cliente</h3><p>Uma empresa nova, meio a meio: o cliente entra com mercado, a casa entra com máquina.</p><div class="c-row long"><span>Quem paga</span><b>o mercado da empresa nova</b></div><div class="c-row long"><span>Fica proprietário</span><b>metade de um negócio, e o direito de replicar o modelo</b></div><div class="c-row long"><span>Morre de</span><b>governança entre dois donos com pressa diferente</b></div></div></div><div class="band rv"><div class="b-lab">A régua da família</div><p>Cobrar por resultado exige três coisas antes do primeiro contrato: uma linha de base medida, um número que o cliente aceite como verdade e um contrato que diga o que acontece quando o número não aparece. Sem as três, resultado vira briga.</p></div></div></div></section>
+<div class="cap" id="cIV"><div class="wrap"><div class="cap-r rv">IV</div><div class="cap-n rv">Acesso</div><div class="cap-s rv"></div></div></div>
+<section id="viver-do-caminho-entre-quem-tem-e-quem-precisa" class="sec "><div class="wrap"><div class="hd"><div class="eyebrow rv">Família D <span>·</span> Distribuição e curadoria</div><h2 class="rv">VIVER DO CAMINHO ENTRE QUEM TEM E QUEM PRECISA</h2><p class="tag rv">Quando funciona, é o negócio mais valioso de todos. Quase nunca funciona do lado da oferta, que é o lado fácil.</p></div><div class="bd"><div class="cards stag"><div class="card"><span class="p-n">18</span><h3>Revenda de software</h3><p>Vender licenças de terceiros com comissão.</p><div class="c-row long"><span>Quem paga</span><b>o fornecedor, em comissão de primeiro ano (faixa de mercado, a confirmar)</b></div><div class="c-row long"><span>Fica proprietário</span><b>nada</b></div><div class="c-row long"><span>Morre de</span><b>preço público, fornecedor indo direto ao cliente e zero trava</b></div></div><div class="card"><span class="p-n">19</span><h3>Marketplace de ferramentas</h3><p>Vitrine com muitos fornecedores e muitos compradores.</p><div class="c-row long"><span>Quem paga</span><b>o fornecedor, por comissão de transação</b></div><div class="c-row long"><span>Fica proprietário</span><b>liquidez, se ela existir</b></div><div class="c-row long"><span>Morre de</span><b>falta de demanda; sem o lado difícil, é uma lista de links</b></div></div><div class="card"><span class="p-n">20</span><h3>Pilha curada e operada</h3><p>A leitura boa do item 12: a casa escolhe, instala, integra, opera e garante a pilha, cobrando por trabalho e responsabilidade.</p><div class="c-row long"><span>Quem paga</span><b>a empresa, uma mensalidade única que embute as ferramentas</b></div><div class="c-row long"><span>Fica proprietário</span><b>a operação, o acesso e o conhecimento do que funciona</b></div><div class="c-row long"><span>Morre de</span><b>escorregar para revenda, cobrando pelo link em vez de pelo trabalho</b></div></div><div class="card"><span class="p-n">21</span><h3>Marketplace de agentes prontos</h3><p>Agentes treinados para funções específicas, publicados por terceiros e certificados pela casa.</p><div class="c-row long"><span>Quem paga</span><b>a empresa que instala; parte vai para quem construiu</b></div><div class="c-row long"><span>Fica proprietário</span><b>o selo, se ele valer algo; a rede, se crescer</b></div><div class="c-row long"><span>Morre de</span><b>qualidade impossível de garantir em escala; um agente ruim queima o selo inteiro</b></div></div><div class="card"><span class="p-n">22</span><h3>Integrador dos sistemas antigos</h3><p>Ligar IA ao ERP, ao sistema de gestão e ao banco de dados que ninguém quer tocar.</p><div class="c-row long"><span>Quem paga</span><b>empresa média e grande, por projeto e por manutenção</b></div><div class="c-row long"><span>Fica proprietário</span><b>conectores reaproveitáveis e a relação com quem tem medo de mexer</b></div><div class="c-row long"><span>Morre de</span><b>nunca morre; é chato, é caro e é onde o dinheiro está parado</b></div></div><div class="card"><span class="p-n">23</span><h3>Loja interna do grupo</h3><p>Um catálogo de ferramentas negociadas, contratadas e cobradas pelo grupo, com preço melhor pelo volume.</p><div class="c-row long"><span>Quem paga</span><b>as empresas do grupo, por uso</b></div><div class="c-row long"><span>Fica proprietário</span><b>poder de compra e padronização</b></div><div class="c-row long"><span>Morre de</span><b>ser confundida com centro de custo; sem preço interno, não é negócio</b></div></div></div><div class="band rv"><div class="b-lab">A régua da família</div><p>Distribuição só vale quando a casa controla o lado da demanda. Ter demanda é ter audiência, base instalada ou canal — isto é, ter feito antes o trabalho das famílias E e A. Começar pela distribuição é começar pelo fim.</p></div></div></div></section>
+<div class="cap" id="cV"><div class="wrap"><div class="cap-r rv">V</div><div class="cap-n rv">Atenção</div><div class="cap-s rv"></div></div></div>
+<section id="o-negocio-de-ser-procurado" class="sec "><div class="wrap"><div class="hd"><div class="eyebrow rv">Família E <span>·</span> Mídia, escola e comunidade</div><h2 class="rv">O NEGÓCIO DE SER PROCURADO</h2><p class="tag rv">A família mais barata de começar, a que paga adiantado, e a que envelhece mais rápido.</p></div><div class="bd"><div class="cards stag"><div class="card"><span class="p-n">24</span><h3>Escola de IA</h3><p>Cursos, turmas, trilhas, do básico ao aplicado.</p><div class="c-row long"><span>Quem paga</span><b>aluno, adiantado</b></div><div class="c-row long"><span>Fica proprietário</span><b>rede de formados, se houver o que fazer com ela</b></div><div class="c-row long"><span>Morre de</span><b>conteúdo que vence a cada trimestre e concorrência que vende a mesma grade</b></div></div><div class="card"><span class="p-n">25</span><h3>Escola como funil de contratação</h3><p>A mesma escola, medida por quantos formados entram na operação do grupo.</p><div class="c-row long"><span>Quem paga</span><b>o aluno paga a conta; o grupo colhe o time</b></div><div class="c-row long"><span>Fica proprietário</span><b>um funil de gente treinada no jeito da casa</b></div><div class="c-row long"><span>Morre de</span><b>não existir vaga do outro lado; aí é só um curso</b></div></div><div class="card"><span class="p-n">26</span><h3>Certificação</h3><p>Um selo que o mercado reconhece para pessoas ou para agentes.</p><div class="c-row long"><span>Quem paga</span><b>quem quer o selo, e quem contrata quem tem o selo</b></div><div class="c-row long"><span>Fica proprietário</span><b>autoridade, que é lenta e durável</b></div><div class="c-row long"><span>Morre de</span><b>ninguém pedir o selo; certificação sem exigência é papel</b></div></div><div class="card"><span class="p-n">27</span><h3>Persona pública</h3><p>Um rosto, humano ou sintético, que publica e é procurado.</p><div class="c-row long"><span>Quem paga</span><b>ninguém diretamente; o retorno é demanda que chega sem mídia paga</b></div><div class="c-row long"><span>Fica proprietário</span><b>audiência — que sai pela porta com a pessoa, se for pessoa</b></div><div class="c-row long"><span>Morre de</span><b>virar hobby sem métrica; ou de regra de identificação de conteúdo sintético mal resolvida</b></div></div><div class="card"><span class="p-n">28</span><h3>Mídia de nicho B2B</h3><p>Boletim, relatório e evento para um setor só, com patrocínio.</p><div class="c-row long"><span>Quem paga</span><b>anunciante e patrocinador</b></div><div class="c-row long"><span>Fica proprietário</span><b>lista própria de leitores, que vale mais que seguidor</b></div><div class="c-row long"><span>Morre de</span><b>cansaço; mídia é publicação sem férias</b></div></div><div class="card"><span class="p-n">29</span><h3>Comunidade paga</h3><p>Assinatura de acesso a pares, materiais e respostas.</p><div class="c-row long"><span>Quem paga</span><b>o membro, mensalidade</b></div><div class="c-row long"><span>Fica proprietário</span><b>a rede, que fica mais forte a cada membro — o raro caso de hub de verdade</b></div><div class="c-row long"><span>Morre de</span><b>silêncio; comunidade sem atividade some em três meses</b></div></div></div><div class="band rv"><div class="b-lab">A régua da família</div><p>Atenção não é receita, é redução de custo de aquisição. Medir escola e persona como unidade de negócio faz a casa matá-las cedo demais ou mantê-las tempo demais. A métrica certa é uma só: contatos qualificados que chegaram sem mídia paga.</p></div></div></div></section>
+<div class="cap" id="cVI"><div class="wrap"><div class="cap-r rv">VI</div><div class="cap-n rv">Infraestrutura</div><div class="cap-s rv"></div></div></div>
+<section id="o-que-faz-o-proximo-produto-custar-uma-fracao-do" class="sec "><div class="wrap"><div class="hd"><div class="eyebrow rv">Família F <span>·</span> A máquina de fazer máquinas</div><h2 class="rv">O QUE FAZ O PRÓXIMO PRODUTO CUSTAR UMA FRAÇÃO DO PRIMEIRO</h2><p class="tag rv">A família invisível. Não se vende sozinha e é o que decide se a casa terá dois produtos ou um só.</p></div><div class="bd"><div class="cards stag"><div class="card"><span class="p-n">30</span><h3>Plataforma interna com preço</h3><p>Gateway de modelos, multiempresa, cobrança, autenticação, custo por cliente, observabilidade.</p><div class="c-row long"><span>Quem paga</span><b>as empresas do grupo, por uso, com contrato e nota</b></div><div class="c-row long"><span>Fica proprietário</span><b>o tempo de montar o produto seguinte</b></div><div class="c-row long"><span>Morre de</span><b>virar balcão de suporte; sem preço e sem SLA, não é plataforma</b></div></div><div class="card"><span class="p-n">31</span><h3>Licenciamento e marca branca</h3><p>Licenciar o produto provado para outro grupo, outra praça ou outro país.</p><div class="c-row long"><span>Quem paga</span><b>o licenciado, entrada mais participação</b></div><div class="c-row long"><span>Fica proprietário</span><b>o produto e o padrão; a operação fica com o outro</b></div><div class="c-row long"><span>Morre de</span><b>licenciar antes de ter operação documentada; suporte vira o negócio</b></div></div><div class="card"><span class="p-n">32</span><h3>Padrão de governança de agentes</h3><p>O jeito de fazer: aprovação humana, amostragem, registro com prova, limite de custo por cliente.</p><div class="c-row long"><span>Quem paga</span><b>começa interno; vira produto quando o mercado precisar provar conformidade</b></div><div class="c-row long"><span>Fica proprietário</span><b>método e reputação de seriedade</b></div><div class="c-row long"><span>Morre de</span><b>chegar cedo demais ao mercado, antes da primeira crise pública do setor</b></div></div></div><div class="band rv"><div class="b-lab">O que a casa já tem escrito</div><p>O Radar Urbano descreve gateway de modelos, multiempresa com território, custo por cliente como métrica de primeira classe, renderização e entrega, e o padrão Guardião — um humano com painel, amostragem de 10% e dois olhos no que é irreversível. Esse é o primeiro catálogo da plataforma. Ele só não está com esse nome.</p></div></div></div></section>
+<div class="cap" id="cVII"><div class="wrap"><div class="cap-r rv">VII</div><div class="cap-n rv">Capital</div><div class="cap-s rv"></div></div></div>
+<section id="quando-a-casa-para-de-vender-ferramenta-e-passa-" class="sec "><div class="wrap"><div class="hd"><div class="eyebrow rv">Família G <span>·</span> Comprar, montar e operar</div><h2 class="rv">QUANDO A CASA PARA DE VENDER FERRAMENTA E PASSA A FICAR COM O RESULTADO</h2><p class="tag rv">A família que mais contraria o papel, e a mais coerente com a própria tese da casa.</p></div><div class="bd"><div class="cards stag"><div class="card"><span class="p-n">33</span><h3>Operadora</h3><p>Comprar ou montar um negócio tradicional e rodá-lo com agentes, ficando com a margem inteira.</p><div class="c-row long"><span>Quem paga</span><b>o mercado daquele negócio</b></div><div class="c-row long"><span>Fica proprietário</span><b>o negócio</b></div><div class="c-row long"><span>Morre de</span><b>subestimar que operar é mais difícil que automatizar</b></div></div><div class="card"><span class="p-n">34</span><h3>Consolidação de carteiras</h3><p>Comprar agências pequenas com clientes e trocar o motor por agentes.</p><div class="c-row long"><span>Quem paga</span><b>os clientes que vieram junto</b></div><div class="c-row long"><span>Fica proprietário</span><b>carteira e contratos</b></div><div class="c-row long"><span>Morre de</span><b>comprar carteira sem ter o motor pronto antes</b></div></div><div class="card"><span class="p-n">35</span><h3>Estúdio de produtos</h3><p>Montar produtos em série, com sócio operador em cada um e a plataforma comum embaixo.</p><div class="c-row long"><span>Quem paga</span><b>cada produto, separado</b></div><div class="c-row long"><span>Fica proprietário</span><b>participação em vários negócios e a plataforma</b></div><div class="c-row long"><span>Morre de</span><b>diluir atenção; estúdio sem plataforma é só desatenção organizada</b></div></div><div class="card"><span class="p-n">36</span><h3>Cooperativa de clientes</h3><p>Reunir muitas empresas pequenas do mesmo setor para comprar, negociar e operar juntas.</p><div class="c-row long"><span>Quem paga</span><b>os associados, mensalidade</b></div><div class="c-row long"><span>Fica proprietário</span><b>a base e o poder de compra; é hub de verdade, pela definição</b></div><div class="c-row long"><span>Morre de</span><b>governança lenta; muitos donos, nenhuma decisão</b></div></div></div><div class="band rv"><div class="b-lab">A pergunta que essa família devolve para o papel</div><p>Se a tese da casa é que agentes fazem o trabalho, a posição mais lucrativa não é vender agentes para quem tem o negócio: é ter o negócio. O bilhete não considera isso em nenhuma das doze linhas, e é a conversa mais valiosa que ele deixou de fora.</p></div></div></div></section>
+<div class="cap" id="cVIII"><div class="wrap"><div class="cap-r rv">VIII</div><div class="cap-n rv">A crítica</div><div class="cap-s rv"></div></div></div>
+<section id="hub-nao-e-modelo-de-negocio" class="sec "><div class="wrap"><div class="hd"><div class="eyebrow rv">Capítulo VIII <span>·</span> A contestação</div><h2 class="rv">HUB NÃO É MODELO DE NEGÓCIO</h2><p class="tag rv">A palavra aparece oito vezes no papel e não decide nada.</p></div><div class="bd"><p class="intro rv">Hub é uma posição numa rede, não um tipo de empresa. Só existe hub quando três coisas acontecem juntas: ele junta oferta e procura que não se encontrariam sozinhas; ele cobra pela travessia; e fica mais forte a cada participante novo. Das trinta e seis posições deste documento, só três são hub pela definição: o marketplace de agentes, a comunidade paga e a cooperativa. Todas as outras são empresas normais com nome bonito.</p><p class="intro rv">O custo da palavra não é estético: ela dá licença para adiar a escolha. Enquanto tudo é hub, nada precisa ter cliente, preço e dono.</p></div></div></section>
+<section id="doze-linhas-quatro-empresas" class="sec alt wide"><div class="wrap"><div class="hd"><div class="eyebrow rv">Capítulo VIII <span>·</span> Os arquétipos</div><h2 class="rv">DOZE LINHAS, QUATRO EMPRESAS</h2></div><div class="bd"><div class="tbl rv"><table><thead><tr><th>Arquétipo</th><th>Linhas do papel</th><th>Quando entra dinheiro</th><th>O que escala</th><th>Como morre</th></tr></thead><tbody><tr><td>Produto</td><td>01, 02, 06</td><td>Depois de 12 a 24 meses</td><td>Venda sem nova entrega</td><td>Caixa acaba antes do segundo ano</td></tr><tr><td>Trabalho</td><td>05, 09, 12</td><td>Em 30 a 60 dias</td><td>Contratando gente</td><td>O maior cliente vira o chefe</td></tr><tr><td>Atenção</td><td>03, 04, 08</td><td>Adiantado</td><td>Audiência</td><td>O conteúdo vence em um trimestre</td></tr><tr><td>Acesso</td><td>07</td><td>Só com os dois lados cheios</td><td>Liquidez</td><td>Nunca consegue o lado da demanda</td></tr></tbody></table></div><p class="intro rv">Quatro arquétipos dentro de uma empresa só são quatro calendários, quatro perfis de contratação e quatro definições de mês bom. Um time faz um bem. Dois, mal. Quatro, nenhum.</p></div></div></section>
+<section id="servir-o-grupo-ou-servir-o-mercado" class="sec dark"><div class="wrap"><div class="hd"><div class="eyebrow rv"></div><h2 class="rv">SERVIR O GRUPO OU SERVIR O MERCADO</h2><p class="tag rv">A linha 05 mata as linhas 01, 02 e 07 sem precisar discutir com elas.</p></div><div class="bd"><p class="intro rv">O conflito não é filosófico, é de agenda. Toda segunda-feira existem duas listas na mesa: a do grupo, que pede e não paga, e a do mercado, que paga e pode ir embora. A que grita mais alto ganha toda semana, e a conta só aparece no fim do ano, quando nada novo nasceu.</p><div class="vb rv"><div class="vb-k">O que precisa estar escrito para as duas coexistirem</div><div class="spec stag"><div class="sp-row"><div class="sp-k">Preço interno</div><div class="sp-v">por uso ou por assento, com nota entre as empresas</div></div><div class="sp-row"><div class="sp-k">Contrato e SLA</div><div class="sp-v">o que a GarowAÍ garante, em quanto tempo, e o que ela não faz</div></div><div class="sp-row"><div class="sp-k">Direito de dizer não</div><div class="sp-v">pedido que fura o roteiro entra na fila ou paga urgência</div></div><div class="sp-row"><div class="sp-k">Propriedade</div><div class="sp-v">de quem é o código e o dado quando a GarowAÍ constrói para outra empresa do grupo</div></div><div class="sp-row"><div class="sp-k">Exclusividade</div><div class="sp-v">a GarowAÍ pode vender para um concorrente de uma empresa do grupo?</div></div></div></div><div class="band rv"><div class="b-lab">A pergunta em uma frase</div><p>O grupo é o primeiro cliente pagante da GarowAÍ ou o dono da agenda dela? As duas respostas são legítimas; só não dá para ter as duas.</p></div></div></div></section>
+<section id="o-que-vai-sobrar-depois-de-tres-anos" class="sec "><div class="wrap"><div class="hd"><div class="eyebrow rv">Capítulo VIII <span>·</span> O ativo</div><h2 class="rv">O QUE VAI SOBRAR DEPOIS DE TRÊS ANOS</h2><p class="tag rv">Código deixou de ser ativo no dia em que um modelo passou a reescrevê-lo numa tarde.</p></div><div class="bd"><div class="cards stag"><div class="card"><h3>Dado proprietário com direito de uso</h3><p>compõe e não se compra depois. É a série de medição do Radar, por termo, ponto e data.</p></div><div class="card"><h3>Distribuição</h3><p>uma lista de gente que atende quando a casa chama.</p></div><div class="card"><h3>Operação</h3><p>a parte chata: acesso, permissão, prazo, prova e responsabilidade.</p></div><div class="card"><h3>Contrato</h3><p>recorrência assinada, com trava legítima.</p></div><div class="card"><h3>Marca</h3><p>compõe devagar e quebra rápido.</p></div><div class="card"><h3>Código</h3><p>velocidade, não fosso.</p></div></div><p class="intro rv">Das doze linhas do papel, deixam algo para trás: a 01, a 05 na versão plataforma, a 12 na versão operada. As outras, do jeito que estão escritas, não deixam nada.</p></div></div></section>
+<section id="o-fornecedor-pode-virar-o-concorrente" class="sec alt"><div class="wrap"><div class="hd"><div class="eyebrow rv">Capítulo VIII <span>·</span> O fornecedor</div><h2 class="rv">O FORNECEDOR PODE VIRAR O CONCORRENTE</h2><p class="tag rv">Toda linha do papel anda sobre a API de alguém que também vende para o cliente final.</p></div><div class="bd"><p class="intro rv">O preço do token cai, e isso é bom. Mas a atualização seguinte pode entregar de graça, dentro do produto do fornecedor, exatamente o que a casa cobrava. A regra que sobra: nunca construir onde o roteiro do fornecedor passa. Construir onde o modelo não chega, porque não tem mãos, nem cadastro, nem responsabilidade legal — acesso e permissão em sistemas de terceiros, conhecimento local que não está na internet, integração com o que é antigo, operação diária com prova, e alguém que assina embaixo.</p></div></div></section>
+<section id="quem-responde-quando-o-agente-erra" class="sec "><div class="wrap"><div class="hd"><div class="eyebrow rv">Capítulo VIII <span>·</span> A responsabilidade</div><h2 class="rv">QUEM RESPONDE QUANDO O AGENTE ERRA</h2><p class="tag rv">Agente que age em nome de terceiro transforma erro técnico em risco jurídico.</p></div><div class="bd"><p class="intro rv">Publicar, responder, cobrar ou prometer em nome de um cliente cria três exposições ao mesmo tempo: contratual, de dados e de reputação — e a terceira é pública, com o nome do cliente. Isso vale para as trinta e seis posições, inclusive escola e persona. O gabarito já existe dentro de casa, no Radar Urbano: nunca a senha do cliente; um acesso só, revogável; registro do que a máquina fez, com prova; dois olhos humanos no que é irreversível; promessa escrita como operação medida, nunca como resultado de venda.</p></div></div></section>
+<div class="cap" id="cIX"><div class="wrap"><div class="cap-r rv">IX</div><div class="cap-n rv">O Radar Group</div><div class="cap-s rv"></div></div></div>
+<section id="o-radar-e-a-unica-posicao-ja-ocupada" class="sec "><div class="wrap"><div class="hd"><div class="eyebrow rv">Capítulo IX <span>·</span> A prova</div><h2 class="rv">O RADAR É A ÚNICA POSIÇÃO JÁ OCUPADA</h2><p class="tag rv">Enquanto o papel pergunta o que a GarowAÍ poderia ser, o Radar Urbano já é: posição 01, vertical de nicho, com cliente, preço e trava.</p></div><div class="bd"><div class="vb rv"><div class="vb-k">O que está fechado</div><div class="spec stag"><div class="sp-row"><div class="sp-k">Preço</div><div class="sp-v">R$ 499/mês, fixo, sem verba de mídia</div></div><div class="sp-row"><div class="sp-k">Produto</div><div class="sp-v">captura de intenção no Google Maps e na Busca local, por assinatura</div></div><div class="sp-row"><div class="sp-k">Entregas</div><div class="sp-v">onze, com numeração fixa</div></div><div class="sp-row"><div class="sp-k">Quem faz</div><div class="sp-v">cinco agentes e um humano com painel</div></div><div class="sp-row"><div class="sp-k">Máquina</div><div class="sp-v">quatro conectores e um serviço de entrega</div></div><div class="sp-row"><div class="sp-k">Tempo do dono</div><div class="sp-v">até 15 minutos no Dia 0</div></div><div class="sp-row"><div class="sp-k">Trava territorial</div><div class="sp-v">no máximo 2 empresas por segmento por zona, em contrato e em código</div></div><div class="sp-row"><div class="sp-k">Custo de tecnologia</div><div class="sp-v">R$ 12–25 por cliente por mês, com alerta em R$ 25</div></div><div class="sp-row"><div class="sp-k">Montagem</div><div class="sp-v">seis semanas, com piloto de 3 clientes por 30 dias</div></div></div></div><div class="vb rv"><div class="vb-k">O que é hipótese, e está marcado como tal</div><div class="spec stag"><div class="sp-row"><div class="sp-k">Margem de contribuição</div><div class="sp-v">47% → 72% → 79%, conforme o operador vai de 30 para 150 clientes</div></div><div class="sp-row"><div class="sp-k">Ponto de equilíbrio</div><div class="sp-v">perto de 120 clientes</div></div><div class="sp-row"><div class="sp-k">Churn</div><div class="sp-v">5% ao mês, vida média de 20 meses</div></div><div class="sp-row"><div class="sp-k">Custo de aquisição</div><div class="sp-v">R$ 1.000–1.500, com retorno em 3 a 4 meses</div></div><div class="sp-row"><div class="sp-k">Capacidade por praça</div><div class="sp-v">240–360 clientes, com ocupação de 10 a 15% das vagas teóricas</div></div></div></div></div></div></section>
+<section id="o-que-o-radar-da-e-o-que-ele-cobra-de-volta" class="sec alt"><div class="wrap"><div class="hd"><div class="eyebrow rv">Capítulo IX <span>·</span> O empréstimo</div><h2 class="rv">O QUE O RADAR DÁ E O QUE ELE COBRA DE VOLTA</h2><p class="tag rv">O Radar Group não entra nesta conversa como exemplo. Entra como fornecedor de peças e como primeiro cliente exigente.</p></div><div class="bd"><div class="vb rv"><div class="vb-k">O que ele empresta</div><ul class="list stag"><li>Gateway de modelos: trocar de modelo sem trocar de produto.</li><li>Multiempresa com território, verificado antes de o cliente nascer.</li><li>Custo por cliente como métrica de primeira classe, com alerta e roteiro de redução.</li><li>O padrão Guardião: humano com painel, aprovação em lote, amostragem de 10%, dois olhos no irreversível.</li><li>Renderização e entrega: cartões, mapas, PDFs de uma página, reenvio.</li><li>A disciplina da promessa: nunca conversão, receita ou "novos clientes"; contar o que é contável.</li><li>Postura de LGPD: dado público de pessoa jurídica, canal de titular, suboperadores nomeados.</li><li>O método das seis semanas, com critério de pronto escrito antes de começar.</li><li>O canal: uma porta já aberta para donos de comércio, com contrato e conversa acontecendo.</li></ul></div><div class="vb rv"><div class="vb-k">O que ele cobra</div><ul class="list stag"><li>Preço interno conhecido, para o custo por cliente continuar abaixo de R$ 25.</li><li>Versão e prazo de descontinuação: nada muda debaixo de um produto no ar.</li><li>SLA escrito, porque existe Boletim toda segunda às 7h e Fechamento todo dia 1.</li><li>Direito de recusar novidade que não passou no critério de pronto.</li><li>Nenhum experimento em cliente pagante sem aprovação do Guardião.</li></ul></div><div class="band rv"><div class="b-lab">O risco na direção contrária</div><p>Uma casa de IA tende a usar o produto do grupo como laboratório, porque é o acesso mais fácil que ela tem. O preço disso não aparece na GarowAÍ: aparece no churn do Radar, três meses depois, e ninguém liga uma coisa à outra.</p></div></div></div></section>
+<section id="o-erro-que-esta-casa-ja-cometeu-uma-vez" class="sec "><div class="wrap"><div class="hd"><div class="eyebrow rv">Capítulo IX <span>·</span> A memória</div><h2 class="rv">O ERRO QUE ESTA CASA JÁ COMETEU UMA VEZ</h2><p class="tag rv">O bilhete é o dossiê de novo, em doze linhas.</p></div><div class="bd"><p class="intro rv">O Radar Urbano nasceu como holding de seis produtos, suíte de R$ 1.500 a R$ 2.200, quatro estágios e avaliação de R$ 5,2 bilhões num documento de 52 seções. Nada aquilo era mentira: era cedo. O corte que veio depois transformou seis produtos em um, fixou o preço em R$ 499, escreveu onze entregas com nome e jogou os outros cinco módulos para um roteiro em fases, cada um com dependência e critério de pronto. Foi esse corte que tornou o negócio montável em seis semanas por R$ 50–65 mil, em vez de continuar bonito e parado no papel.</p><div class="band rv"><div class="b-lab">A regra que saiu daquele corte</div><p>Um produto, um cliente com nome, um preço, uma promessa que se mede. Todo o resto vira fase com dependência, não vira empresa no mesmo trimestre.</p></div></div></div></section>
+<div class="cap" id="cX"><div class="wrap"><div class="cap-r rv">X</div><div class="cap-n rv">As cinco GarowaÍs</div><div class="cap-s rv"></div></div></div>
+<section id="cinco-empresas-inteiras-coerentes-ate-o-fim" class="sec "><div class="wrap"><div class="hd"><div class="eyebrow rv">Capítulo X <span>·</span> Os cenários</div><h2 class="rv">CINCO EMPRESAS INTEIRAS, COERENTES ATÉ O FIM</h2><p class="tag rv">Cada cenário é uma combinação fechada de posições, com o que ele vira em cinco anos. Não são estilos: são empresas diferentes, com gente diferente e caixa diferente.</p></div><div class="bd"><div class="cal stag"><div class="cal-i"><div class="cal-t">A Vertical</div><div class="cal-s">Posições 01, 04, 13, 30</div><ul><li>Um setor por vez, produto com preço fixo e trava, plataforma nascendo por baixo</li><li>Caixa: devagar no primeiro ano, sozinho no terceiro</li><li>Time: pequeno, técnico, com um operador por faixa de clientes</li><li>Em cinco anos: dois ou três verticais, receita recorrente previsível, empresa vendável por múltiplo de receita</li><li>Risco principal: escolher o segundo nicho por entusiasmo, e não por dado</li></ul></div><div class="cal-i"><div class="cal-t">A Fábrica</div><div class="cal-s">Posições 07, 08, 11, 12, 22</div><ul><li>Projetos sob medida e pilhas operadas, com método próprio e time que cresce com a receita</li><li>Caixa: rápido e alto desde o primeiro trimestre</li><li>Time: consultores e engenheiros, com sócio na frente do cliente</li><li>Em cinco anos: casa respeitada, receita alta, valor de venda baixo por depender de gente</li><li>Risco principal: nunca sobrar semana para construir produto</li></ul></div><div class="cal-i"><div class="cal-t">A Plataforma do Grupo</div><div class="cal-s">Posições 30, 23, 31, 32</div><ul><li>O sistema operacional do grupo Garowa, cobrado por uso, depois licenciado para fora</li><li>Caixa: previsível e limitado pelo tamanho do grupo, até o licenciamento abrir</li><li>Time: engenharia e governança; pouca venda</li><li>Em cinco anos: infraestrutura crítica, difícil de trocar, valor concentrado no grupo</li><li>Risco principal: virar departamento e parar de ver o mercado</li></ul></div><div class="cal-i"><div class="cal-t">A Casa de Mídia</div><div class="cal-s">Posições 24, 26, 27, 28, 29</div><ul><li>Escola, certificação, persona, boletim e comunidade: a casa vive de ser procurada</li><li>Caixa: adiantado, com margem alta e teto baixo</li><li>Time: conteúdo, comunidade e produção, com um rosto na frente</li><li>Em cinco anos: autoridade no setor, que vira canal para vender qualquer outra coisa</li><li>Risco principal: o rosto ir embora, ou o assunto esfriar</li></ul></div><div class="cal-i"><div class="cal-t">A Operadora</div><div class="cal-s">Posições 33, 34, 16, 17</div><ul><li>Comprar e operar negócios com agentes, ficar com a margem, replicar o modelo</li><li>Caixa: exige capital antes de qualquer receita</li><li>Time: operação e integração, mais do que engenharia</li><li>Em cinco anos: um grupo de negócios operados, com valor no resultado e não em mensalidade</li><li>Risco principal: descobrir que operar é mais difícil que automatizar, depois de comprar</li></ul></div></div><div class="band rv"><div class="b-lab">O que nenhum cenário permite</div><p>Nenhum dos cinco comporta os doze itens do papel ao mesmo tempo. Todos comportam a persona e a escola como apoio, porque atenção é barata. Nenhum comporta marketplace antes de haver demanda própria. Essa é a única restrição que atravessa os cinco.</p></div></div></div></section>
+<section id="o-que-este-documento-nao-faz" class="sec fecho"><div class="wrap"><div class="eyebrow rv"></div><h2 class="rv">O QUE ESTE DOCUMENTO NÃO FAZ</h2><p class="lead rv">Ele não escolhe. Escolher é do fundador, e a escolha tem consequência de organograma, caixa e contratação já no próximo trimestre.</p><p class="lead rv">O que está aqui é o mapa inteiro: trinta e seis posições, quatro eixos, cinco empresas possíveis e a crítica honesta de cada caminho. O papel original não estava errado — estava cedo. Ele listou tudo o que a GarowAÍ pode ser e não escolheu nada, e essa é exatamente a diferença entre um inventário de possibilidades e um posicionamento.</p><p class="lead rv">As perguntas abaixo não são retóricas. Nenhuma delas tem resposta certa; todas têm consequência imediata.</p><ol class="steps stag"><li>O grupo Garowa é o primeiro cliente pagante da GarowAÍ ou o dono da agenda dela?</li><li>O Radar Group é cliente, irmão ou o mesmo caixa?</li><li>Qual dos cinco cenários a casa está disposta a ser por três anos seguidos?</li><li>Quanto caixa existe para atravessar doze meses sem receita nova?</li><li>Quem é o dono, em tempo integral, de cada posição escolhida?</li><li>A GarowAÍ pode vender para o concorrente de uma empresa do grupo?</li><li>O grupo contrata os alunos da escola?</li><li>A persona tem rosto de pessoa ou é sintética, e quem assina o que ela publica?</li><li>Qual é o primeiro "não" que a casa vai dizer para um cheque que couber na conta?</li><li>Se só uma posição pudesse existir em 2027, qual seria?</li></ol><div class="band rv"><div class="b-lab">A frase que fecha</div><p>Hub não se declara; descobre-se depois, quando alguém percebe que já passa tudo por ali. O que se declara antes é o oposto: um cliente, um preço, uma promessa e uma lista de coisas que a casa não faz.</p></div></div></section>
+
+<div class="fim"><a class="wm" href="#topo"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10.5"/><circle cx="12" cy="12" r="6.5" opacity=".5"/><circle cx="12" cy="12" r="2" opacity=".3"/></svg><span>GarowAÍ · Radar Group</span></a></div>
+</main>
+
+<script>
+(function(){
+  document.documentElement.classList.add('js');
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var cover=document.getElementById('capa');
+  requestAnimationFrame(function(){requestAnimationFrame(function(){cover.classList.add('in')})});
+
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;var el=e.target;el.classList.add('in');io.unobserve(el);el.querySelectorAll('.cnt').forEach(conta)})},{rootMargin:'0px 0px -10% 0px',threshold:.1});
+  document.querySelectorAll('.rv,.stag').forEach(function(el){io.observe(el)});
+  document.querySelectorAll('.stag').forEach(function(el){[].slice.call(el.children).forEach(function(c,i){c.style.transitionDelay=(i*90)+'ms'})});
+
+  function fmt(n,dec){var s=n.toFixed(dec).split('.');s[0]=s[0].replace(/\B(?=(\d{3})+(?!\d))/g,'.');return dec?s[0]+','+s[1]:s[0]}
+  var feitos=new WeakSet();
+  function conta(el){if(feitos.has(el))return;feitos.add(el);var t=parseFloat(el.dataset.t),dec=+el.dataset.dec||0,pre=el.dataset.pre||'',suf=el.dataset.suf||'';if(reduce||isNaN(t))return;var d=1500,t0=null;
+    (function passo(ts){if(!t0)t0=ts;var k=Math.min(1,(ts-t0)/d),e=1-Math.pow(1-k,4);el.textContent=pre+fmt(t*e,dec)+suf;if(k<1)requestAnimationFrame(passo)})(performance.now())}
+
+  var prog=document.getElementById('prog'),bar=document.getElementById('bar');
+  var links=[].slice.call(document.querySelectorAll('.ix a[data-s]')),secs=links.map(function(a){return document.getElementById(a.dataset.s)}).filter(Boolean);
+  function onScroll(){var h=document.documentElement,max=h.scrollHeight-h.clientHeight;prog.style.width=(max>0?h.scrollTop/max*100:0)+'%';bar.classList.toggle('on',h.scrollTop>40);
+    var y=h.scrollTop+h.clientHeight*.4,cur=null;secs.forEach(function(s){if(s.offsetTop<=y)cur=s});links.forEach(function(a){a.classList.toggle('on',!!cur&&a.dataset.s===cur.id)})}
+  addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  var btn=document.getElementById('ixBtn'),ix=document.getElementById('ix');
+  function set(o){document.body.classList.toggle('ix',o);btn.setAttribute('aria-expanded',String(o));[].slice.call(ix.querySelectorAll('a')).forEach(function(a,i){a.style.transitionDelay=o?(40+i*10)+'ms':'0ms'})}
+  btn.addEventListener('click',function(){set(!document.body.classList.contains('ix'))});
+  ix.addEventListener('click',function(e){if(e.target.closest('a'))set(false)});
+  addEventListener('keydown',function(e){if(e.key==='Escape')set(false)});
+})();
+</script>
+
+</body>
+</html>

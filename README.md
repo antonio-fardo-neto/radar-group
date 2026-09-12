@@ -32,4 +32,5 @@ Pacote de documentos do **Radar Urbano**: serviço B2B de captura de intenção 
 - `referencia/` — `01-DOSSIE-HOLDING-VERBATIM.md` (o dossiê original da holding, 52 seções, intocado) e `BRIEF-DE-ESCOPO.md` (as decisões de recorte que governaram a reescrita; inclui o adendo de alinhamento).
 - `detalhado/` — as versões longas e aprofundadas (entregas, acessos, mapa mundi, roadmap, contexto, decisões, backlog, design, como gerar). São rascunhos em revisão; ver `detalhado/README.md`.
 - `src/` — gerador de apresentações web (edição branca) e PDF a partir do Markdown: `python3 src/build.py --all`, `python3 src/make_pdf.py --all`, `python3 src/assemble.py tudo`. Ver `detalhado/07-COMO-GERAR.md`.
+- `garowa-ai/` — os dois documentos da **GarowAÍ** (a casa de IA do grupo Garowa): `01-HORIZONTE.md` (trinta e seis posições possíveis, a crítica ao bilhete de posicionamento e cinco cenários de empresa) e `02-ESTRUTURA.md` (a estrutura real para executar: empresa, contratos, gente, caixa, máquina, operação, LGPD e plano de doze meses). Ver `garowa-ai/README.md`.
 - `dist/` — HTML e PDF gerados.
