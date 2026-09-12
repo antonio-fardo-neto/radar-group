@@ -2,7 +2,7 @@
 """Radar Urbano · monta os documentos finais a partir das partes (_work/parts) e o TUDO-EM-UM.md.
 
 Uso:
-  python3 src/assemble.py parts      # _work/parts/*.md → 02, 03, 04, 05, 11 (e 00, 08, 09, 10 se existirem)
+  python3 src/assemble.py parts [02-MAPA-DE-ENTREGAS.md ...]   # _work/parts/*.md → raiz; sem argumentos monta todos os que têm partes
   python3 src/assemble.py tudo       # concatena os arquivos numerados + README em TUDO-EM-UM.md
 """
 import re, sys
@@ -18,7 +18,8 @@ def join(files):
         out.append(t)
     return "\n\n".join(out) + "\n"
 
-def parts():
+def parts(only=()):
+    """Monta os documentos a partir das partes. Com nomes em `only`, monta só esses (os demais, já corrigidos na raiz, ficam intactos)."""
     plan = {
         "02-MAPA-DE-ENTREGAS.md": ["entregas.md"],
         "03-MAPA-DE-ACESSOS.md": ["acessos.md"],
@@ -31,6 +32,7 @@ def parts():
         "10-BACKLOG.md": ["10-BACKLOG.md"],
     }
     for target, srcs in plan.items():
+        if only and target not in only: continue
         if not all((PARTS / s).exists() for s in srcs):
             print("pulando", target, "(partes faltando)"); continue
         (ROOT / target).write_text(join(srcs), encoding="utf-8")
@@ -49,4 +51,5 @@ def tudo():
 
 if __name__ == "__main__":
     cmd = sys.argv[1] if len(sys.argv) > 1 else "parts"
-    {"parts": parts, "tudo": tudo}[cmd]()
+    if cmd == "parts": parts(tuple(sys.argv[2:]))
+    else: tudo()
