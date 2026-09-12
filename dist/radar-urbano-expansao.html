@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Radar Urbano · Expansão</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Manrope:wght@300;400;500;600&display=swap">
+<style>
+/* Radar Urbano — edição branca. Apple no ar e no ritmo; maison de luxo na tipografia; tecnologia só no acabamento. */
+:root{
+  --bg:#FFFFFF;--bg-2:#F5F5F7;--bg-3:#EDEDF0;--dark:#0B0B0C;--dark-2:#151517;
+  --ink:#1D1D1F;--ink-2:#6E6E73;--ink-3:#A1A1A6;--line:rgba(0,0,0,.09);--line-2:rgba(0,0,0,.16);
+  --em:#0B7A55;--em-soft:rgba(11,122,85,.08);--em-light:#37C48E;
+  --sans:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text","Manrope","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --serif:"Bodoni Moda","Didot","Bodoni 72",Georgia,serif;
+  --ease:cubic-bezier(.22,1,.36,1);
+}
+*{box-sizing:border-box}
+html{background:var(--bg);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+::selection{background:var(--em);color:#fff}
+a{color:inherit;text-decoration:none}
+button:focus-visible,a:focus-visible{outline:2px solid var(--em);outline-offset:3px}
+p{margin:0}
+strong{font-weight:600}
+h2,h3{margin:0;font-weight:500}
+
+/* chrome */
+#prog{position:fixed;top:0;left:0;height:2px;width:0;background:var(--em);z-index:70}
+.bar{position:fixed;top:0;left:0;right:0;height:60px;z-index:60;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(20px,4vw,48px);background:rgba(255,255,255,.72);backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%);border-bottom:1px solid transparent;transition:border-color .4s}
+.bar.on{border-bottom-color:var(--line)}
+.wm{display:flex;align-items:center;gap:12px;font-size:11.5px;font-weight:500;letter-spacing:.34em;text-transform:uppercase;color:var(--ink)}
+.wm svg{width:18px;height:18px}
+.wm svg circle{fill:none;stroke:var(--ink);stroke-width:.9}
+.ix-btn{display:flex;align-items:center;gap:12px;background:none;border:1px solid var(--line-2);color:var(--ink);font-family:var(--sans);font-size:11px;letter-spacing:.28em;text-transform:uppercase;padding:10px 16px;border-radius:999px;cursor:pointer;transition:background .3s,border-color .3s}
+.ix-btn:hover{background:var(--ink);color:#fff;border-color:var(--ink)}
+.ix-btn i{display:block;width:16px;height:9px;position:relative}
+.ix-btn i::before,.ix-btn i::after{content:"";position:absolute;left:0;right:0;height:1px;background:currentColor;transition:transform .4s var(--ease),top .4s var(--ease)}
+.ix-btn i::before{top:0}.ix-btn i::after{top:8px}
+body.ix .ix-btn i::before{top:4px;transform:rotate(45deg)}body.ix .ix-btn i::after{top:4px;transform:rotate(-45deg)}
+
+/* índice em tela cheia */
+.ix{position:fixed;inset:0;z-index:58;background:rgba(255,255,255,.86);backdrop-filter:blur(30px) saturate(160%);-webkit-backdrop-filter:blur(30px) saturate(160%);opacity:0;pointer-events:none;transition:opacity .5s var(--ease);overflow-y:auto;padding:110px clamp(20px,6vw,96px) 80px}
+body.ix .ix{opacity:1;pointer-events:auto}
+.ix-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:36px 48px;max-width:1400px;margin:0 auto}
+.ix-c{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--ink-3);margin-bottom:14px;display:flex;gap:12px;align-items:baseline}
+.ix-r{font-family:var(--serif);font-size:20px;color:var(--ink);letter-spacing:0}
+.ix-g a{display:grid;grid-template-columns:30px 1fr;gap:12px;padding:8px 0;color:var(--ink-2);font-size:13.5px;line-height:1.35;border-top:1px solid var(--line);transition:color .2s;opacity:0;transform:translateY(8px)}
+body.ix .ix-g a{opacity:1;transform:none;transition:opacity .6s var(--ease),transform .6s var(--ease),color .2s}
+.ix-g a i{font-style:normal;font-family:var(--serif);font-size:14px;color:var(--ink-3)}
+.ix-g a:hover,.ix-g a.on{color:var(--ink)}
+.ix-g a.on i{color:var(--em)}
+.ix-g a span{text-transform:none;letter-spacing:0}
+
+/* capa */
+.cover{padding:clamp(150px,20vh,240px) clamp(20px,6vw,96px) clamp(90px,12vh,150px);position:relative;max-width:1400px;margin:0 auto}
+.cover .k{font-size:11px;letter-spacing:.44em;text-transform:uppercase;color:var(--ink-2);margin-bottom:38px}
+.cover h1{font-family:var(--sans);font-weight:500;font-size:clamp(28px,4.4vw,64px);line-height:1.12;letter-spacing:.03em;text-transform:uppercase;margin:0;max-width:22ch;text-wrap:balance}
+.cover h1 .l{display:block;overflow:hidden}.cover h1 .l span{display:block}
+.cover .sub{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(20px,2vw,29px);line-height:1.45;color:var(--ink-2);max-width:56ch;margin:44px 0 0;text-wrap:pretty}
+.cover .rule{height:1px;width:0;background:var(--ink);margin-top:56px;transition:width 1.8s var(--ease)}
+.cover .hint{margin-top:60px;font-size:10.5px;letter-spacing:.34em;text-transform:uppercase;color:var(--ink-3);display:flex;align-items:center;gap:16px}
+.cover .hint b{display:block;width:1px;height:36px;background:var(--ink-3);animation:cai 2.6s var(--ease) infinite}
+@keyframes cai{0%{transform:scaleY(0);transform-origin:top}45%{transform:scaleY(1);transform-origin:top}55%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+.cover .arcs{position:absolute;right:clamp(-120px,-4vw,0px);top:50%;transform:translateY(-50%);width:min(44vw,560px);aspect-ratio:1;pointer-events:none}
+.cover .arcs circle{fill:none;stroke:var(--ink);stroke-width:.7;vector-effect:non-scaling-stroke}
+.a1{opacity:.22}.a2{opacity:.14}.a3{opacity:.09}.a4{opacity:.05}
+@media (max-width:900px){.cover .arcs{display:none}}
+
+/* capítulos */
+.cap{padding:clamp(90px,12vh,150px) clamp(20px,6vw,96px) clamp(30px,4vh,50px);border-top:1px solid var(--line)}
+.cap .wrap{max-width:1400px;margin:0 auto;display:flex;align-items:baseline;gap:28px;flex-wrap:wrap}
+.cap-r{font-family:var(--serif);font-size:clamp(44px,6vw,84px);line-height:1;color:var(--ink);letter-spacing:.02em}
+.cap-n{font-size:12px;letter-spacing:.4em;text-transform:uppercase;color:var(--ink)}
+.cap-s{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-3);margin-left:auto}
+
+/* seções */
+.sec{padding:clamp(80px,11vh,140px) clamp(20px,6vw,96px)}
+.sec.alt{background:var(--bg-2)}
+.sec .wrap{max-width:1400px;margin:0 auto;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,5vw,96px);align-items:start}
+.hd{position:sticky;top:96px}
+.eyebrow{font-size:11px;letter-spacing:.36em;text-transform:uppercase;color:var(--ink-3);margin-bottom:22px}
+.eyebrow span{margin:0 10px;color:var(--line-2)}
+h2{font-size:clamp(21px,2.2vw,32px);line-height:1.25;letter-spacing:.03em;text-transform:uppercase;font-weight:500;color:var(--ink);text-wrap:balance}
+.intro{font-size:clamp(18px,1.35vw,21px);line-height:1.6;color:var(--ink);max-width:62ch;margin-bottom:8px;text-wrap:pretty}
+.intro+.intro{margin-top:18px}
+.bd>.intro+.rows,.bd>.intro+.kpis,.bd>.intro+.prods,.bd>.intro+.tl,.bd>.intro+.mani{margin-top:40px}
+
+/* linhas numeradas */
+.rows{list-style:none;margin:0;padding:0}
+.rows li{display:grid;grid-template-columns:56px 1fr;gap:20px;padding:30px 0;border-top:1px solid var(--line)}
+.rows li:last-child{border-bottom:1px solid var(--line)}
+.num{font-family:var(--serif);font-size:22px;line-height:1;color:var(--ink-3);padding-top:4px;transition:color .3s}
+.rows li:hover .num{color:var(--em)}
+.rows h3{font-size:17px;font-weight:600;letter-spacing:.01em;margin-bottom:8px;color:var(--ink)}
+.rows p{color:var(--ink-2);font-size:16.5px;line-height:1.6;max-width:62ch}
+
+/* kpis */
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.kpi{background:var(--bg);border:1px solid var(--line);border-radius:22px;padding:30px 28px 28px;transition:transform .6s var(--ease),box-shadow .6s var(--ease)}
+.sec.alt .kpi{border-color:transparent}
+.kpi:hover{transform:translateY(-4px);box-shadow:0 30px 60px -36px rgba(0,0,0,.25)}
+.k-lab{font-size:10.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--ink-3);margin-bottom:16px}
+.k-big{font-family:var(--serif);font-weight:400;font-size:clamp(36px,3.6vw,52px);line-height:1;color:var(--ink);letter-spacing:.01em;font-variant-numeric:tabular-nums;margin-bottom:18px}
+.kpi p{font-size:15px;color:var(--ink-2);line-height:1.55}
+
+/* produtos */
+.prods{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+.prod{background:var(--bg);border-radius:22px;padding:28px 26px 24px;border:1px solid transparent;display:flex;flex-direction:column;gap:10px;transition:transform .6s var(--ease),box-shadow .6s var(--ease)}
+.sec:not(.alt) .prod{border-color:var(--line)}
+.prod:hover{transform:translateY(-4px);box-shadow:0 30px 60px -36px rgba(0,0,0,.25)}
+.p-n{font-family:var(--serif);font-size:20px;color:var(--ink-3)}
+.prod h3{font-size:17px;font-weight:600}
+.prod p{font-size:15px;color:var(--ink-2);line-height:1.55;flex:1}
+.p-foot{font-size:12.5px;letter-spacing:.02em;color:var(--em);padding-top:14px;border-top:1px solid var(--line);margin-top:6px}
+.band{margin-top:14px;background:var(--ink);color:#fff;border-radius:22px;padding:30px 32px;display:flex;flex-wrap:wrap;gap:8px 40px;align-items:baseline}
+.b-lab{font-size:10.5px;letter-spacing:.3em;text-transform:uppercase;color:rgba(255,255,255,.55)}
+.band p{font-size:clamp(18px,1.6vw,24px);font-family:var(--serif);color:#fff}
+.band p strong{font-weight:400;color:var(--em-light)}
+
+/* estágios (escuro) */
+.sec.dark{background:var(--dark);color:#F5F5F7}
+.sec.dark .eyebrow{color:rgba(255,255,255,.4)}.sec.dark .eyebrow span{color:rgba(255,255,255,.15)}
+.sec.dark h2{color:#F5F5F7}
+.sec.dark .k-lab{color:rgba(255,255,255,.42)}
+.sec.dark .intro{color:rgba(255,255,255,.78)}
+.est p{font-size:clamp(17px,1.25vw,19px);color:rgba(255,255,255,.78);line-height:1.6;max-width:60ch}
+.fin{margin-top:16px;border-top:1px solid rgba(255,255,255,.14)}
+.f-row{display:flex;justify-content:space-between;gap:24px;align-items:baseline;padding:17px 0;border-bottom:1px solid rgba(255,255,255,.1);font-size:16px;color:rgba(255,255,255,.72)}
+.f-row b{font-family:var(--serif);font-weight:400;font-size:20px;color:#F5F5F7;font-variant-numeric:tabular-nums;white-space:nowrap;letter-spacing:.01em}
+.f-row.neg b{color:rgba(255,255,255,.55)}
+.f-row.soma{color:#F5F5F7}.f-row.soma b{color:var(--em-light)}
+.res{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-top:28px}
+.r-card{background:var(--dark-2);border:1px solid rgba(255,255,255,.08);border-radius:22px;padding:30px 30px 26px}
+.r-big{font-family:var(--serif);font-weight:400;font-size:clamp(34px,3.4vw,50px);line-height:1.05;color:var(--em-light);font-variant-numeric:tabular-nums;letter-spacing:.005em}
+.r-card.val .r-big{color:#F5F5F7}
+.r-note{margin-top:12px;font-style:italic;color:rgba(255,255,255,.55);font-size:15px}
+
+/* linha do tempo */
+.tl{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:26px;position:relative;padding-top:26px}
+.tl::before{content:"";position:absolute;left:0;right:0;top:5px;height:1px;background:var(--line-2)}
+.tl-i{position:relative}
+.tl-dot{position:absolute;top:-26px;left:0;width:11px;height:11px;border-radius:50%;background:var(--bg);border:1px solid var(--ink);transform:translateY(0)}
+.tl-i:hover .tl-dot{background:var(--em);border-color:var(--em)}
+.tl-lab{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--ink);margin-bottom:12px}
+.tl p{font-size:15.5px;color:var(--ink-2);line-height:1.6}
+
+/* manifesto */
+.sec.dark .mani .m-i{display:grid;grid-template-columns:56px 1fr;gap:20px;padding:34px 0;border-top:1px solid rgba(255,255,255,.12)}
+.sec.dark .mani .m-i:last-child{border-bottom:1px solid rgba(255,255,255,.12)}
+.sec.dark .mani .num{color:rgba(255,255,255,.35)}
+.sec.dark .mani h3{font-family:var(--serif);font-weight:400;font-size:clamp(24px,2.2vw,34px);line-height:1.15;color:#F5F5F7;margin-bottom:12px;letter-spacing:.005em}
+.sec.dark .mani p{color:rgba(255,255,255,.7);font-size:16.5px;line-height:1.6;max-width:60ch}
+
+/* fecho */
+.fecho{padding:clamp(120px,16vh,200px) clamp(20px,6vw,96px) clamp(140px,18vh,220px);text-align:center}
+.fecho .wrap{max-width:820px;margin:0 auto;display:block}
+.fecho .eyebrow{margin-bottom:26px}
+.fecho h2{margin-bottom:40px}
+.fecho .lead{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(22px,2.4vw,34px);line-height:1.4;color:var(--ink);text-wrap:pretty}
+.fim{display:flex;justify-content:center;padding:0 0 80px}
+
+/* movimento: Apple, contido */
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
+.js .rv.in{opacity:1;transform:none}
+.js .stag>*{opacity:0;transform:translateY(18px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.js .stag.in>*{opacity:1;transform:none}
+.js .cover h1 .l span{transform:translateY(105%);transition:transform 1.4s var(--ease)}
+.js .cover.in h1 .l span{transform:none}
+.js .cover .k,.js .cover .sub,.js .cover .hint{opacity:0;transform:translateY(12px);transition:opacity 1.1s var(--ease),transform 1.1s var(--ease)}
+.js .cover.in .k,.js .cover.in .sub,.js .cover.in .hint{opacity:1;transform:none}
+.js .cover.in .rule{width:min(360px,50%)}
+.js .cover .arcs circle{stroke-dasharray:1;stroke-dashoffset:1;pathLength:1;transition:stroke-dashoffset 2.4s var(--ease)}
+.js .cover.in .arcs circle{stroke-dashoffset:0}
+@media (prefers-reduced-motion:reduce){.js .rv,.js .stag>*,.js .cover h1 .l span,.js .cover .k,.js .cover .sub,.js .cover .hint,.js .cover .arcs circle{opacity:1!important;transform:none!important;transition:none!important;stroke-dashoffset:0!important}.js .cover .rule{width:min(360px,50%)!important}.cover .hint b{animation:none}}
+
+@media (max-width:900px){
+  .sec .wrap{grid-template-columns:1fr;gap:28px}
+  .hd{position:static}
+  .rows li{grid-template-columns:40px 1fr;gap:14px;padding:24px 0}
+  .f-row{flex-direction:column;gap:4px}
+  .wm span{display:none}
+}
+
+/* blocos comuns aos documentos gerados a partir do Markdown */
+.big-n{font-family:var(--serif);font-size:clamp(56px,6.5vw,104px);line-height:.9;color:var(--ink-3);margin:-6px 0 14px;letter-spacing:.01em}
+.sec.alt .big-n{color:#C9C9CE}
+.tag{font-family:var(--serif);font-style:italic;font-size:clamp(19px,1.6vw,24px);line-height:1.4;color:var(--ink-2);margin-top:18px;max-width:28ch}
+.spec{border-top:1px solid var(--line);margin:6px 0 26px}
+.sp-row{display:grid;grid-template-columns:180px 1fr;gap:24px;padding:16px 0;border-bottom:1px solid var(--line)}
+.sp-k{font-size:10.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--ink-3);padding-top:4px}
+.sp-v{font-size:15.5px;line-height:1.6;color:var(--ink)}
+.h3c{font-family:var(--sans);font-size:19px;font-weight:600;margin:44px 0 14px;letter-spacing:.005em;display:flex;gap:14px;align-items:baseline;flex-wrap:wrap}
+.h3c .h3m{font-family:var(--serif);font-style:italic;font-weight:400;font-size:18px;color:var(--ink-2)}
+.h3c .h3n{font-family:var(--serif);font-weight:400;font-size:26px;color:var(--ink-3)}
+.vb{margin:0 0 26px}.vb-k{font-size:10.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--em);margin:26px 0 10px}
+.vb .intro{font-size:16.5px}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.86em;background:var(--bg-2);padding:1px 6px;border-radius:5px;color:var(--ink)}
+.sec.alt code{background:#E8E8ED}
+pre{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12.5px;line-height:1.55;background:var(--ink);color:#E8ECEA;border-radius:16px;padding:22px 24px;overflow-x:auto;margin:10px 0 18px;white-space:pre-wrap}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:16px;background:var(--bg);margin:10px 0 18px}
+table{border-collapse:collapse;width:100%;font-size:14px;min-width:560px}
+th,td{padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top;text-align:left;line-height:1.5}
+th{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-3);font-weight:500;background:var(--bg-2)}
+tbody tr:last-child td{border-bottom:0}
+.steps{margin:6px 0 18px;padding-left:24px}.steps li{font-size:16px;line-height:1.65;color:var(--ink);margin:10px 0}.steps li::marker{color:var(--em);font-family:var(--serif);font-size:18px}
+.list{margin:6px 0 18px;padding-left:20px}.list li{font-size:16px;line-height:1.65;color:var(--ink);margin:6px 0}.list ul{padding-left:18px;margin:4px 0}
+.dl{margin:6px 0 18px;display:grid;grid-template-columns:1fr;gap:0}
+.dl div{border-top:1px solid var(--line);padding:12px 0}.dl dt{font-weight:600;font-size:15px}.dl dd{margin:3px 0 0;color:var(--ink-2);font-size:15px;line-height:1.55}
+.sec.dark .dl{grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:0 28px}
+.sec.dark .dl div{border-color:rgba(255,255,255,.12)}.sec.dark .dl dt{color:#F5F5F7}.sec.dark .dl dd{color:rgba(255,255,255,.65)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:6px 0 18px}
+.card{background:var(--bg);border-radius:22px;padding:26px 26px 22px;border:1px solid var(--line);display:flex;flex-direction:column;gap:8px;transition:transform .6s var(--ease),box-shadow .6s var(--ease)}
+.sec.alt .card{border-color:transparent}
+.card:hover{transform:translateY(-4px);box-shadow:0 30px 60px -36px rgba(0,0,0,.25)}
+.card .p-n{font-family:var(--serif);font-size:20px;color:var(--ink-3)}
+.card h3{font-size:16.5px;font-weight:600;line-height:1.35}
+.card p{font-size:14.5px;color:var(--ink-2);line-height:1.55}
+.c-row{display:flex;justify-content:space-between;gap:16px;padding:9px 0;border-top:1px solid var(--line);font-size:13.5px;color:var(--ink-2)}
+.c-row b{font-family:var(--serif);font-weight:400;font-size:18px;color:var(--ink);font-variant-numeric:tabular-nums;white-space:nowrap}
+.c-row.hi{color:var(--ink)}.c-row.hi b{color:var(--em);font-size:22px}
+.sec.dark .card{background:var(--dark-2);border-color:rgba(255,255,255,.08)}.sec.dark .card h3{color:#F5F5F7}.sec.dark .card p{color:rgba(255,255,255,.7)}
+.vin{margin-top:36px;padding:30px 0 0;border-top:1px solid var(--line)}
+.vin p{font-family:var(--serif);font-size:clamp(19px,1.5vw,23px);line-height:1.5;color:var(--ink);max-width:62ch;text-wrap:pretty}
+.band{margin:14px 0 22px}
+.band p{font-family:var(--sans);font-size:16.5px;line-height:1.55}
+.quote{margin:10px 0 18px;padding:4px 0 4px 22px;border-left:2px solid var(--em);font-family:var(--serif);font-size:19px;line-height:1.5;color:var(--ink)}
+.cal{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;margin:6px 0 18px}
+.cal-i{background:var(--bg);border-radius:22px;padding:26px 26px 22px;border:1px solid var(--line)}
+.sec.alt .cal-i{border-color:transparent}
+.cal-t{font-family:var(--serif);font-size:30px;line-height:1;color:var(--ink);margin-bottom:8px}
+.cal-s{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--ink-3);margin-bottom:14px}
+.cal p{font-size:14.5px;color:var(--ink-2);line-height:1.55}
+.cal ul{margin:0;padding:0;list-style:none}.cal li{font-size:14.5px;color:var(--ink-2);line-height:1.55;padding:9px 0;border-top:1px solid var(--line)}
+.sec.dark .rows li{border-color:rgba(255,255,255,.12)}.sec.dark .rows h3{color:#F5F5F7}.sec.dark .rows p{color:rgba(255,255,255,.7)}.sec.dark .num{color:rgba(255,255,255,.35)}
+.sec.dark .k-lab,.sec.dark .vb-k{color:rgba(255,255,255,.5)}.sec.dark .tbl{background:var(--dark-2);border-color:rgba(255,255,255,.1)}.sec.dark th{background:rgba(255,255,255,.05);color:rgba(255,255,255,.5)}.sec.dark td{color:rgba(255,255,255,.8);border-color:rgba(255,255,255,.08)}.sec.dark .intro{color:rgba(255,255,255,.78)}
+.sec.dark .sp-row{border-color:rgba(255,255,255,.12)}.sec.dark .sp-v{color:rgba(255,255,255,.85)}.sec.dark .list li,.sec.dark .steps li{color:rgba(255,255,255,.85)}
+.sec.dark .cal-i{background:var(--dark-2);border-color:rgba(255,255,255,.08)}.sec.dark .cal-t{color:#F5F5F7}.sec.dark .cal p,.sec.dark .cal li{color:rgba(255,255,255,.7);border-color:rgba(255,255,255,.1)}
+.sec.dark .band{background:var(--dark-2);border:1px solid rgba(255,255,255,.1)}.sec.dark .quote{color:#F5F5F7}
+.sec.wide .wrap{grid-template-columns:1fr}.sec.wide .hd{position:static;margin-bottom:10px}
+.ix-g a i{font-size:12px}
+@media (max-width:700px){.sp-row{grid-template-columns:1fr;gap:6px}}
+</style>
+</head>
+<body>
+
+
+<div id="prog" aria-hidden="true"></div>
+<header class="bar" id="bar">
+  <a class="wm" href="#topo"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10.5"/><circle cx="12" cy="12" r="6.5" opacity=".5"/><circle cx="12" cy="12" r="2" opacity=".3"/></svg><span>Radar Urbano</span></a>
+  <button class="ix-btn" id="ixBtn" aria-controls="ix" aria-expanded="false"><i></i>Índice</button>
+</header>
+<nav class="ix" id="ix" aria-label="Índice do dossiê"><div class="ix-grid">
+<div class="ix-g"><div class="ix-c">Seções</div>
+<a href="#parte-a-expansao-geografica-e-comercial" data-s="parte-a-expansao-geografica-e-comercial"><i>01</i><span>Parte A · Expansão geográfica e comercial</span></a>
+<a href="#parte-b-expansao-por-modulos" data-s="parte-b-expansao-por-modulos"><i>02</i><span>Parte B · Expansão por módulos</span></a>
+</div>
+</div></nav>
+
+<main id="topo">
+<section class="cover" id="capa">
+  <svg class="arcs" viewBox="0 0 600 600" aria-hidden="true"><circle class="a4" cx="300" cy="300" r="296"/><circle class="a3" cx="300" cy="300" r="222"/><circle class="a2" cx="300" cy="300" r="148"/><circle class="a1" cx="300" cy="300" r="74"/></svg>
+  <div class="k">Radar Urbano</div>
+  <h1><span class="l"><span>Radar Urbano · Expansão</span></span></h1>
+  <p class="sub"></p>
+  <div class="rule"></div>
+  <div class="hint"><b></b>Role para começar</div>
+</section>
+
+<section id="parte-a-expansao-geografica-e-comercial" class="sec  wide"><div class="wrap"><div class="hd"><div class="eyebrow rv"></div><h2 class="rv">Parte A · Expansão geográfica e comercial</h2></div><div class="bd"><div class="h3c rv">A1. A unidade de expansão</div><ul class="list stag"><li>Unidade: <strong>zona × segmento</strong>, com <strong>2 vagas</strong>.</li><li>Zona = bairro do Google Maps ou raio equivalente, gravado no contrato com cidade e segmento. Não é a sobreposição de grades de medição.</li><li>Segmento = categoria principal do perfil no Google (padaria e pizzaria são segmentos diferentes).</li><li>Vaga se reserva pela proposta escrita (5 dias úteis) e se ocupa na assinatura, em transação na tabela <code>zones</code>. Fila por ordem de chegada, sem exceção.</li><li>Consequência: a receita máxima de uma praça é finita e conhecida antes de vender. Crescer é abrir zonas e segmentos novos.</li></ul><div class="h3c rv">A2. Capacidade por praça</div><p class="intro rv">Fórmula: <strong>vagas = zonas × segmentos relevantes × 2</strong>. Segmento relevante: tem demanda por busca local e ao menos 2 perfis fracos na zona (levantado por dados públicos antes de abrir a praça).</p><p class="intro rv">Exemplo (números redondos, só para ilustrar):</p><div class="tbl rv"><table><thead><tr><th>Variável</th><th>Valor de exemplo</th></tr></thead><tbody><tr><td>Zonas na cidade (bairros com busca local relevante)</td><td>40</td></tr><tr><td>Segmentos relevantes por zona</td><td>12</td></tr><tr><td>Vagas teóricas (40 × 12 × 2)</td><td>960</td></tr><tr><td>Ocupação realista (nem toda zona tem 2 candidatos em cada segmento)</td><td>30–50%</td></tr><tr><td>Clientes alcançáveis na praça</td><td>300–480</td></tr><tr><td>Receita mensal no teto realista (× R$ 499)</td><td>R$ 150 mil – R$ 240 mil</td></tr></tbody></table></div><p class="intro rv">Regras: contar bairros pelo Maps, não pelo IBGE; bairro sem volume de busca local não conta; segmento é categoria principal (padaria, pizzaria, oficina, dentista são quatro segmentos); refazer a estimativa a cada 100 clientes com os dados reais de <code>zones</code>.</p><div class="h3c rv">A3. Sequência de crescimento</div><div class="tbl rv"><table><thead><tr><th>Estágio</th><th>Clientes</th><th>Onde</th><th>O que prova</th><th>Gatilho para o próximo</th></tr></thead><tbody><tr><td>Piloto</td><td>3 (padaria, oficina, clínica)</td><td>Praça piloto</td><td>11 entregas por 30 dias; Dia 0 em até 15 min; custo por tenant &lt; R$ 25; Guardião em P0</td><td>11 testes de aceitação passando</td></tr><tr><td>Tração</td><td>20</td><td>Mesma praça</td><td>Onboarding sem engenheiro; Guardião em P1; custo de aquisição por canal conhecido</td><td>20 clientes vivos por 60 dias</td></tr><tr><td>Praça</td><td>100</td><td>Mesma cidade</td><td>1 operador para 80 clientes; P2 com QA de 10%; runbooks usados</td><td>Critérios de abertura (abaixo)</td></tr><tr><td>Segunda praça</td><td>100 → 200+</td><td>Cidade nova</td><td>O roteiro repetido sem o fundador; tabelas por cidade funcionando</td><td>Repetir</td></tr></tbody></table></div><p class="intro rv">Critérios para abrir praça nova (todos):</p><ol class="steps stag"><li>Zonas lotadas acima de 40% nos segmentos-alvo da praça atual, ou fila de espera maior que 10.</li><li>Ao menos 1 Guardião abaixo de 60% da capacidade do estágio.</li><li>Custo de tecnologia por tenant abaixo de R$ 25 por 3 meses; churn mensal abaixo de 5% no mesmo período.</li><li>Levantamento de capacidade da cidade nova (A2) com ao menos 200 vagas realistas.</li><li>Calendário municipal, fuso e <code>zones</code> da cidade nova carregados antes da primeira proposta.</li></ol><div class="h3c rv">A4. Equipe por estágio</div><div class="tbl rv"><table><thead><tr><th>Papel</th><th>Piloto (3)</th><th>20</th><th>100</th><th>500 (várias praças)</th></tr></thead><tbody><tr><td>Head de Operação</td><td>1</td><td>1</td><td>1</td><td>1</td></tr><tr><td>Engenheiro de automação</td><td>1</td><td>1</td><td>1</td><td>2</td></tr><tr><td>Guardiões / operadores</td><td>1 (o Head)</td><td>1</td><td>2 (80 clientes/operador)</td><td>4 (150 clientes/operador)</td></tr><tr><td>Comercial / SDR</td><td>fundador</td><td>1</td><td>2</td><td>1 por praça</td></tr><tr><td>Jurídico</td><td>externo</td><td>externo</td><td>externo</td><td>externo</td></tr></tbody></table></div><p class="intro rv">A razão clientes/operador sobe 30 → 80 → 150 porque não há atendimento em tempo real. O SDR verifica a zona antes de qualquer proposta e assiste o Dia 0. Praça nova exige SDR ou parceiro local; operação e engenharia ficam centralizadas.</p><div class="h3c rv">A5. Canais de aquisição por praça</div><div class="tbl rv"><table><thead><tr><th>Canal</th><th>Como funciona</th><th>Custo e observações</th></tr></thead><tbody><tr><td>Outbound por dados públicos</td><td>Perfis fracos por zona e segmento (categoria errada, sem fotos, sem horário de feriado, avaliações sem resposta) via Places API dentro dos termos e consulta manual; abordagem com Diagnóstico de Posição reduzido</td><td>Só <code>place_id</code> fica além de 30 dias; sem raspagem</td></tr><tr><td>Contabilidades</td><td>Escritórios contábeis da praça indicam clientes por segmento</td><td>Comissão de indicação</td></tr><tr><td>Associações de segmento</td><td>Material com a trava de 2 por zona como argumento (escassez real)</td><td>Custo baixo; funciona por segmento, não por bairro</td></tr><tr><td>Indicação de cliente</td><td>Vaga da zona vizinha oferecida a quem indica</td><td>Só se a zona estiver livre; sem desconto no preço fixo</td></tr><tr><td>Material do balcão</td><td>QR e link curto levam a marca</td><td>Passivo</td></tr></tbody></table></div><p class="intro rv">Argumento de venda em todos os canais: contagens, custo por contato e o Diário de Bordo. Nunca conversão, receita ou "novos clientes".</p><div class="h3c rv">A6. O que muda na máquina ao crescer</div><div class="tbl rv"><table><thead><tr><th>Peça</th><th>Hoje (uma praça)</th><th>Com várias praças</th></tr></thead><tbody><tr><td><code>zones</code></td><td><code>zones(segmento, zona, cidade, tenants_ativos, limite=2)</code></td><td>Mesma tabela; <code>cidade</code> vira chave obrigatória; auditoria diária por cidade (zero linhas com mais de 2 ativos)</td></tr><tr><td>Tabela de cidades</td><td>Implícita</td><td><code>cities(cidade, uf, fuso, ativa, aberta_em)</code>; <code>tenants</code> ganha <code>cidade</code>; <code>zone.check(segmento, zona, cidade)</code></td></tr><tr><td>Calendário de feriados</td><td>Nacional + municipal da praça piloto</td><td>Uma linha por cidade e data, carregada antes de abrir a praça; <code>calendar.holidays(cidade, de, ate)</code> já recebe cidade</td></tr><tr><td>Fuso horário</td><td>Horário de Brasília</td><td><code>cities.fuso</code>; Boletim às 7h locais; avisos e perguntas das 8h às 19h locais; jobs internos (03h, 05h) seguem em Brasília</td></tr><tr><td>Guardião</td><td>Uma fila</td><td>Fila com filtro por cidade e por operador; cada operador tem praças atribuídas</td></tr><tr><td>Custo por tenant</td><td>Média geral</td><td><code>cost.per_tenant</code> também por cidade; praça acima de R$ 25 entra no runbook antes de crescer</td></tr><tr><td>Cotas de API</td><td>Uma chave Places, um OAuth GBP</td><td>Mesmas credenciais; pedir aumento de cota a cada 100 clientes</td></tr><tr><td>Número da casa</td><td>Um</td><td>Um serve todas as praças; segundo só se a qualidade cair (runbook)</td></tr><tr><td>Comercial</td><td>Verificação de zona manual pelo SDR</td><td>Painel de disponibilidade por cidade/zona/segmento, lido de <code>zones</code>, com fila</td></tr></tbody></table></div><p class="intro rv">Nada disso altera agentes, entregas ou preço. É configuração e tabela.</p></div></div></section>
+<section id="parte-b-expansao-por-modulos" class="sec alt wide"><div class="wrap"><div class="hd"><div class="eyebrow rv"></div><h2 class="rv">Parte B · Expansão por módulos</h2></div><div class="bd"><div class="h3c rv">B1. As fases</div><div class="tbl rv"><table><thead><tr><th>Fase</th><th>Módulo</th><th>O que devolve ao cliente</th><th>Acesso novo do cliente</th><th>Pré-requisito / caminho crítico</th><th>Preço</th><th>Montagem</th><th>O que muda nos documentos</th></tr></thead><tbody><tr><td>0</td><td>Radar Urbano (núcleo)</td><td>11 entregas, 5 agentes + Guardião, 4 conectores</td><td>Gerente no perfil, WhatsApp do dono, cartão</td><td>Business Profile APIs (1–2 semanas); Meta para o número da casa</td><td>R$ 499</td><td>6 semanas + piloto 30 dias</td><td>Nenhum: são os documentos atuais</td></tr><tr><td>1</td><td>Radar Concorrência + Radar Menu</td><td>"Quem ganhou a semana" (sábado 9h); Sentinela como agente (feriado, clima, pico de busca, concorrente); comparação nominal no Mapa de Domínio; catálogo com preço; "O que te procuram" no dia 1</td><td>Nenhum (3 concorrentes e a lista de itens, por áudio)</td><td>Núcleo vivo com Cartógrafo aprovado (85% nas 20 buscas); lista de ações autorizadas por tenant; jurídico em 3 frases</td><td>R$ 399 + R$ 399</td><td>3 semanas + piloto</td><td>Entregas: 2 seções; 05 e 07 ganham comparação. Acessos: 3 frases, 2 perguntas. Mundi: Sentinela, <code>places.get_details</code>, clima. Bíblia: cap. XI e XII</td></tr><tr><td>2</td><td>Radar Stars</td><td>Convite de avaliação após atendimento pelo WhatsApp da empresa; Boletim de Reputação com contagem de convites</td><td>Sistema E: WhatsApp da empresa (Meta, Embedded Signup, número dedicado)</td><td>Tech Provider na Meta (dias a semanas, pedido no dia 1); verificação da empresa do cliente; jurídico item 3</td><td>R$ 299</td><td>3 semanas + piloto</td><td>Acessos: Sistema E, itens 2, 3 e 8, passo "minuto 10 a 14". Mundi: WA Connector com 2 metades, <code>wa_linked</code>. Bíblia: cap. XIII</td></tr><tr><td>3</td><td>Radar Chat</td><td>Recepcionista 24/7, Agenda das 7h, número de rastreamento, Resgate de Ligações Perdidas; dashboard em tempo real; "pediu preço" e "horários marcados" no Extrato</td><td>Sistema F: telefonia + Sistema E</td><td>Fase 2; provedor de telefonia (cadastro regulatório, números por DDD); teste em 3 operadoras; jurídico itens 1, 2, 3, 8</td><td>R$ 499</td><td>4 semanas + piloto</td><td>Entregas: 3 seções; 03 e 08 redefinidos. Acessos: Sistema F. Mundi: Recepcionista, Voice Connector, SLO de latência; Guardiões 20→60→120. Bíblia: cap. XIV</td></tr><tr><td>4</td><td>Radar Ads</td><td>Micro-campanhas de busca com raio e teto; Extrato de Mídia com custo por contato por campanha; corte automático</td><td>Sistema G: Google Ads (conta do cliente vinculada à MCC)</td><td>Fundação Telefonia da Fase 3 (atribuição); developer token (dias a semanas); limiares por segmento; verificação de anunciante</td><td>R$ 699 (verba do cliente à parte)</td><td>3 semanas + simulação 31 dias + piloto</td><td>Entregas: Extrato de Mídia; 11 ganha linha. Acessos: Sistema G, itens 1 e 7. Mundi: Estrategista, Ads Connector. Bíblia: cap. XV</td></tr><tr><td>5</td><td>Suíte</td><td>Os 5 módulos num contrato; proposta de expansão no 3º Fechamento (conta de equilíbrio, não previsão); custo por módulo</td><td>Sistemas A a G, contrato com anexos</td><td>Os 5 pilotos fechados; provedor de pagamento com bundle; 1 trimestre de um tenant com tudo</td><td>R$ 1.500–2.200</td><td>2 semanas + piloto de 1 trimestre</td><td>Acessos: anexos, encerramento por módulo. Mundi: 8 agentes, custo por módulo. Bíblia: VII.4, VIII.7, VIII.8</td></tr></tbody></table></div><p class="intro rv">Sequencial com 1 engenheiro: 44 semanas depois do núcleo (cerca de 1 ano do dia 1). Com 2 engenheiros e montagem da fase seguinte durante o piloto da anterior: cerca de 9 meses. Venda de módulo só com piloto fechado.</p><p class="intro rv">Alerta de custo por tenant: R$ 25 no núcleo + Concorrência 2 + Menu 1 + Stars 2 + Chat 5 + Ads 5 = R$ 40 na suíte.</p><div class="h3c rv">B2. Regra da modularidade</div><pre class="rv">tenants.modules_json = {
+  &quot;concorrencia&quot;: {&quot;ativo&quot;: false},
+  &quot;menu&quot;:         {&quot;ativo&quot;: false},
+  &quot;stars&quot;:        {&quot;ativo&quot;: false},
+  &quot;chat&quot;:         {&quot;ativo&quot;: false},
+  &quot;ads&quot;:          {&quot;ativo&quot;: false},
+  &quot;suite&quot;:        false
+}
+todo job de módulo:  if not tenant.modules[MODULO].ativo: return   (uma linha, sem custo)
+alerta de custo:     COST_ALERT_PER_TENANT_BRL = 25 + soma dos acréscimos dos módulos ativos</pre><ol class="steps stag"><li>Liga e desliga por tenant, pela flag. Nenhum agente, conector ou tabela do núcleo muda.</li><li>Cada módulo traz as próprias peças com o próprio nome (<code>competitor_snapshots</code>, <code>invites</code>, <code>calls</code>, <code>campaigns</code>).</li><li>Cada módulo traz os próprios acessos (sistemas E, F, G) e cláusulas (anexos); o Dia 0 ganha um passo dentro dos mesmos 15 minutos.</li><li>As 11 entregas do núcleo não são renumeradas; entregas de módulo têm nome e aparecem no Dashboard, Boletim e Fechamento só com o módulo ligado.</li><li>Compartilhado: LLMGateway, Diário de Bordo (coluna <code>modulo</code>), Guardião (uma fila), número da casa, Dashboard, Tesoureiro (custo por módulo), Cartógrafo (uma medição serve Mapa, Concorrência e Ads), trava de zona.</li><li>Cada fase fecha com piloto de 30 dias nos 3 clientes do núcleo, Guardião em P0 para o módulo novo.</li><li>Desligar um módulo remove só acessos, segredos e cadências dele e exporta o histórico. Não existe módulo sem núcleo.</li></ol><div class="h3c rv">B3. Dependências</div><div class="tbl rv"><table><thead><tr><th>Módulo</th><th>Depende de</th><th>Deixa pronto para</th><th>Pode inverter com</th></tr></thead><tbody><tr><td>Concorrência</td><td>Núcleo (Cartógrafo, Places, Editor, Delivery)</td><td><code>top_place_ids</code> no Mapa; sinais para o Editor</td><td>Qualquer um</td></tr><tr><td>Menu</td><td>Núcleo (Editor, GBP Connector, Guardião)</td><td>Itens de catálogo para cross-sell e termos do Ads</td><td>Qualquer um</td></tr><tr><td>Stars</td><td>Núcleo (Anfitrião) + Fundação Meta</td><td>A Fundação Meta, que o Chat usa inteira</td><td>Chat (depois dele, Stars cai para 1 semana)</td></tr><tr><td>Chat</td><td>Núcleo + Fundação Meta + Fundação Telefonia</td><td><code>calls</code>, número de rastreamento (Ads), evento <code>atendimento.concluido</code> (Stars)</td><td>Stars; nunca depois do Ads</td></tr><tr><td>Ads</td><td>Núcleo (Cartógrafo) + Fundação Telefonia</td><td>Extrato de Mídia para o Fechamento</td><td>Nada; Recepcionista recomendada, não obrigatória</td></tr><tr><td>Suíte</td><td>Os cinco</td><td>Bundle, proposta de expansão, custo por módulo</td><td>Nada</td></tr></tbody></table></div><div class="h3c rv">B4. Ordem alternativa</div><div class="tbl rv"><table><thead><tr><th>Caminho</th><th>Ordem</th><th>Quando usar</th><th>Efeito no prazo</th></tr></thead><tbody><tr><td>A · Padrão</td><td>1, 2, 3, 4, 5</td><td>Menor acesso novo primeiro; 1 engenheiro</td><td>44 semanas</td></tr><tr><td>B · Atendimento primeiro</td><td>3 (com Fundação Meta dentro), 2, 1, 4, 5</td><td>Praças de oficina e clínica (ligação perdida dói mais que posição)</td><td>Chat 5 semanas; Stars 1 semana</td></tr><tr><td>C · Reputação primeiro</td><td>2, 1, 3, 4, 5</td><td>Praças com nota baixa ou poucas avaliações</td><td>Igual ao padrão; Chat herda a fundação</td></tr><tr><td>Menu sozinho</td><td>Menu (2 semanas), depois Concorrência (2 semanas)</td><td>Piloto de alimentação</td><td>Fase 1 vira 4 semanas em duas partes</td></tr><tr><td>Ads sem Chat</td><td>Só Fundação Telefonia (número, encaminhamento, <code>calls</code>) + Ads</td><td>Cliente quer verba, não quer atendimento automático</td><td>+R$ 5 telefonia +R$ 5 Ads no alerta</td></tr></tbody></table></div><p class="intro rv">Nunca inverte: Ads antes da telefonia (sem atribuição); qualquer módulo antes do núcleo com piloto fechado; suíte antes dos 5 pilotos; venda antes do piloto.</p><div class="h3c rv">B5. O que não muda em nenhuma fase</div><ol class="steps stag"><li>Nenhuma métrica de conversão, receita atribuída, "novos clientes" ou ROI. Só contagens e custo por contato.</li><li>Gemini para dados, medição e tudo que toca API do Google (Sentinela, Recepcionista e Estrategista incluídos); outros cérebros só para linguagem, atrás da LLMGateway.</li><li>Nunca a senha do cliente: Gerente no perfil, Embedded Signup com código do cliente, convite na MCC, cartão no provedor.</li><li>Zero tempo do dono; os únicos minutos são no Dia 0 (15, inteiros, com a suíte).</li><li>Diário de Bordo append-only com print, uma tabela, coluna <code>modulo</code>.</li><li>Custo por tenant: alerta R$ 25 + acréscimos declarados, até R$ 40.</li><li>Trava de 2 por segmento por zona, em código, para a suíte inteira; nenhum módulo compra exceção.</li><li>Sem raspagem do Google: Places API dentro dos termos, snapshots de 30 dias, só <code>place_id</code> fica.</li><li>Só avaliações reais: convite após atendimento real, com consentimento, sem incentivo, sem seleção.</li><li>Frescor honesto: Google com data de referência; dado próprio em até 1 hora; tempo real só onde existe (a partir do Chat).</li></ol></div></div></section>
+
+<div class="fim"><a class="wm" href="#topo"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10.5"/><circle cx="12" cy="12" r="6.5" opacity=".5"/><circle cx="12" cy="12" r="2" opacity=".3"/></svg><span>Radar Urbano</span></a></div>
+</main>
+
+<script>
+(function(){
+  document.documentElement.classList.add('js');
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var cover=document.getElementById('capa');
+  requestAnimationFrame(function(){requestAnimationFrame(function(){cover.classList.add('in')})});
+
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;var el=e.target;el.classList.add('in');io.unobserve(el);el.querySelectorAll('.cnt').forEach(conta)})},{rootMargin:'0px 0px -10% 0px',threshold:.1});
+  document.querySelectorAll('.rv,.stag').forEach(function(el){io.observe(el)});
+  document.querySelectorAll('.stag').forEach(function(el){[].slice.call(el.children).forEach(function(c,i){c.style.transitionDelay=(i*90)+'ms'})});
+
+  function fmt(n,dec){var s=n.toFixed(dec).split('.');s[0]=s[0].replace(/\B(?=(\d{3})+(?!\d))/g,'.');return dec?s[0]+','+s[1]:s[0]}
+  var feitos=new WeakSet();
+  function conta(el){if(feitos.has(el))return;feitos.add(el);var t=parseFloat(el.dataset.t),dec=+el.dataset.dec||0,pre=el.dataset.pre||'',suf=el.dataset.suf||'';if(reduce||isNaN(t))return;var d=1500,t0=null;
+    (function passo(ts){if(!t0)t0=ts;var k=Math.min(1,(ts-t0)/d),e=1-Math.pow(1-k,4);el.textContent=pre+fmt(t*e,dec)+suf;if(k<1)requestAnimationFrame(passo)})(performance.now())}
+
+  var prog=document.getElementById('prog'),bar=document.getElementById('bar');
+  var links=[].slice.call(document.querySelectorAll('.ix a[data-s]')),secs=links.map(function(a){return document.getElementById(a.dataset.s)}).filter(Boolean);
+  function onScroll(){var h=document.documentElement,max=h.scrollHeight-h.clientHeight;prog.style.width=(max>0?h.scrollTop/max*100:0)+'%';bar.classList.toggle('on',h.scrollTop>40);
+    var y=h.scrollTop+h.clientHeight*.4,cur=null;secs.forEach(function(s){if(s.offsetTop<=y)cur=s});links.forEach(function(a){a.classList.toggle('on',!!cur&&a.dataset.s===cur.id)})}
+  addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  var btn=document.getElementById('ixBtn'),ix=document.getElementById('ix');
+  function set(o){document.body.classList.toggle('ix',o);btn.setAttribute('aria-expanded',String(o));[].slice.call(ix.querySelectorAll('a')).forEach(function(a,i){a.style.transitionDelay=o?(40+i*10)+'ms':'0ms'})}
+  btn.addEventListener('click',function(){set(!document.body.classList.contains('ix'))});
+  ix.addEventListener('click',function(e){if(e.target.closest('a'))set(false)});
+  addEventListener('keydown',function(e){if(e.key==='Escape')set(false)});
+})();
+</script>
+
+</body>
+</html>
