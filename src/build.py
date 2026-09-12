@@ -227,7 +227,7 @@ def render_body(blocks, sec_cls, ctx):
                 mm = re.match(r"^(.*?)\s+[—–]\s+(.*)$", title)
                 ct, cs = (mm.group(1), mm.group(2)) if mm else (title, "")
                 inner = []
-                while i < n and blocks[i][0] not in ("h4", "h3", "h2", "h1"):
+                while i < n and blocks[i][0] in ("p", "ul", "ol") and not (blocks[i][0] == "p" and is_label_line(blocks[i][1])):
                     bt, bp = blocks[i]
                     if bt == "p": inner.append(f"<p>{inl(bp)}</p>")
                     elif bt in ("ul", "ol"): inner.append("<ul>" + "".join(f"<li>{inl(it['text'])}</li>" for it in bp) + "</ul>")
